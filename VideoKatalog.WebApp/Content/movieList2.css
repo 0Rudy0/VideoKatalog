@@ -1,0 +1,1575 @@
+﻿@media screen {
+
+	/*#region general info */
+
+	#allInfo {
+		position: absolute;
+		/*background-color: red;*/
+		width: 80%;
+		left: 10%;
+		height: 80%;
+		top: 10%;
+	}
+
+	#listboxDiv {
+		position: absolute;
+		height: 100%;
+		top: 0;
+		left: 0;
+		width: 30%;
+		/*min-width: 100px;*/
+		/*background-color: green;*/
+	}
+
+	#listBoxContentmovieListBox {
+		/*background-color: green !important;*/
+	}
+
+		#listBoxContentmovieListBox div {
+			/*width: 40% !important;*/
+		}
+
+			#listBoxContentmovieListBox div > span {
+				/*width: 40% !important;*/
+			}
+
+	#listSearch {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 40px;
+		padding-left: 2%;
+		box-shadow: 0 1px 5px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 -15px 100px rgba(0,0,0,0.1);
+	}
+
+	#mainInfo {
+		position: absolute;
+		left: 31%;
+		top: 0;
+		width: 69%;
+		height: 90%;
+		/*background-color: yellow;*/
+	}
+
+	#sideLoading {
+		position: absolute;
+		top: 10px;
+		left: 10px;
+		width: 50px;
+		height: 50px;
+		display: none;
+		background-size: 40px;
+		border: 1px solid gray;
+		box-shadow: 1px 1px 3px rgba(0,0,0,0.45);
+	}
+
+	#movieListBox, #selectedMovieListBox {
+		/*top: 10% !important;*/
+		bottom: 0;
+		position: absolute !important;
+		overflow-y: hidden;
+		overflow-x: hidden;
+		box-shadow: 0 1px 10px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 -15px 100px rgba(0,0,0,0.1);
+	}
+
+	#selectedMovieListBox {
+		display: none;
+	}
+
+	#tempPosterimg {
+		position: absolute;
+		top: -200px;
+	}
+
+	div.ui-progressbar-value.ui-widget-header.ui-corner-left {
+		margin: 0;
+	}
+
+	/*#endregion */
+
+	/*#region Main info */
+
+	/*#region Name and year */
+
+	#nameYearDiv {
+		position: absolute;
+		/*display: table;*/
+		vertical-align: middle;
+		height: 9%;
+		width: 100%;
+		/*background-color: aqua;*/
+		box-shadow: 0 1px 5px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 -15px 100px rgba(0,0,0,0.1);
+		overflow: hidden;
+	}
+
+	#movieName {
+		position: absolute;
+		/*display: table-cell;*/
+		/*vertical-align: middle;*/
+		padding-left: 10px;
+		font-size: 22pt;
+		width: 65%;
+		left: 0;
+		bottom: 1px;
+		/*word-wrap: break-word;*/
+		/*word-break: keep-all;*/
+		/*height: 100%;*/
+		overflow: hidden;
+		text-overflow: ellipsis;
+	}
+
+	#movieYear {
+		/*display: table-cell;*/
+		position: absolute;
+		/*vertical-align: middle;*/
+		text-align: right;
+		/*margin-right: 20px;*/
+		padding-right: 20px;
+		width: 35%;
+		right: 0;
+		bottom: 1px;
+		font-size: 18pt;
+	}
+
+	/*#endregion */
+
+
+	/*#region Rating */
+
+	#ratingDiv {
+		position: absolute;
+		left: 45%;
+		top: 10%;
+		width: 20%;
+		height: 25%;
+		/*background-color: pink;*/
+		display: table;
+		vertical-align: middle;
+	}
+
+	#ratingIcon {
+		position: absolute;
+		background-image: url(images/star03.png);
+		background-position: 50% 50%;
+		background-size: 60%;
+		width: 100%;
+		height: 100%;
+		max-width: 100%;
+		max-height: 100%;
+		background-repeat: no-repeat;
+		z-index: 1;
+	}
+
+	#ratingText {
+		position: relative;
+		left: -3px;
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+		font-size: 18pt;
+		z-index: 2;
+	}
+
+	/*#endregion */
+
+
+	/*#region Genre */
+
+	#genreDiv {
+		position: absolute;
+		left: 1%;
+		top: 10%;
+		width: 44%;
+		height: 25%;
+		font-size: 14pt;
+		font-style: italic;
+		/*background-color: blue;*/
+	}
+
+	#genres {
+	}
+
+	/*#endregion */
+
+
+	/*#region Director */
+
+	#directorDiv {
+		position: absolute;
+		display: table;
+		vertical-align: middle;
+		left: 0;
+		top: 35%;
+		width: 64%;
+		height: 15%;
+		/*background-color: white;*/
+	}
+
+	#directorIcon {
+		width: 10%;
+		background-position: 50% 50%;
+		background-size: 50%;
+		max-width: 100%;
+		max-height: 100%;
+		background-repeat: no-repeat;
+		display: table-cell;
+		vertical-align: middle;
+		background-image: url(images/director01-dark.png);
+	}
+
+	#director {
+		width: 90%;
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	/*#endregion */
+
+
+	/*#region Cast */
+
+	#castDiv {
+		position: absolute;
+		display: table;
+		vertical-align: middle;
+		left: 0;
+		top: 50%;
+		width: 64%;
+		height: 20%;
+		/*background-color: brown;*/
+	}
+
+	#castIcon {
+		width: 10%;
+		background-position: 50% 50%;
+		background-size: 50%;
+		max-width: 100%;
+		max-height: 100%;
+		background-repeat: no-repeat;
+		display: table-cell;
+		vertical-align: middle;
+		background-image: url(images/cast01-dark.png);
+	}
+
+	#cast {
+		width: 90%;
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	/*#endregion */
+
+
+	/*#region Plot */
+
+
+	#plotDiv {
+		position: absolute;
+		display: table;
+		vertical-align: middle;
+		left: 0;
+		top: 70%;
+		width: 64%;
+		height: 30%;
+		/*background-color: blueviolet;*/
+	}
+
+	#plotIcon {
+		width: 10%;
+		background-position: 50% 50%;
+		background-size: 50%;
+		max-width: 100%;
+		max-height: 100%;
+		background-repeat: no-repeat;
+		display: table-cell;
+		vertical-align: middle;
+		background-image: url(images/plot01-dark.png);
+	}
+
+	#plot {
+		width: 90%;
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+	/*#endregion */
+
+
+	/*#region Poster */
+
+	#posterDiv {
+		position: absolute;
+		width: 35%;
+		left: 65%;
+		top: 10%;
+		/*background-color: yellow;*/
+		height: 75%;
+	}
+
+	/*#posterCase {		
+		position: absolute;
+		top: -2px;
+		right:0;
+		background-image: url(images/case2.png);
+		background-position: 50%;
+		background-repeat: no-repeat;
+		vertical-align: middle;
+		text-align: center;
+		width: calc(100% + 5px);
+		height: calc(100% + 13px);
+		background-size: contain;
+	}*/
+
+	#posterCase {
+		box-shadow: 0 1px 5px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 -15px 100px rgba(0,0,0,0.1);
+	}
+
+	#moviePoster {
+		position: absolute;
+		top: 0;
+		right: 0;
+		/*background-image: url(http://rack.1.mshcdn.com/media/ZgkyMDE0LzA1LzE2LzE3L0dPVEdfUGF5b2ZmLjUyMzZmLmpwZwpwCXRodW1iCTEyMDB4OTYwMD4/b75259dd/9c7/GOTG_Payoff_1-Sht_v4b_Lg.jpg);*/
+		background-position: 50%;
+		background-repeat: no-repeat;
+		vertical-align: middle;
+		text-align: center;
+		width: 100%;
+		height: 100%;
+		background-size: contain;
+		/*display:none;*/
+	}
+
+	#loadingPosterIndicator {
+		position: absolute;
+		top: 40%;
+		right: 40%;
+		background-image: url(images/ajax-loader15.gif);
+		background-position: 50%;
+		background-size: 40%;
+		background-repeat: no-repeat;
+		vertical-align: middle;
+		text-align: center;
+		width: 20%;
+		height: 20%;
+		background-size: contain;
+		display: none;
+	}
+
+	/*#endregion */
+
+	/*#region Add button */
+
+	#addButtonDiv {
+		position: absolute;
+		width: 35%;
+		right: 0;
+		top: 85%;
+		/*background-color: coral;*/
+		height: 15%;
+	}
+
+	#addButton, #removeButton {
+		position: absolute;
+		text-align: center;
+		vertical-align: middle;
+		width: 80%;
+		height: 50%;
+		top: 25%;
+		left: 10%;
+	}
+
+	#removeButton {
+		display: none;
+	}
+
+
+	/*#endregion */
+
+
+
+	/*#endregion */
+
+	/*#region Tech info */
+
+	#techInfo {
+		position: absolute;
+		left: 31%;
+		width: 69%;
+		bottom: 0;
+		/*background-color: blue;*/
+		height: 10%;
+		box-shadow: 0 1px 5px rgba(0,0,0,0.5), inset 0 1px rgba(255,255,255,0.3), inset 0 -15px 100px rgba(0,0,0,0.1);
+	}
+
+	/*#region Runtime */
+
+	#runtimeDiv {
+		position: absolute;
+		width: 18%;
+		display: table;
+		left: 0;
+		height: 100%;
+		/*background-color: aquamarine;*/
+	}
+
+	#runtimeIcon {
+		position: absolute;
+		background-image: url(images/runtime02-dark.png);
+		/*max-width: 100%;*/
+		/*max-height: 100%;*/
+		background-repeat: no-repeat;
+		/*display: table-cell;*/
+		vertical-align: middle;
+		text-align: right;
+		background-position: 50%;
+		background-size: 60%;
+		width: 50%;
+		height: 100%;
+	}
+
+	#runtime {
+		/*position: absolute;*/
+		font-family: 'Courier New';
+		font-weight: 700;
+		left: 40%;
+		width: 60%;
+		height: 100%;
+		text-align: left;
+		vertical-align: middle;
+		display: table-cell;
+	}
+
+	/*#endregion */
+
+	/*#region Size */
+
+	#sizeDiv {
+		position: absolute;
+		display: table;
+		width: 18%;
+		left: 18%;
+		height: 100%;
+		/*background-color: white;*/
+	}
+
+	#sizeIcon {
+		position: absolute;
+		background-image: url(images/size02-dark.png);
+		/*max-width: 100%;*/
+		/*max-height: 100%;*/
+		background-repeat: no-repeat;
+		/*display: table-cell;*/
+		vertical-align: middle;
+		text-align: right;
+		background-position: 50%;
+		background-size: 50%;
+		width: 50%;
+		height: 100%;
+	}
+
+	#size {
+		font-family: 'Courier New';
+		font-weight: 700;
+		/*position: absolute;*/
+		left: 50%;
+		width: 60%;
+		height: 100%;
+		text-align: left;
+		vertical-align: middle;
+		display: table-cell;
+	}
+
+	/*#endregion */
+
+	/*#region Subtitles */
+
+
+
+	#croSubDiv {
+		position: absolute;
+		width: 16%;
+		display: table;
+		left: 36%;
+		height: 100%;
+	}
+
+	#croSubIcon {
+		position: absolute;
+		background-image: url(images/sub-cro.png);
+		/*max-width: 100%;*/
+		/*max-height: 100%;*/
+		background-repeat: no-repeat;
+		/*display: table-cell;*/
+		vertical-align: middle;
+		text-align: right;
+		background-position: 50%;
+		background-size: 30%;
+		width: 100%;
+		height: 100%;
+	}
+
+	#engSubDiv {
+		position: absolute;
+		width: 16%;
+		left: 52%;
+		height: 100%;
+		/*background-color: darkgoldenrod;*/
+	}
+
+	#engSubIcon {
+		position: absolute;
+		background-image: url(images/sub-eng.png);
+		/*max-width: 100%;*/
+		/*max-height: 100%;*/
+		background-repeat: no-repeat;
+		/*display: table-cell;*/
+		vertical-align: middle;
+		text-align: right;
+		background-position: 50%;
+		background-size: 30%;
+		width: 100%;
+		height: 100%;
+	}
+
+	/*#endregion */
+
+
+
+	#imdbDiv {
+		position: absolute;
+		width: 16%;
+		left: 68%;
+		height: 100%;
+		/*background-color: darkcyan;*/
+	}
+
+	#imdbIcon {
+		position: absolute;
+		background-image: url(images/imdb02.png);
+		/*max-width: 100%;*/
+		/*max-height: 100%;*/
+		background-repeat: no-repeat;
+		/*display: table-cell;*/
+		vertical-align: middle;
+		text-align: right;
+		background-position: 50%;
+		background-size: 50%;
+		width: 100%;
+		height: 100%;
+	}
+
+		#imdbIcon:hover {
+			background-size: 55%;
+			cursor: pointer;
+		}
+
+		#imdbIcon:active {
+			background-size: 45%;
+			cursor: pointer;
+		}
+
+	#trailerDiv {
+		position: absolute;
+		width: 16%;
+		left: 84%;
+		height: 100%;
+		/*background-color: darkorange;*/
+	}
+
+	#trailerIcon {
+		position: absolute;
+		background-image: url(images/trailer01.png);
+		/*max-width: 100%;*/
+		/*max-height: 100%;*/
+		background-repeat: no-repeat;
+		/*display: table-cell;*/
+		vertical-align: middle;
+		text-align: right;
+		background-position: 50%;
+		background-size: 50%;
+		width: 100%;
+		height: 100%;
+	}
+
+		#trailerIcon:hover {
+			background-size: 55%;
+			cursor: pointer;
+		}
+
+		#trailerIcon:active {
+			background-size: 45%;
+			cursor: pointer;
+		}
+
+	/*#endregion */
+
+	/*#region Fitler */
+
+	/*#region left content */
+
+	#leftFilterContent {
+		position: absolute;
+		width: 50%;
+		height: 80%;
+		/*background-color: green;*/
+	}
+
+	/*GENRE*/
+	#genresSelectContent {
+		width: 100%;
+		height: 25%;
+		/*background-color: aqua;*/
+	}
+
+	input[type=checkbox] {
+		/*visibility: hidden;*/
+	}
+
+	#selectGenreDiv {
+		position: absolute;
+		left: 6.5%;
+		width: 87%;
+		height: 15%;
+		top: 5%;
+	}
+		/*MAIN BUTTOn*/
+		#selectGenreDiv .btn-group, #selectGenreDiv .multiselect {
+			height: 100% !important;
+		}
+		/*DROP DOWN MENU*/
+		#selectGenreDiv .dropdown-menu {
+			width: 100% !important;
+		}
+		/*EACH LIST ITEM*/
+		#selectGenreDiv li {
+			/*display: none;*/
+		}
+			/*EACH LIST ITEM - SELECTED*/
+			#selectGenreDiv li.active {
+				background-color: black;
+				/*display: none;*/
+			}
+
+		#selectGenreDiv label.checkbox {
+			/*display: none;*/
+		}
+
+		/*CHECKBOX*/
+		#selectGenreDiv input[type=checkbox] {
+			background-color: red;
+			/*display: none;*/
+		}
+
+
+	/*SORTING*/
+
+	#sortDiv {
+		width: 100%;
+		height: 25%;
+		/*background-color: yellowgreen;*/
+	}
+
+	#sortSelectContent {
+		position: absolute;
+		left: 6.5%;
+		width: 87%;
+		height: 15%;
+		top: 30%;
+	}
+
+		#sortSelectContent .btn-group {
+			height: 100% !important;
+		}
+
+		#sortSelectContent .multiselect {
+			height: 100% !important;
+			/*display: none;*/
+		}
+
+		#sortSelectContent .dropdown-menu {
+			width: 100% !important;
+			/*background-color: #2c323c;
+			color: #7a828b;*/
+			/*display: none;*/
+		}
+
+		#sortSelectContent .hover {
+			/*background-color: #2c323c !important;
+				color: #7a828b !important;*/
+		}
+
+	/*AFTER DATE*/
+	#afterDatePickerContent {
+		width: 100%;
+		height: 25%;
+		/*background-color: yellowgreen;*/
+	}
+
+	#afterDateLabel {
+		width: 100%;
+		height: 30%;
+		text-align: center;
+		/*vertical-align: bottom;*/
+		/*display: table-cell;*/
+		/*background-color: white;*/
+	}
+
+	#inputafterDatePicker {
+		display: none;
+	}
+
+	#afterDatePickerContent .jqx-input-content {
+		text-align: center !important;
+	}
+
+	#afterDatePicker {
+		position: relative;
+		width: 80%;
+		left: 6.5%;
+		height: 50%;
+		/*background-color: black;*/
+	}
+
+	.off.toggle .noUi-handle {
+		border-color: red;
+		border-width: 2px;
+	}
+
+	.on.toggle .noUi-handle {
+		border-color: green;
+		border-width: 2px;
+	}
+
+	/*CRO SUBTITLES*/
+	#hasCroSubFilterDiv {
+		position: absolute;
+		width: 40%;
+		height: 25%;
+		left: 6.5%;
+		/*background-color: blanchedalmond;*/
+		display: table;
+	}
+
+		#hasCroSubFilterDiv .icheckbox_polaris {
+			position: absolute;
+			top: calc(50% - 14px);
+			left: calc(35% - 30px);
+		}
+
+	#hasCroSubFilterLabel {
+		width: 50%;
+		height: 100%;
+		display: table-cell;
+		vertical-align: middle;
+		text-align: left;
+		cursor: pointer;
+	}
+
+	/*ENG SUBTITLES*/
+	#hasEngSubFilterDiv {
+		position: absolute;
+		width: 40%;
+		left: 45.5%;
+		height: 25%;
+		/*background-color: cornflowerblue;*/
+		display: table;
+	}
+
+		#hasEngSubFilterDiv .icheckbox_polaris {
+			position: absolute;
+			top: calc(50% - 14px);
+			left: calc(35% - 30px);
+		}
+
+	#hasEngSubFilterLabel {
+		width: 50%;
+		height: 100%;
+		display: table-cell;
+		vertical-align: middle;
+		text-align: left;
+		cursor: pointer;
+	}
+
+	/*#endregion */
+
+	/*#region right content */
+
+	.sliderValueText {
+		position: relative;
+		/*top: 9px;*/
+		font-size: 11px;
+		font-family: Verdana;
+		font-weight: 800;
+		/*color: white;*/
+		display: table-cell;
+		vertical-align: middle;
+		width: 7%;
+		height: 100%;
+	}
+
+	.minText {
+		text-align: right;
+	}
+
+	.maxText {
+		text-align: left;
+		left: calc(84% - 40px);
+	}
+
+	.sliderIconDiv {
+		position: absolute;
+		right: 2%;
+		width: 35px;
+		height: 34px;
+		border: 1px solid #999;
+		top: calc(50% - 18px);
+	}
+
+	#rightFilterContent {
+		position: absolute;
+		width: 50%;
+		left: 50%;
+		height: 80%;
+		/*background-color: blue;*/
+	}
+
+	.rightFilterContent {
+		position: absolute;
+		display: table;
+		width: 100%;
+		height: 25%;
+	}
+
+	.filterSlider {
+		position: absolute;
+		left: calc(7% + 25px);
+		vertical-align: middle;
+		width: calc(79% - 55px);
+		height: 20px;
+		top: calc(50% - 10px);
+	}
+
+	/*RATING*/
+	#ratingSliderContent {
+		top: 0;
+		/*background-color: red;*/
+	}
+
+	#ratingSlider {
+	}
+
+	#imdbMinLabel {
+	}
+
+	#imdbMaxLabel {
+	}
+
+	#filterRatingIcon {
+		background: #f2f2f2 url(../images/searchImdbRating.png) no-repeat center center;
+	}
+
+	/*SIZE*/
+	#sizeSliderContent {
+		top: 25%;
+		/*background-color: salmon;*/
+	}
+
+	#sizeSlider {
+	}
+
+	#sizeMinLabel {
+	}
+
+	#sizeMaxLabel {
+	}
+
+	#searchSizeIcon {
+		background: #f2f2f2 url(images/size02-dark.png) no-repeat center center;
+		background-size: 100%;
+	}
+
+	/*RUNTIME*/
+	#runtimeSliderContent {
+		top: 50%;
+		/*background-color: cornflowerblue;*/
+	}
+
+	#runtimeSlider {
+	}
+
+	#runtimeMinLabel {
+	}
+
+	#runtimeMaxLabel {
+	}
+
+	#searchRuntimeIcon {
+		background: #f2f2f2 url(images/runtime02-dark.png) no-repeat center center;
+		background-size: 100%;
+	}
+
+	/*YEAR*/
+	#yearSliderContent {
+		top: 75%;
+		/*background-color: violet;*/
+	}
+
+	#yearSlider {
+	}
+
+	#yearMinLabel {
+	}
+
+	#yearMaxLabel {
+	}
+
+	#searchYearIcon {
+		background: #f2f2f2 url(../images/searchYear.png) no-repeat center center;
+	}
+
+	/*#endregion */
+
+	/*#region filter button content */
+
+	#filterButtonContent {
+		position: absolute;
+		top: 80%;
+		width: 100%;
+		height: 20%;
+		/*background-color: brown;*/
+		display: table;
+		vertical-align: middle;
+		text-align: center;
+	}
+
+	#resetFilterButtonContent {
+		position: absolute;
+		height: 100%;
+		width: 50%;
+		/*background-color: yellow;*/
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+	}
+
+	#resetFiltersButton {
+		position: absolute;
+		vertical-align: middle;
+		width: 30%;
+		height: 50%;
+		left: 32.5%;
+		top: 25%;
+	}
+
+	#applyFiltersButtonContent {
+		position: absolute;
+		height: 100%;
+		width: 50%;
+		left: 50%;
+		/*background-color: black;*/
+		display: table-cell;
+		vertical-align: middle;
+		text-align: center;
+	}
+
+	#applyFiltersButton {
+		position: absolute;
+		vertical-align: middle;
+		width: 50%;
+		height: 50%;
+		left: 25%;
+		top: 25%;
+	}
+
+	/*#endregion */
+
+	/*#endregion */
+
+}
+
+@media only screen and (min-device-width: 220px) and (max-device-width: 1024px) {
+	#allInfo {
+		position: absolute;
+		/*background-color: red;*/
+		width: auto;
+		left: 20px;
+		right: 20px;
+		padding-left: 60px;
+		height: auto;
+		top: 70px;
+		bottom: 20px;
+		/*min-width: 800px;*/
+		/*min-height: 600px;*/
+	}
+
+	#addButtonDiv {
+		display: none;
+	}
+
+	#posterDiv {
+		height: 87%;
+		top: 11%;
+	}
+
+	.jqx-listitem-state-normal {
+		font-size: 16pt !important;
+	}
+
+	#onlySelectedFilterDiv {
+		display: none;
+	}
+
+	#includeSelectedFilterDiv {
+		display: none;
+	}
+
+	#sizeFilterDiv, #runtimeFilterDiv, #ratingFilterDiv, #yearFilterDiv {
+		height: 18%;
+	}
+}
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen and (min-width : 220px) and (max-width : 767px) {
+	.filterSlider {
+		width: calc(76% - 80px);
+		left: calc(10% + 25px);
+	}
+
+	.minText {
+		width: 10%;
+	}
+
+	.maxText {
+		width: 10%;
+		/*text-align:center;*/
+		left: calc(78% - 40px);
+	}
+
+	.jqx-listitem-state-normal {
+		font-size: 10pt !important;
+	}
+
+	#movieName {
+		font-size: 13pt;
+	}
+
+	#movieYear {
+		font-size: 12pt;
+	}
+
+	#genres {
+		font-size: 11pt;
+	}
+
+	#ratingText {
+		font-size: 12pt;
+		left: 0;
+	}
+
+	#plot {
+		font-size: 10pt;
+	}
+
+	#addButton {
+		font-size: 10pt;
+	}
+
+	#techInfo {
+		height: 50px;
+	}
+
+	#runtimeIcon {
+		width: 40%;
+	}
+
+	#runtime {
+		font-size: 10pt;
+	}
+
+
+	#sizeIcon {
+		width: 40%;
+	}
+
+	#size {
+		font-size: 9pt;
+	}
+
+	#croSubIcon {
+		-moz-background-size: 35%;
+		-o-background-size: 35%;
+		-webkit-background-size: 35%;
+		background-size: 35%;
+	}
+
+	#engSubIcon {
+		-moz-background-size: 35%;
+		-o-background-size: 35%;
+		-webkit-background-size: 35%;
+		background-size: 35%;
+	}
+
+	#imdbIcon {
+		-moz-background-size: 50%;
+		-o-background-size: 50%;
+		-webkit-background-size: 50%;
+		background-size: 50%;
+	}
+
+		#imdbIcon:hover {
+			-moz-background-size: 55%;
+			-o-background-size: 55%;
+			-webkit-background-size: 55%;
+			background-size: 55%;
+			cursor: pointer;
+		}
+
+		#imdbIcon:active {
+			-moz-background-size: 45%;
+			-o-background-size: 45%;
+			-webkit-background-size: 45%;
+			background-size: 45%;
+			cursor: pointer;
+		}
+
+	#trailerIcon {
+		-moz-background-size: 50%;
+		-o-background-size: 50%;
+		-webkit-background-size: 50%;
+		background-size: 50%;
+	}
+
+		#trailerIcon:hover {
+			-moz-background-size: 55%;
+			-o-background-size: 55%;
+			-webkit-background-size: 55%;
+			background-size: 55%;
+			cursor: pointer;
+		}
+
+		#trailerIcon:active {
+			-moz-background-size: 45%;
+			-o-background-size: 45%;
+			-webkit-background-size: 45%;
+			background-size: 45%;
+			cursor: pointer;
+		}
+}
+
+@media only screen and (min-width : 220px) and (max-width : 380px) {
+}
+
+@media only screen and (min-width : 381px) and (max-width : 767px) {
+}
+
+@media only screen and (min-width : 220px) and (max-width : 767px) and (orientation : landscape) {
+}
+
+@media only screen and (min-width : 220px) and (max-width : 767px) and (orientation : portrait) {
+	/*body {
+		background-color: red;
+	}
+	.jqx-listitem-state-normal {
+		font-size: 12pt !important;
+	}
+
+	#listboxDiv {
+		height: 50%;
+		top: 0;
+		left: 0;
+		width: 100%;
+	}
+
+	#mainInfo {
+		left: 0;
+		top: 52%;
+		width: 100%;
+		height: 50%;
+	}
+
+	#techInfo {
+		left: 0;
+		width: 100%;
+		bottom: 0;
+		height: 10%;
+	}*/
+}
+
+/* iPads (portrait and landscape) ----------- */
+@media only screen and (min-width : 768px) and (max-width : 1024px) {
+	body {
+		min-height: 300px;
+	}
+
+	.filterSlider {
+		width: calc(79% - 60px);
+	}
+
+	#mainInfo {
+		height: calc(100% - 50px);
+	}
+
+	.jqx-listitem-state-normal {
+		font-size: 11pt !important;
+	}
+
+	#movieName {
+		font-size: 14pt;
+	}
+
+	#movieYear {
+		font-size: 12pt;
+	}
+
+	#genres {
+		font-size: 12pt;
+	}
+
+	#ratingText {
+		font-size: 9pt;
+		left: -3px;
+	}
+
+	#ratingIcon {
+		background-size: 42%;
+	}
+
+	#runtimeIcon {
+		width: 40%;
+	}
+
+	#runtime {
+		font-size: 9pt;
+	}
+
+	#posterDiv {
+		top: 12%;
+	}
+
+	#addButtonDiv {
+		top: 87%;
+		height: 13%;
+	}
+
+	#addButton, #removeButton {
+		font-size: 9pt;
+		/*height: 80%;*/
+		padding: 0;
+		width: 80%;
+		top: 20%;
+		left: 10%;
+	}
+
+
+	#sizeIcon {
+		width: 40%;
+	}
+
+	#techInfo {
+		height: 9%;
+	}
+
+	#size {
+		font-size: 9pt;
+	}
+
+	#croSubIcon {
+		background-size: 25%;
+	}
+
+	#engSubIcon {
+		background-size: 25%;
+	}
+
+	#imdbIcon {
+		background-size: 45%;
+	}
+
+		#imdbIcon:hover {
+			background-size: 55%;
+			cursor: pointer;
+		}
+
+		#imdbIcon:active {
+			background-size: 45%;
+			cursor: pointer;
+		}
+
+	#trailerIcon {
+		background-size: 45%;
+	}
+
+		#trailerIcon:hover {
+			background-size: 55%;
+			cursor: pointer;
+		}
+
+		#trailerIcon:active {
+			background-size: 45%;
+			cursor: pointer;
+		}
+}
+
+/* iPads (landscape) ----------- */
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : landscape) {
+}
+
+/* iPads (portrait) ----------- */
+@media only screen and (min-width : 768px) and (max-width : 1024px) and (orientation : portrait) {
+	#listboxDiv {
+		height: 40%;
+		top: 0;
+		left: 0;
+		width: 100%;
+	}
+
+	#mainInfo {
+		left: 0;
+		top: 42%;
+		width: 100%;
+		height: 50%;
+	}
+
+	#techInfo {
+		left: 0;
+		width: 100%;
+		bottom: 0;
+		height: 7%;
+	}
+}
+
+/* Desktops and laptops ----------- */
+@media only screen and (min-width : 1024px) {
+}
+
+@media only screen and (min-width : 1024px) and (max-width : 1200px) {
+	body {
+		min-height: 420px;
+	}
+
+	.filterSlider {
+		width: calc(79% - 60px);
+	}
+
+	#mainInfo {
+		height: calc(100% - 50px);
+	}
+
+	.jqx-listitem-state-normal {
+		font-size: 11pt !important;
+	}
+
+	#movieName {
+		font-size: 14pt;
+	}
+
+	#movieYear {
+		font-size: 12pt;
+	}
+
+	#genres {
+		font-size: 12pt;
+	}
+
+	#ratingText {
+		font-size: 11pt;
+		left: -1px;
+	}
+
+	#ratingIcon {
+		background-size: 42%;
+	}
+
+	#runtimeIcon {
+		width: 40%;
+	}
+
+	#runtime {
+		font-size: 10pt;
+	}
+
+	#posterDiv {
+		top: 12%;
+	}
+
+	#addButtonDiv {
+		top: 87%;
+		height: 13%;
+	}
+
+	#addButton, #removeButton {
+		font-size: 9pt;
+		/*height: 80%;*/
+		padding: 0;
+		width: 80%;
+		top: 10%;
+		left: 10%;
+	}
+
+
+	#sizeIcon {
+		width: 40%;
+	}
+
+	#techInfo {
+		height: 9%;
+	}
+
+	#size {
+		font-size: 10pt;
+	}
+
+	#croSubIcon {
+		background-size: 25%;
+	}
+
+	#engSubIcon {
+		background-size: 25%;
+	}
+
+	#imdbIcon {
+		background-size: 45%;
+	}
+
+		#imdbIcon:hover {
+			background-size: 55%;
+			cursor: pointer;
+		}
+
+		#imdbIcon:active {
+			background-size: 45%;
+			cursor: pointer;
+		}
+
+	#trailerIcon {
+		background-size: 45%;
+	}
+
+		#trailerIcon:hover {
+			background-size: 55%;
+			cursor: pointer;
+		}
+
+		#trailerIcon:active {
+			background-size: 45%;
+			cursor: pointer;
+		}
+}
+
+@media only screen and (min-width : 1201px) and (max-width : 1449px) {
+	body {
+		min-height: 500px;
+	}
+
+	.filterSlider {
+		width: calc(79% - 60px);
+	}
+
+	#mainInfo {
+		height: calc(100% - 50px);
+	}
+
+	.jqx-listitem-state-normal {
+		font-size: 11pt !important;
+	}
+
+	#movieName {
+		font-size: 16pt;
+	}
+
+	#movieYear {
+		font-size: 14pt;
+	}
+
+	#genres {
+		font-size: 12pt;
+	}
+
+	#ratingText {
+		font-size: 11pt;
+		left: 0;
+	}
+
+	#ratingIcon {
+		background-size: 45%;
+	}
+
+	#runtimeIcon {
+		width: 40%;
+	}
+
+	#runtime {
+		font-size: 11pt;
+	}
+
+	#addButton, #removeButton {
+		font-size: 9pt;
+		/*font-size: 11pt;*/
+		/*height: 80%;*/
+		width: 80%;
+		top: 10%;
+		left: 10%;
+	}
+
+
+	#sizeIcon {
+		width: 40%;
+	}
+
+	#techInfo {
+		/*height: 50px;*/
+		height: 9%;
+	}
+
+	#size {
+		font-size: 11pt;
+	}
+
+	#croSubIcon {
+		background-size: 25%;
+	}
+
+	#engSubIcon {
+		background-size: 25%;
+	}
+
+	#imdbIcon {
+		background-size: 40%;
+	}
+
+		#imdbIcon:hover {
+			background-size: 55%;
+			cursor: pointer;
+		}
+
+		#imdbIcon:active {
+			background-size: 45%;
+			cursor: pointer;
+		}
+
+	#trailerIcon {
+		background-size: 40%;
+	}
+
+		#trailerIcon:hover {
+			background-size: 55%;
+			cursor: pointer;
+		}
+
+		#trailerIcon:active {
+			background-size: 45%;
+			cursor: pointer;
+		}
+}
+
+/* Large screens ----------- */
+@media only screen and (min-width : 1450px) {
+	body {
+		min-height: 690px;
+	}
+
+	.jqx-listitem-state-normal {
+		/*font-size: 13pt !important;*/
+	}
+}

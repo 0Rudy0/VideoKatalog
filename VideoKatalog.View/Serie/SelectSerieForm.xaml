@@ -1,0 +1,26 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:localConverters ="clr-namespace:Video_katalog.Converters"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="Video_katalog.SelectSerieForm"
+        WindowStartupLocation="CenterOwner" Title="Sve serije" Height="550" Width="368">
+    <Window.Resources>
+        <localConverters:NameToImagePathConverter x:Key="nameToImagePathConverter"/>
+        <DataTemplate x:Key="serieTemplate">
+			<Grid Height="70" Width="310" Background="#5DEDEDED" Margin="0,5">
+                <Image x:Name="seriePoster" HorizontalAlignment="Left" Margin="8,8,0,0" Width="37.57" VerticalAlignment="Top" Height="54.032" Source="{Binding Name, ConverterParameter=serie, Converter={StaticResource nameToImagePathConverter}}"/>
+				<TextBlock x:Name="serieNameTB" Margin="42,0,0,0" TextWrapping="Wrap" Text="{Binding Name}" d:LayoutOverrides="Height" HorizontalAlignment="Center" VerticalAlignment="Center" FontSize="16" FontWeight="Bold" FontFamily="Trajan Pro" TextAlignment="Center" Width="248"/>
+			</Grid>
+		</DataTemplate>
+	</Window.Resources>
+    <Grid>
+        <ListBox x:Name="allSerieListBox" Margin="0,38,0,112" ScrollViewer.CanContentScroll="False" HorizontalAlignment="Center" Width="337" ItemTemplate="{DynamicResource serieTemplate}" SelectionChanged="allSerieListBox_SelectionChanged" />
+    	<TextBlock HorizontalAlignment="Center" Margin="0,8,0,0" TextWrapping="Wrap" Text="Odaberi seriju" VerticalAlignment="Top" FontWeight="Bold" FontSize="16"/>
+    	<Button x:Name="acceptButton" Margin="0,0,-160,15" VerticalAlignment="Bottom" HorizontalAlignment="Center" Width="89" Click="Button_Click">
+            <Image HorizontalAlignment="Center" VerticalAlignment="Center" Source="/VideoKatalog.View;component/Resources/OK64p.png" Height="54"/>
+    	</Button>
+    	<ListBox x:Name="seasonListBox" Height="72" Margin="8,0,0,8" Style="{DynamicResource SimpleListBox}" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="152"/>
+    	<TextBlock x:Name="selectSeasonLabel" HorizontalAlignment="Left" Margin="26.943,0,0,84" TextWrapping="Wrap" Text="Odaberi sezonu" VerticalAlignment="Bottom" FontWeight="Bold" FontSize="16"/>
+        
+    </Grid>
+</Window>

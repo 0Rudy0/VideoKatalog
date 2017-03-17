@@ -1,0 +1,313 @@
+﻿@model IEnumerable<VideoKatalog.WebApp.Movie>
+@using VideoKatalog.WebApp
+@using System.Linq
+
+@{
+    ViewBag.Title = "Lista filmova";
+    VideoKatalog.WebApp.VideoDatabaseEntities context = new VideoKatalog.WebApp.VideoDatabaseEntities();
+    int counter = 0;
+    //UserProfile currentUser = Session["CurrentUser"] as UserProfile;
+}
+
+<link rel="stylesheet" type="text/css" href="../Content/movieList.min.css" />
+<link rel="stylesheet" type="text/css" href="../Content/fancySelect.min.css" />
+<link rel="stylesheet" type="text/css" href="../Content/index.css" />
+<link rel="stylesheet" type="text/css" href="../Content/jquery-ui.min.css" />
+
+
+<div id="reloadDiv">
+    <img id="reloadIndicator" src="../Content/images/loader7.gif" style="display:none" />
+</div>
+<div id="miniReloadDiv">
+    <span id="miniReloadText">Provjera za novim podacima</span>
+    <img id="miniReloadIndicator" src="../Content/images/loader7.gif" />
+</div>
+
+
+@{/******SEARCH ***********/}
+<div id="searchDiv">
+    <img id="showSearch" onclick="slideDownSearch()" class="showSearch" src="../images/searchNDown.png" title="Otvori panel za pretragu"
+         onmousedown="showSearchIconClick()" onmouseup="showSearchIconHighlight()" onmouseover="showSearchIconHighlight()" onmouseout="showSearchIconNormal()" />
+    <img id="hideSearch" onclick="slideUpSearch()" class="showSearch" src="../images/searchNUp.png" title="Zatvori panel za pretragu"
+         onmousedown="hideSearchIconClick()" onmouseup="hideSearchIconHighlight()" onmouseover="hideSearchIconHighlight()" onmouseout="hideSearchIconNormal()" />
+    <img id="showSearchAdvanced" onclick="slideDownSearchAdvanced()" class="showSearch" src="../images/searchPDown.png" title="Otvori panel za naprednu pretragu"
+         onmousedown="showSearchAdvancedIconClick()" onmouseup="showSearchAdvancedIconHighlight()" onmouseover="showSearchAdvancedIconHighlight()" onmouseout="showSearchAdvancedIconNormal()" />
+    <img id="hideSearchAdvanced" onclick="slideUpSearchAdvanced()" class="showSearch" src="../images/searchPUp.png" title="Zatvori panel za naprednu pretragu"
+         onmousedown="hideSearchAdvancedIconClick()" onmouseup="hideSearchAdvancedIconHighlight()" onmouseover="hideSearchAdvancedIconHighlight()" onmouseout="hideSearchAdvancedIconNormal()" />
+
+    <!--img id="reloadIcon" title="Osvjezi podatke" src="../Content/images/reload.png" onclick="fillListBox()"
+         onmouseover="reloadIconHighlight()" onmouseout="reloadIconNormal()" onmousedown="reloadIconClick()" onmouseup="reloadIconHighlight()" /-->
+    <div id="reloadIcon" title="Osvjezi podatke" onclick="fillListBox()"></div>
+    <div id="resetFormIcon" onclick="resetSearchForm()"></div>
+
+    <div id="searchMainDiv">
+        <div id="searchMainInputDiv">
+            <input type="text" id="searchMainInput" title="Unesi ime filma za pretragu" />
+            <div id="searchMainIconDiv">
+            </div>
+        </div>
+        <div id="sortDiv" title="Odaberi atribut za sortiranje" onchange="changedSortAttribute()">
+            <select id="sortSelectProperty">
+                <option value="name">Naziv</option>
+                <option value="rating">Ocjena</option>
+                <option value="year">Godina</option>
+                <option value="runtime">Trajanje</option>
+                <option value="addDate">Datum dodavanja</option>
+            </select>
+        </div>
+
+    </div>
+    <div id="searchAdvanced">
+        <div id="searchActorDiv">
+            <input id="searchActor" title="Unesi naziv glumca" />
+            <div id="searchActorIconDiv">
+            </div>
+        </div>
+
+
+        <div id="searchDirectorDiv">
+            <input id="searchDirector" title="Unesi naziv rezisera" />
+            <div id="searchDirectorIconDiv">
+            </div>
+        </div>
+
+        <div id="searchGenre">
+            <div id="selectGenreDiv">
+                <select name="genreInput" id="selectGenre" multiple="multiple">
+                    <option value="Akcija" id="Akcija">Akcija</option>
+                    <option value="Animacija" id="Animacija">Animacija</option>
+                    <option value="Avantura" id="Avantura">Avantura</option>
+                    <option value="Crtani" id="Crtani">Crtani</option>
+                    <option value="Drama" id="Drama">Drama</option>
+                    <option value="Fantastika" id="Fantastika">Fantastika</option>
+                    <option value="Horor" id="Horor">Horor</option>
+                    <option value="Komedija" id="Komedija">Komedija</option>
+                    <option value="Krimi" id="Krimi">Krimi</option>
+                    <option value="Misterija" id="Misterija">Misterija</option>
+                    <option value="Muzicki" id="Muzicki">Muzicki</option>
+                    <option value="Obiteljski" id="Obiteljski">Obiteljski</option>
+                    <option value="Povjesni" id="Povjesni">Povjesni</option>
+                    <option value="Ratni" id="Ratni">Ratni</option>
+                    <option value="Romantika" id="Romantika">Romantika</option>
+                    <option value="Sportski" id="Sportski">Sportski</option>
+                    <option value="Vestern" id="Vestern">Vestern</option>
+                    <option value="Triler" id="Triler">Triler</option>
+                    <option value="Znanstvena fantastika" id="Znanstvena fantastika">Znanstvena fantastika</option>
+                </select>
+            </div>
+            <div id="searchGenreIcon">
+            </div>
+        </div>
+        <div id="croatianSubSearchDiv">
+            <div id="croatianSubSlider" onclick="if ($('#croatianSubSlider').val() == 0) $('#croatianSubSlider').val(1); else $('#croatianSubSlider').val(0)"></div>
+            <label id="croatianSubLabel" class="subLabel">Hrvatski prijevod</label>
+        </div>
+        <div id="englishSubSearchDiv">
+            <div id="englishSubSlider" onclick="if ($('#englishSubSlider').val() == 0) $('#englishSubSlider').val(1); else $('#englishSubSlider').val(0)"></div>
+            <label id="englishSubLabel" class="subLabel">Engleski prijevod</label>
+        </div>
+
+
+        <div id="searchImdbRating" class="advSearchSliderDiv">
+            <div id="spansliderimdb" class="sliderDiv" title="Filtriranje po ocjeni">
+                <div id="sliderImdb"></div>
+            </div>
+            <div id="imdbMin" class="sliderValueText minText" title="Minimalna ocjena">1.0</div>
+            <div id="imdbMax" class="sliderValueText maxText" title="Maksmalna ocjena">10.0</div>
+            <div id="searchImdbRatingIcon" class="sliderIconDiv">
+            </div>
+        </div>
+
+
+        <div id="searchSize" class="advSearchSliderDiv">
+            <div id="spanSliderSize" class="sliderDiv" title="Filtriranje po veličini (GB)">
+                <div id="sliderSize"></div>
+            </div>
+            <label id="sizeMin" class="sliderValueText minText" title="Minimalna velicina (GB)">0.0</label>
+            <label id="sizeMax" class="sliderValueText maxText" title="Maksimalna velicina (GB)">50.0</label>
+            <div id="searchSizeIcon" class="sliderIconDiv">
+            </div>
+        </div>
+
+
+        <div id="searchRuntime" class="advSearchSliderDiv">
+            <div id="spanSliderRuntime" class="sliderDiv" title="Filtriranje po trajanju (minute)">
+                <div id="sliderRuntime"></div>
+            </div>
+            <label id="runtimeMin" class="sliderValueText minText" title="Minimalno trajanje u minutama">1</label>
+            <label id="runtimeMax" class="sliderValueText maxText" title="Maksimalno trajanje u minutama">300</label>
+            <div id="searchRuntimeIcon" class="sliderIconDiv">
+            </div>
+        </div>
+
+
+        <div id="searchYear" class="advSearchSliderDiv">
+            <div id="spanSliderYear" class="sliderDiv" title="Filtriranje po ocjeni">
+                <div id="sliderYear"></div>
+            </div>
+            <label id="yearMin" class="sliderValueText minText" title="Minimalna godina">1937</label>
+            <label id="yearMax" class="sliderValueText maxText" title="Maksimalna godina">2014</label>
+            <div id="searchYearIcon" class="sliderIconDiv">
+            </div>
+        </div>
+    </div>
+</div>
+
+<div id="mainContent">
+    @{/******* MOVIE LIST**********/}
+    <div id="placeForList">
+        <div id="CountDiv">
+            Broj filmova:
+            <label id="labelCount">0</label>
+        </div>
+        <select size="28" id="movieList" onchange='movieListChangedIndex(value)'></select>
+    </div>
+    <div id="PosterDiv">
+        <img id="posterCase" src="~/images/case.png" width="320" height="422">
+        <img id="moviePoster" src="~/images/1pixel.png" width="300" height="422" />
+    </div>
+
+    <div id="infoDiv">
+        <div id="nameDiv">
+            <label id="name"></label>
+        </div>
+        <div id="genreDiv">
+            <label id="genres"></label>
+        </div>
+        <div id="ratingDiv">
+            <div id="ratingMaskDiv">
+            </div>
+            <div id="ratingIconsDiv">
+            </div>
+            <div id="ratingTextDiv">
+                <label id="rating"></label> /10
+            </div>
+        </div>
+        <div id="castDiv">
+            <img width="25" height="25" src="~/images/cast 1.png" /> <label id="cast"></label>
+        </div>
+        <div id="directorDiv">
+            <img width="30" height="30" src="~/images/director40p.png" /> <label id="director"></label>
+        </div>
+        <div id="plotDiv">
+            <img width="25" height="25" src="~/images/plot 5.png" /> <label id="plot"></label>
+        </div>
+        <div id="runtimeDiv">
+            <div id="runtimeIconDiv">
+                <img src="~/images/runtimeIcon.png" id="runtimeIcon" />
+            </div>
+            <br />
+            <label id="runtime">
+            </label>
+        </div>
+        <div id="rezolutionDiv">
+            <div id="rezolutionIconDiv">
+                <img src="~/images/resolutionIcon.png" id="resolutionIcon" />
+            </div>
+            <br />
+            <label id="resolution">
+            </label>
+        </div>
+        <div id="audioDiv">
+            <div id="audioIcon">
+            </div>
+            <br />
+            <label id="audioLabel">
+            </label>
+        </div>
+        <div id="sizeDiv">
+            <div id="sizeIconDiv">
+                <img src="~/images/sizeIcon.png" id="sizeIcon" />
+            </div>
+            <br />
+            <label id="size">
+            </label>
+        </div>
+        <div id="subtitleCroDiv">
+            <div id="subtitleCroIconDiv">
+                <img src="~/images/1pixel.png" id="subtitleCroIcon" />
+            </div>
+            <br />
+            <label id="subtitleCroLabel">
+            </label>
+        </div>
+        <div id="subtitleEngDiv">
+            <div id="subtitleEngIconDiv">
+                <img src="~/images/1pixel.png" id="subtitleEngIcon" />
+            </div>
+        </div>
+        <div id="imdbDiv">
+            <div id="imdbIconDiv">
+                <img src="~/images/imdbIcon.png" id="imdbIcon" onclick="openIMDb()"
+                     onmouseover="imdbIconHighlight()" onmouseout="imdbIconNormal()" onmousedown="imdbIconClick()" onmouseup="imdbIconHighlight()" />
+            </div>
+        </div>
+        <div id="trailerDiv">
+            <div id="trailerIconDiv">
+                <img src="~/images/trailerIcon.png" id="trailerIcon"
+                     onmouseover="trailerIconHighlight()" onmouseout="trailerIconNormal()" onmousedown="trailerIconClick()" onmouseup="trailerIconHighlight()" />
+            </div>
+        </div>
+        <div id="trailerWindow">
+            <div id="trailerWindowHeader">
+                <span>
+                    Trailer za film
+                </span>
+            </div>
+            <div style="overflow: hidden; margin: 20px;" id="trailerWindowContent">
+                <iframe width="750" height="421" id="movieTrailerFrame"
+                        src="#"></iframe>
+            </div>
+        </div>
+    </div>
+
+
+    @{/****ADD BUTTON AND CURRENT SESSION************/}
+    <div id="addButtonDiv">
+        <img id="addIconGl" src="~/images/addIconGl.png" width="48px" height="48px"
+             onmouseover="addButtonHighlight()" onmouseout="addButtonNormal()" onmousedown="addButtonClick()" onmouseup="addButtonHighlight()"
+             onclick="selectMovie()" />
+    </div>
+
+    <div id="currentSession">
+        <select size="20" id="sessionSelected" onchange="sessionSelectedChangedIndex(value)"></select>
+        <div id="removeButtonDiv">
+            <img id="removeIconSp" src="~/images/removeIcon.png" width="35" height="35"
+                 onmouseover="removeButtonHighlight()" onmouseout="removeButtonNormal()" onmousedown="removeButtonClick()" onmouseup="removeButtonHighlight()"
+                 onclick="unselectMovie()" />
+        </div>
+        <div id="saveSessionDiv">
+            <img id="saveSelectedMovies"
+                 onmouseover="saveButtonHighlight()" onmouseout="saveButtonNormal()" onmousedown="saveButtonClick()" onmouseup="saveButtonHighlight()"
+                 onclick="saveSelected()" src="~/images/saveIcon.png" width="25" height="25" />
+        </div>
+    </div>
+
+    <div id="currentSessionInfo">
+        <p style="margin-left:10px;margin-top:20px"> Ukupno odabrano: <label id="totalSelectedSizeLabel" style="font-weight:bold">0 GB</label></p>
+    </div>
+</div>
+
+@section scripts {
+    <script type="text/javascript">
+
+        $(document).ready(function () {
+            $('#trailerWindow').jqxWindow({
+                showCollapseButton: true, maxHeight: 600, maxWidth: 1000, minHeight: 500, minWidth: 800, height: 500, width: 800,
+                initContent: function () {
+                    $('#trailerWindow').jqxWindow('focus');
+                    $('#trailerWindow').jqxWindow('close');
+                }
+            });
+
+            $('#trailerIcon').click(function () {
+                $('#trailerWindow').jqxWindow('open');
+            });
+        });
+    </script>
+
+    <script src="../Scripts/changingIcons.min.js" type="text/javascript"></script>
+    <script src="../Scripts/movieList.min.js" type="text/javascript"></script>
+    <script src="../Scripts/fancySelect.min.js" type="text/javascript"></script>
+    <script src="../Scripts/jquery-ui.min.js" type="text/javascript"></script>
+}

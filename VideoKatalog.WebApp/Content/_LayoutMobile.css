@@ -1,0 +1,25 @@
+center {
+    display:none;
+}
+.ui-footer {
+    position:fixed !important;
+    bottom:0;
+    width:100%;
+    z-index:101;
+    opacity:1;
+}
+
+.ui-content {
+    margin-left:10px;
+    margin:10px 15px 50px 15px;
+}
+div[style*="z-index: 2147483647"] {
+    display:none;
+}
+
+
+@media screen and (max-width: 720px) {
+}
+
+@media screen and (max-width: 1920px) and (min-width: 721px) {
+}

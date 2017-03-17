@@ -1,0 +1,2210 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>FolderPickerLib.Fakes</name>
+    </assembly>
+    <members>
+        <member name="T:FolderPickerLib.Fakes.ShimDriveIconConverter">
+            <summary>Shim type of FolderPickerLib.DriveIconConverter</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimDriveIconConverter.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimDriveIconConverter.#ctor(FolderPickerLib.DriveIconConverter)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimDriveIconConverter.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimDriveIconConverter.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimDriveIconConverter.Bind(System.Windows.Data.IValueConverter)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimDriveIconConverter.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimDriveIconConverter.Constructor">
+            <summary>Sets the shim of DriveIconConverter.DriveIconConverter()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimDriveIconConverter.CreateImageString">
+            <summary>Sets the shim of DriveIconConverter.CreateImage(String uri)</summary>
+        </member>
+        <member name="T:FolderPickerLib.Fakes.ShimDriveIconConverter.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimDriveIconConverter.AllInstances.CreateImageString">
+            <summary>Sets the shim of DriveIconConverter.CreateImage(String uri)</summary>
+        </member>
+        <member name="T:FolderPickerLib.Fakes.ShimDriveTreeItem">
+            <summary>Shim type of FolderPickerLib.DriveTreeItem</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimDriveTreeItem.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimDriveTreeItem.#ctor(FolderPickerLib.DriveTreeItem)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimDriveTreeItem.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimDriveTreeItem.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimDriveTreeItem.Bind(System.ComponentModel.INotifyPropertyChanged)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimDriveTreeItem.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimDriveTreeItem.ConstructorStringDriveTypeTreeItem">
+            <summary>Sets the shim of DriveTreeItem.DriveTreeItem(String name, DriveType driveType, TreeItem parent)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimDriveTreeItem.DriveTypeGet">
+            <summary>Sets the shim of DriveTreeItem.get_DriveType()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimDriveTreeItem.DriveTypeSetDriveType">
+            <summary>Sets the shim of DriveTreeItem.set_DriveType(DriveType value)</summary>
+        </member>
+        <member name="T:FolderPickerLib.Fakes.ShimDriveTreeItem.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimDriveTreeItem.AllInstances.DriveTypeGet">
+            <summary>Sets the shim of DriveTreeItem.get_DriveType()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimDriveTreeItem.AllInstances.DriveTypeSetDriveType">
+            <summary>Sets the shim of DriveTreeItem.set_DriveType(DriveType value)</summary>
+        </member>
+        <member name="T:FolderPickerLib.Fakes.ShimFolderPickerControl">
+            <summary>Shim type of FolderPickerLib.FolderPickerControl</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimFolderPickerControl.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimFolderPickerControl.#ctor(FolderPickerLib.FolderPickerControl)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimFolderPickerControl.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimFolderPickerControl.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimFolderPickerControl.Bind(System.Windows.IInputElement)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimFolderPickerControl.Bind(System.Windows.Markup.IAddChild)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimFolderPickerControl.Bind(System.Windows.Media.Animation.IAnimatable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimFolderPickerControl.Bind(System.Windows.IFrameworkInputElement)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimFolderPickerControl.Bind(System.ComponentModel.INotifyPropertyChanged)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimFolderPickerControl.Bind(System.ComponentModel.ISupportInitialize)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimFolderPickerControl.Bind(System.Windows.Markup.IComponentConnector)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimFolderPickerControl.Bind(System.Windows.Markup.IQueryAmbient)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimFolderPickerControl.NotifyPropertyChangedOf1ExpressionOfFuncOfM0``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Action{System.Linq.Expressions.Expression{System.Func{``0}}})">
+            <summary>Sets the shim of FolderPickerControl.NotifyPropertyChanged(Expression`1&lt;Func`1&lt;!!0&gt;&gt; property)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.Constructor">
+            <summary>Sets the shim of FolderPickerControl.FolderPickerControl()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.Init">
+            <summary>Sets the shim of FolderPickerControl.Init()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.InitialPathGet">
+            <summary>Sets the shim of FolderPickerControl.get_InitialPath()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.InitialPathSetString">
+            <summary>Sets the shim of FolderPickerControl.set_InitialPath(String value)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.InitializeComponent">
+            <summary>Sets the shim of FolderPickerControl.InitializeComponent()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.OnPropertyChangedString">
+            <summary>Sets the shim of FolderPickerControl.OnPropertyChanged(String propertyName)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.PropertyChangedAddPropertyChangedEventHandler">
+            <summary>Sets the shim of FolderPickerControl.add_PropertyChanged(PropertyChangedEventHandler value)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.PropertyChangedRemovePropertyChangedEventHandler">
+            <summary>Sets the shim of FolderPickerControl.remove_PropertyChanged(PropertyChangedEventHandler value)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.RootGet">
+            <summary>Sets the shim of FolderPickerControl.get_Root()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.RootSetTreeItem">
+            <summary>Sets the shim of FolderPickerControl.set_Root(TreeItem value)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.SelectedItemGet">
+            <summary>Sets the shim of FolderPickerControl.get_SelectedItem()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.SelectedItemSetTreeItem">
+            <summary>Sets the shim of FolderPickerControl.set_SelectedItem(TreeItem value)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.SelectedPathGet">
+            <summary>Sets the shim of FolderPickerControl.get_SelectedPath()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.SelectedPathSetString">
+            <summary>Sets the shim of FolderPickerControl.set_SelectedPath(String value)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.StaticConstructor">
+            <summary>Sets the shim of FolderPickerControl.FolderPickerControl()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.SystemWindowsMarkupIComponentConnectorConnectInt32Object">
+            <summary>Sets the shim of FolderPickerControl.System.Windows.Markup.IComponentConnector.Connect(Int32 connectionId, Object target)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.TraverseUpToRootDirectoryInfo">
+            <summary>Sets the shim of FolderPickerControl.TraverseUpToRoot(DirectoryInfo child)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.TreeView_ExpandedObjectRoutedEventArgs">
+            <summary>Sets the shim of FolderPickerControl.TreeView_Expanded(Object sender, RoutedEventArgs e)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.TreeView_SelectedObjectRoutedEventArgs">
+            <summary>Sets the shim of FolderPickerControl.TreeView_Selected(Object sender, RoutedEventArgs e)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.UpdateInitialPathUI">
+            <summary>Sets the shim of FolderPickerControl.UpdateInitialPathUI()</summary>
+        </member>
+        <member name="T:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances.NotifyPropertyChangedOf1ExpressionOfFuncOfM0``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Action{FolderPickerLib.FolderPickerControl,System.Linq.Expressions.Expression{System.Func{``0}}})">
+            <summary>Sets the shim of FolderPickerControl.NotifyPropertyChanged(Expression`1&lt;Func`1&lt;!!0&gt;&gt; property)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances.Init">
+            <summary>Sets the shim of FolderPickerControl.Init()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances.InitialPathGet">
+            <summary>Sets the shim of FolderPickerControl.get_InitialPath()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances.InitialPathSetString">
+            <summary>Sets the shim of FolderPickerControl.set_InitialPath(String value)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances.InitializeComponent">
+            <summary>Sets the shim of FolderPickerControl.InitializeComponent()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances.OnPropertyChangedString">
+            <summary>Sets the shim of FolderPickerControl.OnPropertyChanged(String propertyName)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances.PropertyChangedAddPropertyChangedEventHandler">
+            <summary>Sets the shim of FolderPickerControl.add_PropertyChanged(PropertyChangedEventHandler value)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances.PropertyChangedRemovePropertyChangedEventHandler">
+            <summary>Sets the shim of FolderPickerControl.remove_PropertyChanged(PropertyChangedEventHandler value)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances.RootGet">
+            <summary>Sets the shim of FolderPickerControl.get_Root()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances.RootSetTreeItem">
+            <summary>Sets the shim of FolderPickerControl.set_Root(TreeItem value)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances.SelectedItemGet">
+            <summary>Sets the shim of FolderPickerControl.get_SelectedItem()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances.SelectedItemSetTreeItem">
+            <summary>Sets the shim of FolderPickerControl.set_SelectedItem(TreeItem value)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances.SelectedPathGet">
+            <summary>Sets the shim of FolderPickerControl.get_SelectedPath()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances.SelectedPathSetString">
+            <summary>Sets the shim of FolderPickerControl.set_SelectedPath(String value)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances.SystemWindowsMarkupIComponentConnectorConnectInt32Object">
+            <summary>Sets the shim of FolderPickerControl.System.Windows.Markup.IComponentConnector.Connect(Int32 connectionId, Object target)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances.TraverseUpToRootDirectoryInfo">
+            <summary>Sets the shim of FolderPickerControl.TraverseUpToRoot(DirectoryInfo child)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances.TreeView_ExpandedObjectRoutedEventArgs">
+            <summary>Sets the shim of FolderPickerControl.TreeView_Expanded(Object sender, RoutedEventArgs e)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances.TreeView_SelectedObjectRoutedEventArgs">
+            <summary>Sets the shim of FolderPickerControl.TreeView_Selected(Object sender, RoutedEventArgs e)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances.UpdateInitialPathUI">
+            <summary>Sets the shim of FolderPickerControl.UpdateInitialPathUI()</summary>
+        </member>
+        <member name="T:FolderPickerLib.Fakes.ShimFolderPickerDialog">
+            <summary>Shim type of FolderPickerLib.FolderPickerDialog</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimFolderPickerDialog.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimFolderPickerDialog.#ctor(FolderPickerLib.FolderPickerDialog)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimFolderPickerDialog.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimFolderPickerDialog.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimFolderPickerDialog.Bind(System.Windows.IInputElement)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimFolderPickerDialog.Bind(System.Windows.Markup.IAddChild)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimFolderPickerDialog.Bind(System.Windows.Media.Animation.IAnimatable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimFolderPickerDialog.Bind(System.Windows.IFrameworkInputElement)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimFolderPickerDialog.Bind(System.ComponentModel.ISupportInitialize)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimFolderPickerDialog.Bind(System.Windows.Markup.IComponentConnector)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimFolderPickerDialog.Bind(System.Windows.Markup.IQueryAmbient)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerDialog.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerDialog.CancelButton_ClickObjectRoutedEventArgs">
+            <summary>Sets the shim of FolderPickerDialog.CancelButton_Click(Object sender, RoutedEventArgs e)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerDialog.Constructor">
+            <summary>Sets the shim of FolderPickerDialog.FolderPickerDialog()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerDialog.InitialPathGet">
+            <summary>Sets the shim of FolderPickerDialog.get_InitialPath()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerDialog.InitialPathSetString">
+            <summary>Sets the shim of FolderPickerDialog.set_InitialPath(String value)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerDialog.InitializeComponent">
+            <summary>Sets the shim of FolderPickerDialog.InitializeComponent()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerDialog.OkButton_ClickObjectRoutedEventArgs">
+            <summary>Sets the shim of FolderPickerDialog.OkButton_Click(Object sender, RoutedEventArgs e)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerDialog.SelectedPathGet">
+            <summary>Sets the shim of FolderPickerDialog.get_SelectedPath()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerDialog.SelectedPathSetString">
+            <summary>Sets the shim of FolderPickerDialog.set_SelectedPath(String value)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerDialog.SystemWindowsMarkupIComponentConnectorConnectInt32Object">
+            <summary>Sets the shim of FolderPickerDialog.System.Windows.Markup.IComponentConnector.Connect(Int32 connectionId, Object target)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerDialog._CreateDelegateTypeString">
+            <summary>Sets the shim of FolderPickerDialog._CreateDelegate(Type delegateType, String handler)</summary>
+        </member>
+        <member name="T:FolderPickerLib.Fakes.ShimFolderPickerDialog.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerDialog.AllInstances.CancelButton_ClickObjectRoutedEventArgs">
+            <summary>Sets the shim of FolderPickerDialog.CancelButton_Click(Object sender, RoutedEventArgs e)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerDialog.AllInstances.InitialPathGet">
+            <summary>Sets the shim of FolderPickerDialog.get_InitialPath()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerDialog.AllInstances.InitialPathSetString">
+            <summary>Sets the shim of FolderPickerDialog.set_InitialPath(String value)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerDialog.AllInstances.InitializeComponent">
+            <summary>Sets the shim of FolderPickerDialog.InitializeComponent()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerDialog.AllInstances.OkButton_ClickObjectRoutedEventArgs">
+            <summary>Sets the shim of FolderPickerDialog.OkButton_Click(Object sender, RoutedEventArgs e)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerDialog.AllInstances.SelectedPathGet">
+            <summary>Sets the shim of FolderPickerDialog.get_SelectedPath()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerDialog.AllInstances.SelectedPathSetString">
+            <summary>Sets the shim of FolderPickerDialog.set_SelectedPath(String value)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerDialog.AllInstances.SystemWindowsMarkupIComponentConnectorConnectInt32Object">
+            <summary>Sets the shim of FolderPickerDialog.System.Windows.Markup.IComponentConnector.Connect(Int32 connectionId, Object target)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerDialog.AllInstances._CreateDelegateTypeString">
+            <summary>Sets the shim of FolderPickerDialog._CreateDelegate(Type delegateType, String handler)</summary>
+        </member>
+        <member name="T:FolderPickerLib.Fakes.ShimNotifiableObject">
+            <summary>Shim type of FolderPickerLib.NotifiableObject</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimNotifiableObject.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimNotifiableObject.#ctor(FolderPickerLib.NotifiableObject)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimNotifiableObject.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimNotifiableObject.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimNotifiableObject.Bind(System.ComponentModel.INotifyPropertyChanged)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimNotifiableObject.NotifyPropertyChangedOf1ExpressionOfFuncOfM0``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Action{System.Linq.Expressions.Expression{System.Func{``0}}})">
+            <summary>Sets the shim of NotifiableObject.NotifyPropertyChanged(Expression`1&lt;Func`1&lt;!!0&gt;&gt; property)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimNotifiableObject.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimNotifiableObject.Constructor">
+            <summary>Sets the shim of NotifiableObject.NotifiableObject()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimNotifiableObject.OnPropertyChangedString">
+            <summary>Sets the shim of NotifiableObject.OnPropertyChanged(String propertyName)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimNotifiableObject.PropertyChangedAddPropertyChangedEventHandler">
+            <summary>Sets the shim of NotifiableObject.add_PropertyChanged(PropertyChangedEventHandler value)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimNotifiableObject.PropertyChangedRemovePropertyChangedEventHandler">
+            <summary>Sets the shim of NotifiableObject.remove_PropertyChanged(PropertyChangedEventHandler value)</summary>
+        </member>
+        <member name="T:FolderPickerLib.Fakes.ShimNotifiableObject.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimNotifiableObject.AllInstances.NotifyPropertyChangedOf1ExpressionOfFuncOfM0``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Action{FolderPickerLib.NotifiableObject,System.Linq.Expressions.Expression{System.Func{``0}}})">
+            <summary>Sets the shim of NotifiableObject.NotifyPropertyChanged(Expression`1&lt;Func`1&lt;!!0&gt;&gt; property)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimNotifiableObject.AllInstances.OnPropertyChangedString">
+            <summary>Sets the shim of NotifiableObject.OnPropertyChanged(String propertyName)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimNotifiableObject.AllInstances.PropertyChangedAddPropertyChangedEventHandler">
+            <summary>Sets the shim of NotifiableObject.add_PropertyChanged(PropertyChangedEventHandler value)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimNotifiableObject.AllInstances.PropertyChangedRemovePropertyChangedEventHandler">
+            <summary>Sets the shim of NotifiableObject.remove_PropertyChanged(PropertyChangedEventHandler value)</summary>
+        </member>
+        <member name="T:FolderPickerLib.Fakes.ShimTreeItem">
+            <summary>Shim type of FolderPickerLib.TreeItem</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimTreeItem.#ctor">
+            <summary>Initializes a new shim instance</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimTreeItem.#ctor(FolderPickerLib.TreeItem)">
+            <summary>Initializes a new shim for the given instance</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimTreeItem.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimTreeItem.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimTreeItem.Bind(System.ComponentModel.INotifyPropertyChanged)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimTreeItem.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimTreeItem.ChildsGet">
+            <summary>Sets the shim of TreeItem.get_Childs()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimTreeItem.ChildsSetObservableCollectionOfTreeItem">
+            <summary>Sets the shim of TreeItem.set_Childs(ObservableCollection`1&lt;TreeItem&gt; value)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimTreeItem.ConstructorStringTreeItem">
+            <summary>Sets the shim of TreeItem.TreeItem(String name, TreeItem parent)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimTreeItem.GetFullPath">
+            <summary>Sets the shim of TreeItem.GetFullPath()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimTreeItem.IsFullyLoadedGet">
+            <summary>Sets the shim of TreeItem.get_IsFullyLoaded()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimTreeItem.IsFullyLoadedSetBoolean">
+            <summary>Sets the shim of TreeItem.set_IsFullyLoaded(Boolean value)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimTreeItem.NameGet">
+            <summary>Sets the shim of TreeItem.get_Name()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimTreeItem.NameSetString">
+            <summary>Sets the shim of TreeItem.set_Name(String value)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimTreeItem.ParentGet">
+            <summary>Sets the shim of TreeItem.get_Parent()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimTreeItem.ParentSetTreeItem">
+            <summary>Sets the shim of TreeItem.set_Parent(TreeItem value)</summary>
+        </member>
+        <member name="T:FolderPickerLib.Fakes.ShimTreeItem.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimTreeItem.AllInstances.ChildsGet">
+            <summary>Sets the shim of TreeItem.get_Childs()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimTreeItem.AllInstances.ChildsSetObservableCollectionOfTreeItem">
+            <summary>Sets the shim of TreeItem.set_Childs(ObservableCollection`1&lt;TreeItem&gt; value)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimTreeItem.AllInstances.GetFullPath">
+            <summary>Sets the shim of TreeItem.GetFullPath()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimTreeItem.AllInstances.IsFullyLoadedGet">
+            <summary>Sets the shim of TreeItem.get_IsFullyLoaded()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimTreeItem.AllInstances.IsFullyLoadedSetBoolean">
+            <summary>Sets the shim of TreeItem.set_IsFullyLoaded(Boolean value)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimTreeItem.AllInstances.NameGet">
+            <summary>Sets the shim of TreeItem.get_Name()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimTreeItem.AllInstances.NameSetString">
+            <summary>Sets the shim of TreeItem.set_Name(String value)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimTreeItem.AllInstances.ParentGet">
+            <summary>Sets the shim of TreeItem.get_Parent()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimTreeItem.AllInstances.ParentSetTreeItem">
+            <summary>Sets the shim of TreeItem.set_Parent(TreeItem value)</summary>
+        </member>
+        <member name="T:FolderPickerLib.Fakes.StubDriveIconConverter">
+            <summary>Stub type of FolderPickerLib.DriveIconConverter</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubDriveIconConverter.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubDriveIconConverter.InitializeStub">
+            <summary>Initializes a new instance of type StubDriveIconConverter</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.StubDriveIconConverter.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.StubDriveIconConverter.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.StubDriveIconConverter.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:FolderPickerLib.Fakes.StubDriveTreeItem">
+            <summary>Stub type of FolderPickerLib.DriveTreeItem</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubDriveTreeItem.#ctor(System.String,System.IO.DriveType,FolderPickerLib.TreeItem)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubDriveTreeItem.InitializeStub">
+            <summary>Initializes a new instance of type StubDriveTreeItem</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.StubDriveTreeItem.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.StubDriveTreeItem.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.StubDriveTreeItem.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:FolderPickerLib.Fakes.StubFolderPickerControl">
+            <summary>Stub type of FolderPickerLib.FolderPickerControl</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.AddChild(System.Object)">
+            <summary>Sets the stub of ContentControl.AddChild(Object value)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.AddChildObject">
+            <summary>Sets the stub of ContentControl.AddChild(Object value)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.AddText(System.String)">
+            <summary>Sets the stub of ContentControl.AddText(String text)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.AddTextString">
+            <summary>Sets the stub of ContentControl.AddText(String text)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.ArrangeOverride(System.Windows.Size)">
+            <summary>Sets the stub of Control.ArrangeOverride(Size arrangeBounds)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.ArrangeOverrideSize">
+            <summary>Sets the stub of Control.ArrangeOverride(Size arrangeBounds)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.BeginInit">
+            <summary>Sets the stub of FrameworkElement.BeginInit()</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.BeginInit01">
+            <summary>Sets the stub of FrameworkElement.BeginInit()</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.EndInit">
+            <summary>Sets the stub of FrameworkElement.EndInit()</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.EndInit01">
+            <summary>Sets the stub of FrameworkElement.EndInit()</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.GetLayoutClip(System.Windows.Size)">
+            <summary>Sets the stub of FrameworkElement.GetLayoutClip(Size layoutSlotSize)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.GetLayoutClipSize">
+            <summary>Sets the stub of FrameworkElement.GetLayoutClip(Size layoutSlotSize)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.GetUIParentCore">
+            <summary>Sets the stub of FrameworkElement.GetUIParentCore()</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.GetUIParentCore01">
+            <summary>Sets the stub of FrameworkElement.GetUIParentCore()</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.GetVisualChild(System.Int32)">
+            <summary>Sets the stub of FrameworkElement.GetVisualChild(Int32 index)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.GetVisualChildInt32">
+            <summary>Sets the stub of FrameworkElement.GetVisualChild(Int32 index)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.HandlesScrollingGet">
+            <summary>Sets the stub of Control.get_HandlesScrolling()</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.HitTestCore(System.Windows.Media.GeometryHitTestParameters)">
+            <summary>Sets the stub of UIElement.HitTestCore(GeometryHitTestParameters hitTestParameters)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.HitTestCore(System.Windows.Media.PointHitTestParameters)">
+            <summary>Sets the stub of UIElement.HitTestCore(PointHitTestParameters hitTestParameters)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.HitTestCoreGeometryHitTestParameters">
+            <summary>Sets the stub of UIElement.HitTestCore(GeometryHitTestParameters hitTestParameters)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.HitTestCorePointHitTestParameters">
+            <summary>Sets the stub of UIElement.HitTestCore(PointHitTestParameters hitTestParameters)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.InitializeStub">
+            <summary>Initializes a new instance of type StubFolderPickerControl</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.IsEnabledCoreGet">
+            <summary>Sets the stub of UIElement.get_IsEnabledCore()</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.LogicalChildrenGet">
+            <summary>Sets the stub of ContentControl.get_LogicalChildren()</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.MeasureOverride(System.Windows.Size)">
+            <summary>Sets the stub of Control.MeasureOverride(Size constraint)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.MeasureOverrideSize">
+            <summary>Sets the stub of Control.MeasureOverride(Size constraint)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnAccessKey(System.Windows.Input.AccessKeyEventArgs)">
+            <summary>Sets the stub of UIElement.OnAccessKey(AccessKeyEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnAccessKeyAccessKeyEventArgs">
+            <summary>Sets the stub of UIElement.OnAccessKey(AccessKeyEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnApplyTemplate">
+            <summary>Sets the stub of FrameworkElement.OnApplyTemplate()</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnApplyTemplate01">
+            <summary>Sets the stub of FrameworkElement.OnApplyTemplate()</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnChildDesiredSizeChanged(System.Windows.UIElement)">
+            <summary>Sets the stub of UIElement.OnChildDesiredSizeChanged(UIElement child)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnChildDesiredSizeChangedUIElement">
+            <summary>Sets the stub of UIElement.OnChildDesiredSizeChanged(UIElement child)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnContentChanged(System.Object,System.Object)">
+            <summary>Sets the stub of ContentControl.OnContentChanged(Object oldContent, Object newContent)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnContentChangedObjectObject">
+            <summary>Sets the stub of ContentControl.OnContentChanged(Object oldContent, Object newContent)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnContentStringFormatChanged(System.String,System.String)">
+            <summary>Sets the stub of ContentControl.OnContentStringFormatChanged(String oldContentStringFormat, String newContentStringFormat)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnContentStringFormatChangedStringString">
+            <summary>Sets the stub of ContentControl.OnContentStringFormatChanged(String oldContentStringFormat, String newContentStringFormat)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnContentTemplateChanged(System.Windows.DataTemplate,System.Windows.DataTemplate)">
+            <summary>Sets the stub of ContentControl.OnContentTemplateChanged(DataTemplate oldContentTemplate, DataTemplate newContentTemplate)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnContentTemplateChangedDataTemplateDataTemplate">
+            <summary>Sets the stub of ContentControl.OnContentTemplateChanged(DataTemplate oldContentTemplate, DataTemplate newContentTemplate)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnContentTemplateSelectorChanged(System.Windows.Controls.DataTemplateSelector,System.Windows.Controls.DataTemplateSelector)">
+            <summary>Sets the stub of ContentControl.OnContentTemplateSelectorChanged(DataTemplateSelector oldContentTemplateSelector, DataTemplateSelector newContentTemplateSelector)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnContentTemplateSelectorChangedDataTemplateSelectorDataTemplateSelector">
+            <summary>Sets the stub of ContentControl.OnContentTemplateSelectorChanged(DataTemplateSelector oldContentTemplateSelector, DataTemplateSelector newContentTemplateSelector)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnContextMenuClosing(System.Windows.Controls.ContextMenuEventArgs)">
+            <summary>Sets the stub of FrameworkElement.OnContextMenuClosing(ContextMenuEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnContextMenuClosingContextMenuEventArgs">
+            <summary>Sets the stub of FrameworkElement.OnContextMenuClosing(ContextMenuEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnContextMenuOpening(System.Windows.Controls.ContextMenuEventArgs)">
+            <summary>Sets the stub of FrameworkElement.OnContextMenuOpening(ContextMenuEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnContextMenuOpeningContextMenuEventArgs">
+            <summary>Sets the stub of FrameworkElement.OnContextMenuOpening(ContextMenuEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnCreateAutomationPeer">
+            <summary>Sets the stub of UserControl.OnCreateAutomationPeer()</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnCreateAutomationPeer01">
+            <summary>Sets the stub of UserControl.OnCreateAutomationPeer()</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnDragEnter(System.Windows.DragEventArgs)">
+            <summary>Sets the stub of UIElement.OnDragEnter(DragEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnDragEnterDragEventArgs">
+            <summary>Sets the stub of UIElement.OnDragEnter(DragEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnDragLeave(System.Windows.DragEventArgs)">
+            <summary>Sets the stub of UIElement.OnDragLeave(DragEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnDragLeaveDragEventArgs">
+            <summary>Sets the stub of UIElement.OnDragLeave(DragEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnDragOver(System.Windows.DragEventArgs)">
+            <summary>Sets the stub of UIElement.OnDragOver(DragEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnDragOverDragEventArgs">
+            <summary>Sets the stub of UIElement.OnDragOver(DragEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnDrop(System.Windows.DragEventArgs)">
+            <summary>Sets the stub of UIElement.OnDrop(DragEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnDropDragEventArgs">
+            <summary>Sets the stub of UIElement.OnDrop(DragEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnGiveFeedback(System.Windows.GiveFeedbackEventArgs)">
+            <summary>Sets the stub of UIElement.OnGiveFeedback(GiveFeedbackEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnGiveFeedbackGiveFeedbackEventArgs">
+            <summary>Sets the stub of UIElement.OnGiveFeedback(GiveFeedbackEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnGotFocus(System.Windows.RoutedEventArgs)">
+            <summary>Sets the stub of FrameworkElement.OnGotFocus(RoutedEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnGotFocusRoutedEventArgs">
+            <summary>Sets the stub of FrameworkElement.OnGotFocus(RoutedEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnGotKeyboardFocus(System.Windows.Input.KeyboardFocusChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnGotKeyboardFocus(KeyboardFocusChangedEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnGotKeyboardFocusKeyboardFocusChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnGotKeyboardFocus(KeyboardFocusChangedEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnGotMouseCapture(System.Windows.Input.MouseEventArgs)">
+            <summary>Sets the stub of UIElement.OnGotMouseCapture(MouseEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnGotMouseCaptureMouseEventArgs">
+            <summary>Sets the stub of UIElement.OnGotMouseCapture(MouseEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnGotStylusCapture(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnGotStylusCapture(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnGotStylusCaptureStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnGotStylusCapture(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnGotTouchCapture(System.Windows.Input.TouchEventArgs)">
+            <summary>Sets the stub of UIElement.OnGotTouchCapture(TouchEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnGotTouchCaptureTouchEventArgs">
+            <summary>Sets the stub of UIElement.OnGotTouchCapture(TouchEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnInitialized(System.EventArgs)">
+            <summary>Sets the stub of FrameworkElement.OnInitialized(EventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnInitializedEventArgs">
+            <summary>Sets the stub of FrameworkElement.OnInitialized(EventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnIsKeyboardFocusWithinChanged(System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnIsKeyboardFocusWithinChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnIsKeyboardFocusWithinChangedDependencyPropertyChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnIsKeyboardFocusWithinChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnIsKeyboardFocusedChanged(System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnIsKeyboardFocusedChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnIsKeyboardFocusedChangedDependencyPropertyChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnIsKeyboardFocusedChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnIsMouseCaptureWithinChanged(System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnIsMouseCaptureWithinChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnIsMouseCaptureWithinChangedDependencyPropertyChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnIsMouseCaptureWithinChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnIsMouseCapturedChanged(System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnIsMouseCapturedChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnIsMouseCapturedChangedDependencyPropertyChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnIsMouseCapturedChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnIsMouseDirectlyOverChanged(System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnIsMouseDirectlyOverChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnIsMouseDirectlyOverChangedDependencyPropertyChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnIsMouseDirectlyOverChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnIsStylusCaptureWithinChanged(System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnIsStylusCaptureWithinChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnIsStylusCaptureWithinChangedDependencyPropertyChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnIsStylusCaptureWithinChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnIsStylusCapturedChanged(System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnIsStylusCapturedChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnIsStylusCapturedChangedDependencyPropertyChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnIsStylusCapturedChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnIsStylusDirectlyOverChanged(System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnIsStylusDirectlyOverChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnIsStylusDirectlyOverChangedDependencyPropertyChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnIsStylusDirectlyOverChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnKeyDown(System.Windows.Input.KeyEventArgs)">
+            <summary>Sets the stub of UIElement.OnKeyDown(KeyEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnKeyDownKeyEventArgs">
+            <summary>Sets the stub of UIElement.OnKeyDown(KeyEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnKeyUp(System.Windows.Input.KeyEventArgs)">
+            <summary>Sets the stub of UIElement.OnKeyUp(KeyEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnKeyUpKeyEventArgs">
+            <summary>Sets the stub of UIElement.OnKeyUp(KeyEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnLostFocus(System.Windows.RoutedEventArgs)">
+            <summary>Sets the stub of UIElement.OnLostFocus(RoutedEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnLostFocusRoutedEventArgs">
+            <summary>Sets the stub of UIElement.OnLostFocus(RoutedEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnLostKeyboardFocus(System.Windows.Input.KeyboardFocusChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnLostKeyboardFocus(KeyboardFocusChangedEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnLostKeyboardFocusKeyboardFocusChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnLostKeyboardFocus(KeyboardFocusChangedEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnLostMouseCapture(System.Windows.Input.MouseEventArgs)">
+            <summary>Sets the stub of UIElement.OnLostMouseCapture(MouseEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnLostMouseCaptureMouseEventArgs">
+            <summary>Sets the stub of UIElement.OnLostMouseCapture(MouseEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnLostStylusCapture(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnLostStylusCapture(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnLostStylusCaptureStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnLostStylusCapture(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnLostTouchCapture(System.Windows.Input.TouchEventArgs)">
+            <summary>Sets the stub of UIElement.OnLostTouchCapture(TouchEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnLostTouchCaptureTouchEventArgs">
+            <summary>Sets the stub of UIElement.OnLostTouchCapture(TouchEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnManipulationBoundaryFeedback(System.Windows.Input.ManipulationBoundaryFeedbackEventArgs)">
+            <summary>Sets the stub of UIElement.OnManipulationBoundaryFeedback(ManipulationBoundaryFeedbackEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnManipulationBoundaryFeedbackManipulationBoundaryFeedbackEventArgs">
+            <summary>Sets the stub of UIElement.OnManipulationBoundaryFeedback(ManipulationBoundaryFeedbackEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnManipulationCompleted(System.Windows.Input.ManipulationCompletedEventArgs)">
+            <summary>Sets the stub of UIElement.OnManipulationCompleted(ManipulationCompletedEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnManipulationCompletedManipulationCompletedEventArgs">
+            <summary>Sets the stub of UIElement.OnManipulationCompleted(ManipulationCompletedEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnManipulationDelta(System.Windows.Input.ManipulationDeltaEventArgs)">
+            <summary>Sets the stub of UIElement.OnManipulationDelta(ManipulationDeltaEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnManipulationDeltaManipulationDeltaEventArgs">
+            <summary>Sets the stub of UIElement.OnManipulationDelta(ManipulationDeltaEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnManipulationInertiaStarting(System.Windows.Input.ManipulationInertiaStartingEventArgs)">
+            <summary>Sets the stub of UIElement.OnManipulationInertiaStarting(ManipulationInertiaStartingEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnManipulationInertiaStartingManipulationInertiaStartingEventArgs">
+            <summary>Sets the stub of UIElement.OnManipulationInertiaStarting(ManipulationInertiaStartingEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnManipulationStarted(System.Windows.Input.ManipulationStartedEventArgs)">
+            <summary>Sets the stub of UIElement.OnManipulationStarted(ManipulationStartedEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnManipulationStartedManipulationStartedEventArgs">
+            <summary>Sets the stub of UIElement.OnManipulationStarted(ManipulationStartedEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnManipulationStarting(System.Windows.Input.ManipulationStartingEventArgs)">
+            <summary>Sets the stub of UIElement.OnManipulationStarting(ManipulationStartingEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnManipulationStartingManipulationStartingEventArgs">
+            <summary>Sets the stub of UIElement.OnManipulationStarting(ManipulationStartingEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnMouseDoubleClick(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of Control.OnMouseDoubleClick(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnMouseDoubleClickMouseButtonEventArgs">
+            <summary>Sets the stub of Control.OnMouseDoubleClick(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnMouseDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnMouseDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnMouseDownMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnMouseDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnMouseEnter(System.Windows.Input.MouseEventArgs)">
+            <summary>Sets the stub of UIElement.OnMouseEnter(MouseEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnMouseEnterMouseEventArgs">
+            <summary>Sets the stub of UIElement.OnMouseEnter(MouseEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnMouseLeave(System.Windows.Input.MouseEventArgs)">
+            <summary>Sets the stub of UIElement.OnMouseLeave(MouseEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnMouseLeaveMouseEventArgs">
+            <summary>Sets the stub of UIElement.OnMouseLeave(MouseEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnMouseLeftButtonDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnMouseLeftButtonDownMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnMouseLeftButtonDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnMouseLeftButtonUp(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnMouseLeftButtonUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnMouseLeftButtonUpMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnMouseLeftButtonUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnMouseMove(System.Windows.Input.MouseEventArgs)">
+            <summary>Sets the stub of UIElement.OnMouseMove(MouseEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnMouseMoveMouseEventArgs">
+            <summary>Sets the stub of UIElement.OnMouseMove(MouseEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnMouseRightButtonDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnMouseRightButtonDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnMouseRightButtonDownMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnMouseRightButtonDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnMouseRightButtonUp(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnMouseRightButtonUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnMouseRightButtonUpMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnMouseRightButtonUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnMouseUp(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnMouseUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnMouseUpMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnMouseUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnMouseWheel(System.Windows.Input.MouseWheelEventArgs)">
+            <summary>Sets the stub of UIElement.OnMouseWheel(MouseWheelEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnMouseWheelMouseWheelEventArgs">
+            <summary>Sets the stub of UIElement.OnMouseWheel(MouseWheelEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewDragEnter(System.Windows.DragEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewDragEnter(DragEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewDragEnterDragEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewDragEnter(DragEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewDragLeave(System.Windows.DragEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewDragLeave(DragEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewDragLeaveDragEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewDragLeave(DragEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewDragOver(System.Windows.DragEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewDragOver(DragEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewDragOverDragEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewDragOver(DragEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewDrop(System.Windows.DragEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewDrop(DragEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewDropDragEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewDrop(DragEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewGiveFeedback(System.Windows.GiveFeedbackEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewGiveFeedback(GiveFeedbackEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewGiveFeedbackGiveFeedbackEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewGiveFeedback(GiveFeedbackEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewGotKeyboardFocus(System.Windows.Input.KeyboardFocusChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewGotKeyboardFocus(KeyboardFocusChangedEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewGotKeyboardFocusKeyboardFocusChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewGotKeyboardFocus(KeyboardFocusChangedEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewKeyDown(System.Windows.Input.KeyEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewKeyDown(KeyEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewKeyDownKeyEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewKeyDown(KeyEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewKeyUp(System.Windows.Input.KeyEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewKeyUp(KeyEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewKeyUpKeyEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewKeyUp(KeyEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewLostKeyboardFocus(System.Windows.Input.KeyboardFocusChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewLostKeyboardFocus(KeyboardFocusChangedEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewLostKeyboardFocusKeyboardFocusChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewLostKeyboardFocus(KeyboardFocusChangedEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewMouseDoubleClick(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of Control.OnPreviewMouseDoubleClick(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewMouseDoubleClickMouseButtonEventArgs">
+            <summary>Sets the stub of Control.OnPreviewMouseDoubleClick(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewMouseDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewMouseDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewMouseDownMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewMouseDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewMouseLeftButtonDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewMouseLeftButtonDownMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewMouseLeftButtonDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewMouseLeftButtonUp(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewMouseLeftButtonUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewMouseLeftButtonUpMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewMouseLeftButtonUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewMouseMove(System.Windows.Input.MouseEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewMouseMove(MouseEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewMouseMoveMouseEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewMouseMove(MouseEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewMouseRightButtonDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewMouseRightButtonDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewMouseRightButtonDownMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewMouseRightButtonDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewMouseRightButtonUp(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewMouseRightButtonUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewMouseRightButtonUpMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewMouseRightButtonUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewMouseUp(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewMouseUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewMouseUpMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewMouseUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewMouseWheel(System.Windows.Input.MouseWheelEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewMouseWheel(MouseWheelEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewMouseWheelMouseWheelEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewMouseWheel(MouseWheelEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewQueryContinueDrag(System.Windows.QueryContinueDragEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewQueryContinueDrag(QueryContinueDragEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewQueryContinueDragQueryContinueDragEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewQueryContinueDrag(QueryContinueDragEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewStylusButtonDown(System.Windows.Input.StylusButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewStylusButtonDown(StylusButtonEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewStylusButtonDownStylusButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewStylusButtonDown(StylusButtonEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewStylusButtonUp(System.Windows.Input.StylusButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewStylusButtonUp(StylusButtonEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewStylusButtonUpStylusButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewStylusButtonUp(StylusButtonEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewStylusDown(System.Windows.Input.StylusDownEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewStylusDown(StylusDownEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewStylusDownStylusDownEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewStylusDown(StylusDownEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewStylusInAirMove(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewStylusInAirMove(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewStylusInAirMoveStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewStylusInAirMove(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewStylusInRange(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewStylusInRange(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewStylusInRangeStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewStylusInRange(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewStylusMove(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewStylusMove(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewStylusMoveStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewStylusMove(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewStylusOutOfRange(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewStylusOutOfRange(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewStylusOutOfRangeStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewStylusOutOfRange(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewStylusSystemGesture(System.Windows.Input.StylusSystemGestureEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewStylusSystemGesture(StylusSystemGestureEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewStylusSystemGestureStylusSystemGestureEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewStylusSystemGesture(StylusSystemGestureEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewStylusUp(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewStylusUp(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewStylusUpStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewStylusUp(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewTextInput(System.Windows.Input.TextCompositionEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewTextInput(TextCompositionEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewTextInputTextCompositionEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewTextInput(TextCompositionEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewTouchDown(System.Windows.Input.TouchEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewTouchDown(TouchEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewTouchDownTouchEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewTouchDown(TouchEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewTouchMove(System.Windows.Input.TouchEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewTouchMove(TouchEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewTouchMoveTouchEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewTouchMove(TouchEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewTouchUp(System.Windows.Input.TouchEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewTouchUp(TouchEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnPreviewTouchUpTouchEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewTouchUp(TouchEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>Sets the stub of FrameworkElement.OnPropertyChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnPropertyChangedDependencyPropertyChangedEventArgs">
+            <summary>Sets the stub of FrameworkElement.OnPropertyChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnQueryContinueDrag(System.Windows.QueryContinueDragEventArgs)">
+            <summary>Sets the stub of UIElement.OnQueryContinueDrag(QueryContinueDragEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnQueryContinueDragQueryContinueDragEventArgs">
+            <summary>Sets the stub of UIElement.OnQueryContinueDrag(QueryContinueDragEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnQueryCursor(System.Windows.Input.QueryCursorEventArgs)">
+            <summary>Sets the stub of UIElement.OnQueryCursor(QueryCursorEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnQueryCursorQueryCursorEventArgs">
+            <summary>Sets the stub of UIElement.OnQueryCursor(QueryCursorEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnRender(System.Windows.Media.DrawingContext)">
+            <summary>Sets the stub of UIElement.OnRender(DrawingContext drawingContext)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnRenderDrawingContext">
+            <summary>Sets the stub of UIElement.OnRender(DrawingContext drawingContext)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnRenderSizeChanged(System.Windows.SizeChangedInfo)">
+            <summary>Sets the stub of FrameworkElement.OnRenderSizeChanged(SizeChangedInfo sizeInfo)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnRenderSizeChangedSizeChangedInfo">
+            <summary>Sets the stub of FrameworkElement.OnRenderSizeChanged(SizeChangedInfo sizeInfo)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnStyleChanged(System.Windows.Style,System.Windows.Style)">
+            <summary>Sets the stub of FrameworkElement.OnStyleChanged(Style oldStyle, Style newStyle)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnStyleChangedStyleStyle">
+            <summary>Sets the stub of FrameworkElement.OnStyleChanged(Style oldStyle, Style newStyle)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnStylusButtonDown(System.Windows.Input.StylusButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnStylusButtonDown(StylusButtonEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnStylusButtonDownStylusButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnStylusButtonDown(StylusButtonEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnStylusButtonUp(System.Windows.Input.StylusButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnStylusButtonUp(StylusButtonEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnStylusButtonUpStylusButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnStylusButtonUp(StylusButtonEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnStylusDown(System.Windows.Input.StylusDownEventArgs)">
+            <summary>Sets the stub of UIElement.OnStylusDown(StylusDownEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnStylusDownStylusDownEventArgs">
+            <summary>Sets the stub of UIElement.OnStylusDown(StylusDownEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnStylusEnter(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnStylusEnter(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnStylusEnterStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnStylusEnter(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnStylusInAirMove(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnStylusInAirMove(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnStylusInAirMoveStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnStylusInAirMove(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnStylusInRange(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnStylusInRange(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnStylusInRangeStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnStylusInRange(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnStylusLeave(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnStylusLeave(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnStylusLeaveStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnStylusLeave(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnStylusMove(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnStylusMove(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnStylusMoveStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnStylusMove(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnStylusOutOfRange(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnStylusOutOfRange(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnStylusOutOfRangeStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnStylusOutOfRange(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnStylusSystemGesture(System.Windows.Input.StylusSystemGestureEventArgs)">
+            <summary>Sets the stub of UIElement.OnStylusSystemGesture(StylusSystemGestureEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnStylusSystemGestureStylusSystemGestureEventArgs">
+            <summary>Sets the stub of UIElement.OnStylusSystemGesture(StylusSystemGestureEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnStylusUp(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnStylusUp(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnStylusUpStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnStylusUp(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnTemplateChanged(System.Windows.Controls.ControlTemplate,System.Windows.Controls.ControlTemplate)">
+            <summary>Sets the stub of Control.OnTemplateChanged(ControlTemplate oldTemplate, ControlTemplate newTemplate)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnTemplateChangedControlTemplateControlTemplate">
+            <summary>Sets the stub of Control.OnTemplateChanged(ControlTemplate oldTemplate, ControlTemplate newTemplate)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnTextInput(System.Windows.Input.TextCompositionEventArgs)">
+            <summary>Sets the stub of UIElement.OnTextInput(TextCompositionEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnTextInputTextCompositionEventArgs">
+            <summary>Sets the stub of UIElement.OnTextInput(TextCompositionEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnToolTipClosing(System.Windows.Controls.ToolTipEventArgs)">
+            <summary>Sets the stub of FrameworkElement.OnToolTipClosing(ToolTipEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnToolTipClosingToolTipEventArgs">
+            <summary>Sets the stub of FrameworkElement.OnToolTipClosing(ToolTipEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnToolTipOpening(System.Windows.Controls.ToolTipEventArgs)">
+            <summary>Sets the stub of FrameworkElement.OnToolTipOpening(ToolTipEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnToolTipOpeningToolTipEventArgs">
+            <summary>Sets the stub of FrameworkElement.OnToolTipOpening(ToolTipEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnTouchDown(System.Windows.Input.TouchEventArgs)">
+            <summary>Sets the stub of UIElement.OnTouchDown(TouchEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnTouchDownTouchEventArgs">
+            <summary>Sets the stub of UIElement.OnTouchDown(TouchEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnTouchEnter(System.Windows.Input.TouchEventArgs)">
+            <summary>Sets the stub of UIElement.OnTouchEnter(TouchEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnTouchEnterTouchEventArgs">
+            <summary>Sets the stub of UIElement.OnTouchEnter(TouchEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnTouchLeave(System.Windows.Input.TouchEventArgs)">
+            <summary>Sets the stub of UIElement.OnTouchLeave(TouchEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnTouchLeaveTouchEventArgs">
+            <summary>Sets the stub of UIElement.OnTouchLeave(TouchEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnTouchMove(System.Windows.Input.TouchEventArgs)">
+            <summary>Sets the stub of UIElement.OnTouchMove(TouchEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnTouchMoveTouchEventArgs">
+            <summary>Sets the stub of UIElement.OnTouchMove(TouchEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnTouchUp(System.Windows.Input.TouchEventArgs)">
+            <summary>Sets the stub of UIElement.OnTouchUp(TouchEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnTouchUpTouchEventArgs">
+            <summary>Sets the stub of UIElement.OnTouchUp(TouchEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnVisualChildrenChanged(System.Windows.DependencyObject,System.Windows.DependencyObject)">
+            <summary>Sets the stub of Visual.OnVisualChildrenChanged(DependencyObject visualAdded, DependencyObject visualRemoved)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnVisualChildrenChangedDependencyObjectDependencyObject">
+            <summary>Sets the stub of Visual.OnVisualChildrenChanged(DependencyObject visualAdded, DependencyObject visualRemoved)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.OnVisualParentChanged(System.Windows.DependencyObject)">
+            <summary>Sets the stub of FrameworkElement.OnVisualParentChanged(DependencyObject oldParent)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.OnVisualParentChangedDependencyObject">
+            <summary>Sets the stub of FrameworkElement.OnVisualParentChanged(DependencyObject oldParent)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.ParentLayoutInvalidated(System.Windows.UIElement)">
+            <summary>Sets the stub of FrameworkElement.ParentLayoutInvalidated(UIElement child)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.ParentLayoutInvalidatedUIElement">
+            <summary>Sets the stub of FrameworkElement.ParentLayoutInvalidated(UIElement child)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.ShouldSerializeContent">
+            <summary>Sets the stub of ContentControl.ShouldSerializeContent()</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.ShouldSerializeContent01">
+            <summary>Sets the stub of ContentControl.ShouldSerializeContent()</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.ShouldSerializeProperty(System.Windows.DependencyProperty)">
+            <summary>Sets the stub of DependencyObject.ShouldSerializeProperty(DependencyProperty dp)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.ShouldSerializePropertyDependencyProperty">
+            <summary>Sets the stub of DependencyObject.ShouldSerializeProperty(DependencyProperty dp)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.ToString">
+            <summary>Sets the stub of Control.ToString()</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.ToString01">
+            <summary>Sets the stub of Control.ToString()</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.VisualChildrenCountGet">
+            <summary>Sets the stub of FrameworkElement.get_VisualChildrenCount()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.StubFolderPickerControl.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.StubFolderPickerControl.HandlesScrolling">
+            <summary>Sets the stub of Control.get_HandlesScrolling()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.StubFolderPickerControl.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.StubFolderPickerControl.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.StubFolderPickerControl.IsEnabledCore">
+            <summary>Sets the stub of UIElement.get_IsEnabledCore()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.StubFolderPickerControl.LogicalChildren">
+            <summary>Sets the stub of ContentControl.get_LogicalChildren()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.StubFolderPickerControl.VisualChildrenCount">
+            <summary>Sets the stub of FrameworkElement.get_VisualChildrenCount()</summary>
+        </member>
+        <member name="T:FolderPickerLib.Fakes.StubFolderPickerDialog">
+            <summary>Stub type of FolderPickerLib.FolderPickerDialog</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.AddChild(System.Object)">
+            <summary>Sets the stub of ContentControl.AddChild(Object value)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.AddChildObject">
+            <summary>Sets the stub of ContentControl.AddChild(Object value)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.AddText(System.String)">
+            <summary>Sets the stub of ContentControl.AddText(String text)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.AddTextString">
+            <summary>Sets the stub of ContentControl.AddText(String text)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.ArrangeOverride(System.Windows.Size)">
+            <summary>Sets the stub of Window.ArrangeOverride(Size arrangeBounds)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.ArrangeOverrideSize">
+            <summary>Sets the stub of Window.ArrangeOverride(Size arrangeBounds)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.BeginInit">
+            <summary>Sets the stub of FrameworkElement.BeginInit()</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.BeginInit01">
+            <summary>Sets the stub of FrameworkElement.BeginInit()</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.EndInit">
+            <summary>Sets the stub of FrameworkElement.EndInit()</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.EndInit01">
+            <summary>Sets the stub of FrameworkElement.EndInit()</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.GetLayoutClip(System.Windows.Size)">
+            <summary>Sets the stub of FrameworkElement.GetLayoutClip(Size layoutSlotSize)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.GetLayoutClipSize">
+            <summary>Sets the stub of FrameworkElement.GetLayoutClip(Size layoutSlotSize)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.GetUIParentCore">
+            <summary>Sets the stub of FrameworkElement.GetUIParentCore()</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.GetUIParentCore01">
+            <summary>Sets the stub of FrameworkElement.GetUIParentCore()</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.GetVisualChild(System.Int32)">
+            <summary>Sets the stub of FrameworkElement.GetVisualChild(Int32 index)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.GetVisualChildInt32">
+            <summary>Sets the stub of FrameworkElement.GetVisualChild(Int32 index)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.HandlesScrollingGet">
+            <summary>Sets the stub of Control.get_HandlesScrolling()</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.HitTestCore(System.Windows.Media.GeometryHitTestParameters)">
+            <summary>Sets the stub of UIElement.HitTestCore(GeometryHitTestParameters hitTestParameters)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.HitTestCore(System.Windows.Media.PointHitTestParameters)">
+            <summary>Sets the stub of UIElement.HitTestCore(PointHitTestParameters hitTestParameters)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.HitTestCoreGeometryHitTestParameters">
+            <summary>Sets the stub of UIElement.HitTestCore(GeometryHitTestParameters hitTestParameters)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.HitTestCorePointHitTestParameters">
+            <summary>Sets the stub of UIElement.HitTestCore(PointHitTestParameters hitTestParameters)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.InitializeStub">
+            <summary>Initializes a new instance of type StubFolderPickerDialog</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.IsEnabledCoreGet">
+            <summary>Sets the stub of UIElement.get_IsEnabledCore()</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.LogicalChildrenGet">
+            <summary>Sets the stub of Window.get_LogicalChildren()</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.MeasureOverride(System.Windows.Size)">
+            <summary>Sets the stub of Window.MeasureOverride(Size availableSize)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.MeasureOverrideSize">
+            <summary>Sets the stub of Window.MeasureOverride(Size availableSize)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnAccessKey(System.Windows.Input.AccessKeyEventArgs)">
+            <summary>Sets the stub of UIElement.OnAccessKey(AccessKeyEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnAccessKeyAccessKeyEventArgs">
+            <summary>Sets the stub of UIElement.OnAccessKey(AccessKeyEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnActivated(System.EventArgs)">
+            <summary>Sets the stub of Window.OnActivated(EventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnActivatedEventArgs">
+            <summary>Sets the stub of Window.OnActivated(EventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnApplyTemplate">
+            <summary>Sets the stub of FrameworkElement.OnApplyTemplate()</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnApplyTemplate01">
+            <summary>Sets the stub of FrameworkElement.OnApplyTemplate()</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnChildDesiredSizeChanged(System.Windows.UIElement)">
+            <summary>Sets the stub of UIElement.OnChildDesiredSizeChanged(UIElement child)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnChildDesiredSizeChangedUIElement">
+            <summary>Sets the stub of UIElement.OnChildDesiredSizeChanged(UIElement child)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnClosed(System.EventArgs)">
+            <summary>Sets the stub of Window.OnClosed(EventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnClosedEventArgs">
+            <summary>Sets the stub of Window.OnClosed(EventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnClosing(System.ComponentModel.CancelEventArgs)">
+            <summary>Sets the stub of Window.OnClosing(CancelEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnClosingCancelEventArgs">
+            <summary>Sets the stub of Window.OnClosing(CancelEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnContentChanged(System.Object,System.Object)">
+            <summary>Sets the stub of Window.OnContentChanged(Object oldContent, Object newContent)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnContentChangedObjectObject">
+            <summary>Sets the stub of Window.OnContentChanged(Object oldContent, Object newContent)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnContentRendered(System.EventArgs)">
+            <summary>Sets the stub of Window.OnContentRendered(EventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnContentRenderedEventArgs">
+            <summary>Sets the stub of Window.OnContentRendered(EventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnContentStringFormatChanged(System.String,System.String)">
+            <summary>Sets the stub of ContentControl.OnContentStringFormatChanged(String oldContentStringFormat, String newContentStringFormat)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnContentStringFormatChangedStringString">
+            <summary>Sets the stub of ContentControl.OnContentStringFormatChanged(String oldContentStringFormat, String newContentStringFormat)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnContentTemplateChanged(System.Windows.DataTemplate,System.Windows.DataTemplate)">
+            <summary>Sets the stub of ContentControl.OnContentTemplateChanged(DataTemplate oldContentTemplate, DataTemplate newContentTemplate)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnContentTemplateChangedDataTemplateDataTemplate">
+            <summary>Sets the stub of ContentControl.OnContentTemplateChanged(DataTemplate oldContentTemplate, DataTemplate newContentTemplate)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnContentTemplateSelectorChanged(System.Windows.Controls.DataTemplateSelector,System.Windows.Controls.DataTemplateSelector)">
+            <summary>Sets the stub of ContentControl.OnContentTemplateSelectorChanged(DataTemplateSelector oldContentTemplateSelector, DataTemplateSelector newContentTemplateSelector)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnContentTemplateSelectorChangedDataTemplateSelectorDataTemplateSelector">
+            <summary>Sets the stub of ContentControl.OnContentTemplateSelectorChanged(DataTemplateSelector oldContentTemplateSelector, DataTemplateSelector newContentTemplateSelector)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnContextMenuClosing(System.Windows.Controls.ContextMenuEventArgs)">
+            <summary>Sets the stub of FrameworkElement.OnContextMenuClosing(ContextMenuEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnContextMenuClosingContextMenuEventArgs">
+            <summary>Sets the stub of FrameworkElement.OnContextMenuClosing(ContextMenuEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnContextMenuOpening(System.Windows.Controls.ContextMenuEventArgs)">
+            <summary>Sets the stub of FrameworkElement.OnContextMenuOpening(ContextMenuEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnContextMenuOpeningContextMenuEventArgs">
+            <summary>Sets the stub of FrameworkElement.OnContextMenuOpening(ContextMenuEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnCreateAutomationPeer">
+            <summary>Sets the stub of Window.OnCreateAutomationPeer()</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnCreateAutomationPeer01">
+            <summary>Sets the stub of Window.OnCreateAutomationPeer()</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnDeactivated(System.EventArgs)">
+            <summary>Sets the stub of Window.OnDeactivated(EventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnDeactivatedEventArgs">
+            <summary>Sets the stub of Window.OnDeactivated(EventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnDragEnter(System.Windows.DragEventArgs)">
+            <summary>Sets the stub of UIElement.OnDragEnter(DragEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnDragEnterDragEventArgs">
+            <summary>Sets the stub of UIElement.OnDragEnter(DragEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnDragLeave(System.Windows.DragEventArgs)">
+            <summary>Sets the stub of UIElement.OnDragLeave(DragEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnDragLeaveDragEventArgs">
+            <summary>Sets the stub of UIElement.OnDragLeave(DragEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnDragOver(System.Windows.DragEventArgs)">
+            <summary>Sets the stub of UIElement.OnDragOver(DragEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnDragOverDragEventArgs">
+            <summary>Sets the stub of UIElement.OnDragOver(DragEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnDrop(System.Windows.DragEventArgs)">
+            <summary>Sets the stub of UIElement.OnDrop(DragEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnDropDragEventArgs">
+            <summary>Sets the stub of UIElement.OnDrop(DragEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnGiveFeedback(System.Windows.GiveFeedbackEventArgs)">
+            <summary>Sets the stub of UIElement.OnGiveFeedback(GiveFeedbackEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnGiveFeedbackGiveFeedbackEventArgs">
+            <summary>Sets the stub of UIElement.OnGiveFeedback(GiveFeedbackEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnGotFocus(System.Windows.RoutedEventArgs)">
+            <summary>Sets the stub of FrameworkElement.OnGotFocus(RoutedEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnGotFocusRoutedEventArgs">
+            <summary>Sets the stub of FrameworkElement.OnGotFocus(RoutedEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnGotKeyboardFocus(System.Windows.Input.KeyboardFocusChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnGotKeyboardFocus(KeyboardFocusChangedEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnGotKeyboardFocusKeyboardFocusChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnGotKeyboardFocus(KeyboardFocusChangedEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnGotMouseCapture(System.Windows.Input.MouseEventArgs)">
+            <summary>Sets the stub of UIElement.OnGotMouseCapture(MouseEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnGotMouseCaptureMouseEventArgs">
+            <summary>Sets the stub of UIElement.OnGotMouseCapture(MouseEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnGotStylusCapture(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnGotStylusCapture(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnGotStylusCaptureStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnGotStylusCapture(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnGotTouchCapture(System.Windows.Input.TouchEventArgs)">
+            <summary>Sets the stub of UIElement.OnGotTouchCapture(TouchEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnGotTouchCaptureTouchEventArgs">
+            <summary>Sets the stub of UIElement.OnGotTouchCapture(TouchEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnInitialized(System.EventArgs)">
+            <summary>Sets the stub of FrameworkElement.OnInitialized(EventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnInitializedEventArgs">
+            <summary>Sets the stub of FrameworkElement.OnInitialized(EventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnIsKeyboardFocusWithinChanged(System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnIsKeyboardFocusWithinChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnIsKeyboardFocusWithinChangedDependencyPropertyChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnIsKeyboardFocusWithinChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnIsKeyboardFocusedChanged(System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnIsKeyboardFocusedChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnIsKeyboardFocusedChangedDependencyPropertyChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnIsKeyboardFocusedChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnIsMouseCaptureWithinChanged(System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnIsMouseCaptureWithinChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnIsMouseCaptureWithinChangedDependencyPropertyChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnIsMouseCaptureWithinChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnIsMouseCapturedChanged(System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnIsMouseCapturedChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnIsMouseCapturedChangedDependencyPropertyChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnIsMouseCapturedChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnIsMouseDirectlyOverChanged(System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnIsMouseDirectlyOverChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnIsMouseDirectlyOverChangedDependencyPropertyChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnIsMouseDirectlyOverChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnIsStylusCaptureWithinChanged(System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnIsStylusCaptureWithinChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnIsStylusCaptureWithinChangedDependencyPropertyChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnIsStylusCaptureWithinChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnIsStylusCapturedChanged(System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnIsStylusCapturedChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnIsStylusCapturedChangedDependencyPropertyChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnIsStylusCapturedChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnIsStylusDirectlyOverChanged(System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnIsStylusDirectlyOverChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnIsStylusDirectlyOverChangedDependencyPropertyChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnIsStylusDirectlyOverChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnKeyDown(System.Windows.Input.KeyEventArgs)">
+            <summary>Sets the stub of UIElement.OnKeyDown(KeyEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnKeyDownKeyEventArgs">
+            <summary>Sets the stub of UIElement.OnKeyDown(KeyEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnKeyUp(System.Windows.Input.KeyEventArgs)">
+            <summary>Sets the stub of UIElement.OnKeyUp(KeyEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnKeyUpKeyEventArgs">
+            <summary>Sets the stub of UIElement.OnKeyUp(KeyEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnLocationChanged(System.EventArgs)">
+            <summary>Sets the stub of Window.OnLocationChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnLocationChangedEventArgs">
+            <summary>Sets the stub of Window.OnLocationChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnLostFocus(System.Windows.RoutedEventArgs)">
+            <summary>Sets the stub of UIElement.OnLostFocus(RoutedEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnLostFocusRoutedEventArgs">
+            <summary>Sets the stub of UIElement.OnLostFocus(RoutedEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnLostKeyboardFocus(System.Windows.Input.KeyboardFocusChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnLostKeyboardFocus(KeyboardFocusChangedEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnLostKeyboardFocusKeyboardFocusChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnLostKeyboardFocus(KeyboardFocusChangedEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnLostMouseCapture(System.Windows.Input.MouseEventArgs)">
+            <summary>Sets the stub of UIElement.OnLostMouseCapture(MouseEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnLostMouseCaptureMouseEventArgs">
+            <summary>Sets the stub of UIElement.OnLostMouseCapture(MouseEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnLostStylusCapture(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnLostStylusCapture(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnLostStylusCaptureStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnLostStylusCapture(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnLostTouchCapture(System.Windows.Input.TouchEventArgs)">
+            <summary>Sets the stub of UIElement.OnLostTouchCapture(TouchEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnLostTouchCaptureTouchEventArgs">
+            <summary>Sets the stub of UIElement.OnLostTouchCapture(TouchEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnManipulationBoundaryFeedback(System.Windows.Input.ManipulationBoundaryFeedbackEventArgs)">
+            <summary>Sets the stub of Window.OnManipulationBoundaryFeedback(ManipulationBoundaryFeedbackEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnManipulationBoundaryFeedbackManipulationBoundaryFeedbackEventArgs">
+            <summary>Sets the stub of Window.OnManipulationBoundaryFeedback(ManipulationBoundaryFeedbackEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnManipulationCompleted(System.Windows.Input.ManipulationCompletedEventArgs)">
+            <summary>Sets the stub of UIElement.OnManipulationCompleted(ManipulationCompletedEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnManipulationCompletedManipulationCompletedEventArgs">
+            <summary>Sets the stub of UIElement.OnManipulationCompleted(ManipulationCompletedEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnManipulationDelta(System.Windows.Input.ManipulationDeltaEventArgs)">
+            <summary>Sets the stub of UIElement.OnManipulationDelta(ManipulationDeltaEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnManipulationDeltaManipulationDeltaEventArgs">
+            <summary>Sets the stub of UIElement.OnManipulationDelta(ManipulationDeltaEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnManipulationInertiaStarting(System.Windows.Input.ManipulationInertiaStartingEventArgs)">
+            <summary>Sets the stub of UIElement.OnManipulationInertiaStarting(ManipulationInertiaStartingEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnManipulationInertiaStartingManipulationInertiaStartingEventArgs">
+            <summary>Sets the stub of UIElement.OnManipulationInertiaStarting(ManipulationInertiaStartingEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnManipulationStarted(System.Windows.Input.ManipulationStartedEventArgs)">
+            <summary>Sets the stub of UIElement.OnManipulationStarted(ManipulationStartedEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnManipulationStartedManipulationStartedEventArgs">
+            <summary>Sets the stub of UIElement.OnManipulationStarted(ManipulationStartedEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnManipulationStarting(System.Windows.Input.ManipulationStartingEventArgs)">
+            <summary>Sets the stub of UIElement.OnManipulationStarting(ManipulationStartingEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnManipulationStartingManipulationStartingEventArgs">
+            <summary>Sets the stub of UIElement.OnManipulationStarting(ManipulationStartingEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnMouseDoubleClick(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of Control.OnMouseDoubleClick(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnMouseDoubleClickMouseButtonEventArgs">
+            <summary>Sets the stub of Control.OnMouseDoubleClick(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnMouseDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnMouseDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnMouseDownMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnMouseDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnMouseEnter(System.Windows.Input.MouseEventArgs)">
+            <summary>Sets the stub of UIElement.OnMouseEnter(MouseEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnMouseEnterMouseEventArgs">
+            <summary>Sets the stub of UIElement.OnMouseEnter(MouseEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnMouseLeave(System.Windows.Input.MouseEventArgs)">
+            <summary>Sets the stub of UIElement.OnMouseLeave(MouseEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnMouseLeaveMouseEventArgs">
+            <summary>Sets the stub of UIElement.OnMouseLeave(MouseEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnMouseLeftButtonDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnMouseLeftButtonDownMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnMouseLeftButtonDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnMouseLeftButtonUp(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnMouseLeftButtonUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnMouseLeftButtonUpMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnMouseLeftButtonUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnMouseMove(System.Windows.Input.MouseEventArgs)">
+            <summary>Sets the stub of UIElement.OnMouseMove(MouseEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnMouseMoveMouseEventArgs">
+            <summary>Sets the stub of UIElement.OnMouseMove(MouseEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnMouseRightButtonDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnMouseRightButtonDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnMouseRightButtonDownMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnMouseRightButtonDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnMouseRightButtonUp(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnMouseRightButtonUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnMouseRightButtonUpMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnMouseRightButtonUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnMouseUp(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnMouseUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnMouseUpMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnMouseUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnMouseWheel(System.Windows.Input.MouseWheelEventArgs)">
+            <summary>Sets the stub of UIElement.OnMouseWheel(MouseWheelEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnMouseWheelMouseWheelEventArgs">
+            <summary>Sets the stub of UIElement.OnMouseWheel(MouseWheelEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewDragEnter(System.Windows.DragEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewDragEnter(DragEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewDragEnterDragEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewDragEnter(DragEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewDragLeave(System.Windows.DragEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewDragLeave(DragEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewDragLeaveDragEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewDragLeave(DragEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewDragOver(System.Windows.DragEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewDragOver(DragEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewDragOverDragEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewDragOver(DragEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewDrop(System.Windows.DragEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewDrop(DragEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewDropDragEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewDrop(DragEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewGiveFeedback(System.Windows.GiveFeedbackEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewGiveFeedback(GiveFeedbackEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewGiveFeedbackGiveFeedbackEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewGiveFeedback(GiveFeedbackEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewGotKeyboardFocus(System.Windows.Input.KeyboardFocusChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewGotKeyboardFocus(KeyboardFocusChangedEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewGotKeyboardFocusKeyboardFocusChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewGotKeyboardFocus(KeyboardFocusChangedEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewKeyDown(System.Windows.Input.KeyEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewKeyDown(KeyEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewKeyDownKeyEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewKeyDown(KeyEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewKeyUp(System.Windows.Input.KeyEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewKeyUp(KeyEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewKeyUpKeyEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewKeyUp(KeyEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewLostKeyboardFocus(System.Windows.Input.KeyboardFocusChangedEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewLostKeyboardFocus(KeyboardFocusChangedEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewLostKeyboardFocusKeyboardFocusChangedEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewLostKeyboardFocus(KeyboardFocusChangedEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewMouseDoubleClick(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of Control.OnPreviewMouseDoubleClick(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewMouseDoubleClickMouseButtonEventArgs">
+            <summary>Sets the stub of Control.OnPreviewMouseDoubleClick(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewMouseDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewMouseDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewMouseDownMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewMouseDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewMouseLeftButtonDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewMouseLeftButtonDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewMouseLeftButtonDownMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewMouseLeftButtonDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewMouseLeftButtonUp(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewMouseLeftButtonUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewMouseLeftButtonUpMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewMouseLeftButtonUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewMouseMove(System.Windows.Input.MouseEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewMouseMove(MouseEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewMouseMoveMouseEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewMouseMove(MouseEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewMouseRightButtonDown(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewMouseRightButtonDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewMouseRightButtonDownMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewMouseRightButtonDown(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewMouseRightButtonUp(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewMouseRightButtonUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewMouseRightButtonUpMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewMouseRightButtonUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewMouseUp(System.Windows.Input.MouseButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewMouseUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewMouseUpMouseButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewMouseUp(MouseButtonEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewMouseWheel(System.Windows.Input.MouseWheelEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewMouseWheel(MouseWheelEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewMouseWheelMouseWheelEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewMouseWheel(MouseWheelEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewQueryContinueDrag(System.Windows.QueryContinueDragEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewQueryContinueDrag(QueryContinueDragEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewQueryContinueDragQueryContinueDragEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewQueryContinueDrag(QueryContinueDragEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewStylusButtonDown(System.Windows.Input.StylusButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewStylusButtonDown(StylusButtonEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewStylusButtonDownStylusButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewStylusButtonDown(StylusButtonEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewStylusButtonUp(System.Windows.Input.StylusButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewStylusButtonUp(StylusButtonEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewStylusButtonUpStylusButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewStylusButtonUp(StylusButtonEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewStylusDown(System.Windows.Input.StylusDownEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewStylusDown(StylusDownEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewStylusDownStylusDownEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewStylusDown(StylusDownEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewStylusInAirMove(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewStylusInAirMove(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewStylusInAirMoveStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewStylusInAirMove(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewStylusInRange(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewStylusInRange(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewStylusInRangeStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewStylusInRange(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewStylusMove(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewStylusMove(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewStylusMoveStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewStylusMove(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewStylusOutOfRange(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewStylusOutOfRange(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewStylusOutOfRangeStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewStylusOutOfRange(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewStylusSystemGesture(System.Windows.Input.StylusSystemGestureEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewStylusSystemGesture(StylusSystemGestureEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewStylusSystemGestureStylusSystemGestureEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewStylusSystemGesture(StylusSystemGestureEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewStylusUp(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewStylusUp(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewStylusUpStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewStylusUp(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewTextInput(System.Windows.Input.TextCompositionEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewTextInput(TextCompositionEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewTextInputTextCompositionEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewTextInput(TextCompositionEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewTouchDown(System.Windows.Input.TouchEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewTouchDown(TouchEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewTouchDownTouchEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewTouchDown(TouchEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewTouchMove(System.Windows.Input.TouchEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewTouchMove(TouchEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewTouchMoveTouchEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewTouchMove(TouchEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewTouchUp(System.Windows.Input.TouchEventArgs)">
+            <summary>Sets the stub of UIElement.OnPreviewTouchUp(TouchEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPreviewTouchUpTouchEventArgs">
+            <summary>Sets the stub of UIElement.OnPreviewTouchUp(TouchEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPropertyChanged(System.Windows.DependencyPropertyChangedEventArgs)">
+            <summary>Sets the stub of FrameworkElement.OnPropertyChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnPropertyChangedDependencyPropertyChangedEventArgs">
+            <summary>Sets the stub of FrameworkElement.OnPropertyChanged(DependencyPropertyChangedEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnQueryContinueDrag(System.Windows.QueryContinueDragEventArgs)">
+            <summary>Sets the stub of UIElement.OnQueryContinueDrag(QueryContinueDragEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnQueryContinueDragQueryContinueDragEventArgs">
+            <summary>Sets the stub of UIElement.OnQueryContinueDrag(QueryContinueDragEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnQueryCursor(System.Windows.Input.QueryCursorEventArgs)">
+            <summary>Sets the stub of UIElement.OnQueryCursor(QueryCursorEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnQueryCursorQueryCursorEventArgs">
+            <summary>Sets the stub of UIElement.OnQueryCursor(QueryCursorEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnRender(System.Windows.Media.DrawingContext)">
+            <summary>Sets the stub of UIElement.OnRender(DrawingContext drawingContext)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnRenderDrawingContext">
+            <summary>Sets the stub of UIElement.OnRender(DrawingContext drawingContext)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnRenderSizeChanged(System.Windows.SizeChangedInfo)">
+            <summary>Sets the stub of FrameworkElement.OnRenderSizeChanged(SizeChangedInfo sizeInfo)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnRenderSizeChangedSizeChangedInfo">
+            <summary>Sets the stub of FrameworkElement.OnRenderSizeChanged(SizeChangedInfo sizeInfo)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnSourceInitialized(System.EventArgs)">
+            <summary>Sets the stub of Window.OnSourceInitialized(EventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnSourceInitializedEventArgs">
+            <summary>Sets the stub of Window.OnSourceInitialized(EventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnStateChanged(System.EventArgs)">
+            <summary>Sets the stub of Window.OnStateChanged(EventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnStateChangedEventArgs">
+            <summary>Sets the stub of Window.OnStateChanged(EventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnStyleChanged(System.Windows.Style,System.Windows.Style)">
+            <summary>Sets the stub of FrameworkElement.OnStyleChanged(Style oldStyle, Style newStyle)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnStyleChangedStyleStyle">
+            <summary>Sets the stub of FrameworkElement.OnStyleChanged(Style oldStyle, Style newStyle)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnStylusButtonDown(System.Windows.Input.StylusButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnStylusButtonDown(StylusButtonEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnStylusButtonDownStylusButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnStylusButtonDown(StylusButtonEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnStylusButtonUp(System.Windows.Input.StylusButtonEventArgs)">
+            <summary>Sets the stub of UIElement.OnStylusButtonUp(StylusButtonEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnStylusButtonUpStylusButtonEventArgs">
+            <summary>Sets the stub of UIElement.OnStylusButtonUp(StylusButtonEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnStylusDown(System.Windows.Input.StylusDownEventArgs)">
+            <summary>Sets the stub of UIElement.OnStylusDown(StylusDownEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnStylusDownStylusDownEventArgs">
+            <summary>Sets the stub of UIElement.OnStylusDown(StylusDownEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnStylusEnter(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnStylusEnter(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnStylusEnterStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnStylusEnter(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnStylusInAirMove(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnStylusInAirMove(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnStylusInAirMoveStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnStylusInAirMove(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnStylusInRange(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnStylusInRange(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnStylusInRangeStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnStylusInRange(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnStylusLeave(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnStylusLeave(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnStylusLeaveStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnStylusLeave(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnStylusMove(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnStylusMove(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnStylusMoveStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnStylusMove(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnStylusOutOfRange(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnStylusOutOfRange(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnStylusOutOfRangeStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnStylusOutOfRange(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnStylusSystemGesture(System.Windows.Input.StylusSystemGestureEventArgs)">
+            <summary>Sets the stub of UIElement.OnStylusSystemGesture(StylusSystemGestureEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnStylusSystemGestureStylusSystemGestureEventArgs">
+            <summary>Sets the stub of UIElement.OnStylusSystemGesture(StylusSystemGestureEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnStylusUp(System.Windows.Input.StylusEventArgs)">
+            <summary>Sets the stub of UIElement.OnStylusUp(StylusEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnStylusUpStylusEventArgs">
+            <summary>Sets the stub of UIElement.OnStylusUp(StylusEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnTemplateChanged(System.Windows.Controls.ControlTemplate,System.Windows.Controls.ControlTemplate)">
+            <summary>Sets the stub of Control.OnTemplateChanged(ControlTemplate oldTemplate, ControlTemplate newTemplate)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnTemplateChangedControlTemplateControlTemplate">
+            <summary>Sets the stub of Control.OnTemplateChanged(ControlTemplate oldTemplate, ControlTemplate newTemplate)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnTextInput(System.Windows.Input.TextCompositionEventArgs)">
+            <summary>Sets the stub of UIElement.OnTextInput(TextCompositionEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnTextInputTextCompositionEventArgs">
+            <summary>Sets the stub of UIElement.OnTextInput(TextCompositionEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnToolTipClosing(System.Windows.Controls.ToolTipEventArgs)">
+            <summary>Sets the stub of FrameworkElement.OnToolTipClosing(ToolTipEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnToolTipClosingToolTipEventArgs">
+            <summary>Sets the stub of FrameworkElement.OnToolTipClosing(ToolTipEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnToolTipOpening(System.Windows.Controls.ToolTipEventArgs)">
+            <summary>Sets the stub of FrameworkElement.OnToolTipOpening(ToolTipEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnToolTipOpeningToolTipEventArgs">
+            <summary>Sets the stub of FrameworkElement.OnToolTipOpening(ToolTipEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnTouchDown(System.Windows.Input.TouchEventArgs)">
+            <summary>Sets the stub of UIElement.OnTouchDown(TouchEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnTouchDownTouchEventArgs">
+            <summary>Sets the stub of UIElement.OnTouchDown(TouchEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnTouchEnter(System.Windows.Input.TouchEventArgs)">
+            <summary>Sets the stub of UIElement.OnTouchEnter(TouchEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnTouchEnterTouchEventArgs">
+            <summary>Sets the stub of UIElement.OnTouchEnter(TouchEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnTouchLeave(System.Windows.Input.TouchEventArgs)">
+            <summary>Sets the stub of UIElement.OnTouchLeave(TouchEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnTouchLeaveTouchEventArgs">
+            <summary>Sets the stub of UIElement.OnTouchLeave(TouchEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnTouchMove(System.Windows.Input.TouchEventArgs)">
+            <summary>Sets the stub of UIElement.OnTouchMove(TouchEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnTouchMoveTouchEventArgs">
+            <summary>Sets the stub of UIElement.OnTouchMove(TouchEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnTouchUp(System.Windows.Input.TouchEventArgs)">
+            <summary>Sets the stub of UIElement.OnTouchUp(TouchEventArgs e)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnTouchUpTouchEventArgs">
+            <summary>Sets the stub of UIElement.OnTouchUp(TouchEventArgs e)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.OnVisualChildrenChanged(System.Windows.DependencyObject,System.Windows.DependencyObject)">
+            <summary>Sets the stub of Visual.OnVisualChildrenChanged(DependencyObject visualAdded, DependencyObject visualRemoved)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.OnVisualChildrenChangedDependencyObjectDependencyObject">
+            <summary>Sets the stub of Visual.OnVisualChildrenChanged(DependencyObject visualAdded, DependencyObject visualRemoved)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.ParentLayoutInvalidated(System.Windows.UIElement)">
+            <summary>Sets the stub of FrameworkElement.ParentLayoutInvalidated(UIElement child)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.ParentLayoutInvalidatedUIElement">
+            <summary>Sets the stub of FrameworkElement.ParentLayoutInvalidated(UIElement child)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.ShouldSerializeContent">
+            <summary>Sets the stub of ContentControl.ShouldSerializeContent()</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.ShouldSerializeContent01">
+            <summary>Sets the stub of ContentControl.ShouldSerializeContent()</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.ShouldSerializeProperty(System.Windows.DependencyProperty)">
+            <summary>Sets the stub of DependencyObject.ShouldSerializeProperty(DependencyProperty dp)</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.ShouldSerializePropertyDependencyProperty">
+            <summary>Sets the stub of DependencyObject.ShouldSerializeProperty(DependencyProperty dp)</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.ToString">
+            <summary>Sets the stub of Control.ToString()</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.ToString01">
+            <summary>Sets the stub of Control.ToString()</summary>
+        </member>
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.VisualChildrenCountGet">
+            <summary>Sets the stub of FrameworkElement.get_VisualChildrenCount()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.StubFolderPickerDialog.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.StubFolderPickerDialog.HandlesScrolling">
+            <summary>Sets the stub of Control.get_HandlesScrolling()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.StubFolderPickerDialog.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.StubFolderPickerDialog.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.StubFolderPickerDialog.IsEnabledCore">
+            <summary>Sets the stub of UIElement.get_IsEnabledCore()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.StubFolderPickerDialog.LogicalChildren">
+            <summary>Sets the stub of Window.get_LogicalChildren()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.StubFolderPickerDialog.VisualChildrenCount">
+            <summary>Sets the stub of FrameworkElement.get_VisualChildrenCount()</summary>
+        </member>
+        <member name="T:FolderPickerLib.Fakes.StubNotifiableObject">
+            <summary>Stub type of FolderPickerLib.NotifiableObject</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubNotifiableObject.#ctor">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubNotifiableObject.InitializeStub">
+            <summary>Initializes a new instance of type StubNotifiableObject</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.StubNotifiableObject.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.StubNotifiableObject.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.StubNotifiableObject.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="T:FolderPickerLib.Fakes.StubTreeItem">
+            <summary>Stub type of FolderPickerLib.TreeItem</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubTreeItem.#ctor(System.String,FolderPickerLib.TreeItem)">
+            <summary>Initializes a new instance</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubTreeItem.InitializeStub">
+            <summary>Initializes a new instance of type StubTreeItem</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.StubTreeItem.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.StubTreeItem.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.StubTreeItem.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+    </members>
+</doc>

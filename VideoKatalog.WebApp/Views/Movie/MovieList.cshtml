@@ -1,0 +1,183 @@
+﻿@model IEnumerable<VideoKatalog.WebApp.Movie>
+@using VideoKatalog.WebApp
+@using System.Linq
+
+@{
+    ViewBag.Title = "Filmovi";
+    //VideoKatalog.WebApp.VideoDatabaseEntities context = new VideoKatalog.WebApp.VideoDatabaseEntities();
+    //UserProfile currentUser = Session["CurrentUser"] as UserProfile;
+}
+
+@Styles.Render("~/Content/MovieList2")
+
+<div class="loadingDiv" id="mainLoading"></div>
+<div id="sideLoading" class="loadingDiv" title="Provjera za novim filmovima"></div>
+<div id="allInfo">
+    <div id="listboxDiv">
+        <input id="listSearch" />
+        <div id="movieListBox"></div>
+        <div id="selectedMovieListBox"></div>
+    </div>
+    <div id="mainInfo">
+        @*<div class="loadingDiv"></div>*@
+        <div id="nameYearDiv">
+			<span id="movieName"></span>
+            <span id="movieYear" title="hahaha"></span>
+        </div>
+        <div id="ratingDiv">
+            <div id="ratingIcon"></div>
+            <span id="ratingText"></span>
+        </div>
+        <div id="genreDiv">
+            <span id="genres"></span>
+        </div>
+        <div id="directorDiv">
+            <div id="directorIcon"></div>
+            <div id="director"></div>
+        </div>
+        <div id="castDiv">
+            <div id="castIcon"></div>
+            <div id="cast"></div>
+        </div>
+        <div id="plotDiv">
+            <div id="plotIcon"></div>
+            <div id="plot"></div>
+        </div>
+        <div id="posterDiv">
+            @*<span class="helper"></span>*@
+            @*<img id="moviePoster" src="http://imgc.allpostersimages.com/images/P-473-488-90/15/1555/PN9DD00Z/posters/back-to-the-future.jpg" />*@
+            <div id="moviePoster"></div>
+			<div id="loadingPosterIndicator"></div>
+            @*<div id="posterCase"></div>*@
+            @*<img id="posterCase" src="~/Content/images/case.png" />*@
+        </div>
+        <div id="addButtonDiv">
+			<button id="addButton" class="addButton">ODABERI</button>
+            <button id="removeButton" class="removeButton">MAKNI</button>
+        </div>
+    </div>
+
+
+    <div id="techInfo">
+        @*<div class="loadingDiv"></div>*@
+        <div id="runtimeDiv">
+            <div id="runtimeIcon"></div>
+            <div id="runtime"></div>
+        </div>
+        <div id="sizeDiv">
+            <div id="sizeIcon"></div>
+            <span id="size"></span>
+        </div>
+        <div id="croSubDiv">
+            <div id="croSubIcon" class="noSub"></div>
+        </div>
+        <div id="engSubDiv">
+            <div id="engSubIcon" class="noSub"></div>
+        </div>
+        <div id="imdbDiv">
+            <div id="imdbIcon"></div>
+        </div>
+        <div id="trailerDiv">
+            <div id="trailerIcon"></div>
+        </div>
+    </div>
+
+    <div id="selectGenresDiv2">
+        <div id="selectGenre2"></div>
+    </div>
+
+</div>
+
+
+@section filters2 {
+    <div id="leftFilterContent">
+        <div id="genresSelectContent">
+            <div id="selectGenreDiv">
+                <select name="genreInput" class="multiselect" id="selectGenre" multiple="multiple">
+                    <option value="Akcija" id="Akcija">Akcija</option>
+                    <option value="Animacija" id="Animacija">Animacija</option>
+                    <option value="Avantura" id="Avantura">Avantura</option>
+                    <option value="Drama" id="Drama">Drama</option>
+                    <option value="Fantastika" id="Fantastika">Fantastika</option>
+                    <option value="Horor" id="Horor">Horor</option>
+                    <option value="Komedija" id="Komedija">Komedija</option>
+                    <option value="Krimi" id="Krimi">Krimi</option>
+                    <option value="Misterija" id="Misterija">Misterija</option>
+                    <option value="Muzicki" id="Muzicki">Muzicki</option>
+                    <option value="Obiteljski" id="Obiteljski">Obiteljski</option>
+                    <option value="Povjesni" id="Povjesni">Povjesni</option>
+                    <option value="Ratni" id="Ratni">Ratni</option>
+                    <option value="Romantika" id="Romantika">Romantika</option>
+                    <option value="Sportski" id="Sportski">Sportski</option>
+                    <option value="Vestern" id="Vestern">Vestern</option>
+                    <option value="Triler" id="Triler">Triler</option>
+                    <option value="Znanstvena fantastika" id="Znanstvena fantastika">Znanstvena fantastika</option>
+                </select>
+            </div>
+        </div>
+		<div id="sortDiv" title="Odaberi atribut za sortiranje">
+			<div id="sortSelectContent" title="Odaberi atribut za sortiranje">
+				<select id="sortSelectProperty" class="multiselect" title="Odaberi atribut za sortiranje">
+					<option value="name" title="Odaberi atribut za sortiranje">Naziv</option>
+					<option value="rating">Ocjena</option>
+					<option value="year">Godina</option>
+					<option value="runtime">Trajanje</option>
+					<option value="addDate">Datum dodavanja</option>
+				</select>
+			</div>
+		</div>
+        <div id="afterDatePickerContent">
+            <div id="afterDateLabel">Dodano nakon datuma</div>
+            <div id="afterDatePicker"></div>
+        </div>
+        <div id="hasCroSubFilterDiv">
+            <input type="checkbox" id="hasCroSubFilterCheckbox" name="iCheck" />
+            <label for="hasCroSubFilterCheckbox" id="hasCroSubFilterLabel">Hrvatski titlovi</label>
+        </div>
+        <div id="hasEngSubFilterDiv">
+            <input type="checkbox" id="hasEngSubFilterCheckbox" name="iCheck" />
+            <label for="hasEngSubFilterCheckbox" id="hasEngSubFilterLabel">Engleski titlovi</label>
+        </div>
+    </div>
+    <div id="rightFilterContent">
+        <div id="ratingSliderContent" class="rightFilterContent">
+            <span id="imdbMinLabel" class="sliderValueText minText" title="Minimalna ocjena">1.00</span>
+            <span id="imdbMaxLabel" class="sliderValueText maxText" title="Maksmalna ocjena">10.0</span>
+            <div id="ratingSlider" class="filterSlider"></div>
+            <div id="filterRatingIcon" class="sliderIconDiv"></div>
+        </div>
+        <div id="sizeSliderContent" class="rightFilterContent">
+            <label id="sizeMinLabel" class="sliderValueText minText" title="Minimalna velicina (GB)">0.0</label>
+            <label id="sizeMaxLabel" class="sliderValueText maxText" title="Maksimalna velicina (GB)">50.0</label>
+            <div id="sizeSlider" class="filterSlider"></div>
+            <div id="searchSizeIcon" class="sliderIconDiv"></div>
+        </div>
+        <div id="runtimeSliderContent" class="rightFilterContent">
+            <label id="runtimeMinLabel" class="sliderValueText minText" title="Minimalno trajanje u minutama">1</label>
+            <label id="runtimeMaxLabel" class="sliderValueText maxText" title="Maksimalno trajanje u minutama">300</label>
+            <div id="runtimeSlider" class="filterSlider"></div>
+            <div id="searchRuntimeIcon" class="sliderIconDiv"></div>
+        </div>
+        <div id="yearSliderContent" class="rightFilterContent">
+            <label id="yearMinLabel" class="sliderValueText minText" title="Minimalna godina">1937</label>
+            <label id="yearMaxLabel" class="sliderValueText maxText" title="Maksimalna godina">2014</label>
+            <div id="yearSlider" class="filterSlider"></div>
+            <div id="searchYearIcon" class="sliderIconDiv"></div>
+        </div>
+    </div>
+    <div id="filterButtonContent">
+        <div id="resetFilterButtonContent">
+            <button id="resetFiltersButton" class="removeButton">RESET</button>
+        </div>
+        <div id="applyFiltersButtonContent">
+            <button id="applyFiltersButton" class="addButton">FILTRIRAJ</button>
+        </div>
+    </div>
+}
+
+
+@section scripts {
+
+    @Scripts.Render("~/bundles/MovieList2")
+
+}

@@ -1,0 +1,167 @@
+﻿@using VideoKatalog.WebApp;
+
+@{
+	bool loadSelected = false;
+	if (Session["loadSelected"] != null)
+	{
+		loadSelected = (bool)Session["loadSelected"];
+	}
+	Session["loadSelected"] = false;
+}
+
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=2" />
+	<link rel="SHORTCUT ICON" href="@Url.Content("~/Content/images/favicon11.ico")" />
+	<title>@ViewBag.Title</title>
+
+	@*@Styles.Render("~/Content/css")
+		@Scripts.Render("~/bundles/modernizr")*@
+
+	@Styles.Render("~/Content/LayoutKatalog")
+
+	@*<link rel="stylesheet" href="~/Scripts/jqwidgets/styles/jqx.base.css" type="text/css" />
+
+		<!-- add the jQuery script -->
+		<script type="text/javascript" src="~/Scripts/jquery-1.10.2.min.js"></script>
+		<!-- add the jQWidgets framework -->
+		<script type="text/javascript" src="~/Scripts/jqwidgets/jqxcore.js"></script>
+		<!-- add one or more widgets -->
+		<script type="text/javascript" src="~/Scripts/jqwidgets/jqxbuttons.js"></script>
+		<!-- add one of the jQWidgets styles -->
+		<link rel="stylesheet" href="~/Scripts/jqwidgets/styles/jqx.darkblue.css" type="text/css" />
+
+		<script type="text/javascript" src="~/Scripts/jqwidgets/jqxwindow.js"></script>
+		<script type="text/javascript" src="~/Scripts/jqwidgets/jqxscrollbar.js"></script>
+		<script type="text/javascript" src="~/Scripts/jqwidgets/jqxpanel.js"></script>
+		<script type="text/javascript" src="~/Scripts/jqwidgets/jqxtabs.js"></script>
+		<script type="text/javascript" src="~/Scripts/jqwidgets/jqxcheckbox.js"></script>
+		<script type="text/javascript" src="~/Scripts/scripts/demos.js"></script>
+		<script type="text/javascript" src="~/Scripts/jqwidgets/jqxinput.js"></script>*@
+
+	@*<link rel="stylesheet" type="text/css" href="~/Content/normalize.css" />
+		<link rel="stylesheet" type="text/css" href="~/Content/demo.css" />
+		<link rel="stylesheet" type="text/css" href="~/Content/icons.css" />
+		<link rel="stylesheet" type="text/css" href="~/Content/component.css" />*@
+	<script src="~/Scripts/modernizr.custom.js"></script>
+
+</head>
+<body>
+	<div id="st-container" class="st-container">
+		<nav class="st-menu st-effect-1" id="menu-1">
+			<h2 class="icon icon-eye">Navigacija</h2>
+			<ul>
+				<li><a class="icon icon-video" href="~/Movie/List">Filmovi</a></li>
+				<li><a class="icon icon-tv" href="~/Serie/List">Serije</a></li>
+				<li><a class="icon icon-display" href="https://www.mediafire.com/folder/5bgj1pg6xwm7p/Katalog" target="_blank">Video uzorci</a></li>
+				@*<li><a class="icon icon-mail" href="~/Home/Kontakt">Kontakt</a></li>*@
+			</ul>
+		</nav>
+
+		<nav class="st-menu st-effect-15" id="menu-15">
+			@RenderSection("Filters", required: false)
+		</nav>
+
+		<div id="filters2">
+			@RenderSection("filters2", required: false)
+		</div>
+
+		<img id="tempPosterimg" width="1" height="1" src=""/>
+
+		<div class="st-pusher">
+			@*<nav class="st-menu st-effect-5" id="menu-5">
+					<h2 class="icon icon-stack">Navigacija</h2>
+					<ul>
+						<li><a class="icon icon-data" href="#">Filmovi</a></li>
+						<li><a class="icon icon-location" href="#">Serije</a></li>
+						<li><a class="icon icon-study" href="#">Video uzorci</a></li>
+						<li><a class="icon icon-photo" href="#">Kontakt</a></li>
+					</ul>
+				</nav>*@
+
+			<div id="topContent">
+				<button data-effect="st-effect-1" id="menuButton" title="Navigacija"></button>
+				<button data-effect="st-effect-15" id="filterButton" title="Prikaži filtere"></button>
+				<span id="pageTitle">@ViewBag.Title</span>
+			</div>
+			<button data-effect="st-effect-1" id="menuButtonMobile"></button>
+			<button data-effect="st-effect-15" id="filterButtonMobile"></button>
+			<div id="mainContent">
+				@*<div id="resolution">Rezolucija</div>*@
+				@RenderBody()
+				<div id="trailerWindow">
+					<div id="trailerWindowHeader">
+						<span>
+							Trailer
+						</span>
+					</div>
+					<div style="overflow: hidden; margin: 20px;" id="trailerWindowContent">
+						<iframe id="trailerFrame"
+								src="#"></iframe>
+					</div>
+				</div>
+			</div>
+			<div id="compactInfoDiv">
+
+				<div id="uploadWindow">
+					<div id="uploadWindowHeader">
+						<span>
+							Učitaj datoteku
+						</span>
+					</div>
+					<div style="overflow: hidden; margin: 20px;" id="trailerWindowContent">
+						@using (Html.BeginForm("Upload", "Home", FormMethod.Post,
+			new { enctype = "multipart/form-data" }))
+						{
+							<input type="file" id="file" name="file" value="Odaberi datoteku" title="Odaberi datoteku" />
+							<input type="submit" value="Učitaj odabrano" id="submitBtn" />
+						}
+					</div>
+					
+				</div>
+
+				<button id="loadTxt" title="Učitaj popis"></button>
+				<button id="saveToTxt" title="Spremi odabrano"></button>
+				<button id="clearAll" title="Obriši odabrano"></button>
+				<div id="hddSizeSelectDiv" title="Odaberi veličinu HDD-a">
+					@*<span id="hddSizeSelectSpan">Ograniči odabir</span>*@
+					<select id="hddSizeSelect" name="Ograniči odabir">
+						<option value="0">∞ GB</option>
+						<option value="256">256 GB</option>
+						<option value="512">512 GB</option>
+						<option value="1024">1 TB</option>
+						<option value="2048">2 TB</option>
+						<option value="3072">3 TB</option>
+						<option value="4096">4 TB</option>
+						<option value="5120">5 TB</option>
+					</select>
+				</div>
+				<span id="selectedSize" title="Ukupna veličina odabranog">0 GB</span>
+				<div id="progressBar" title="Popunjenost HDD-a"></div>
+				<div id="selectedPercentage" title="Popunjenost HDD-a">0 %</div>
+				<button id="showSelectedButton" title="Pregled odabranog">ODABRANO</button>
+			</div>
+			@*<div id="rightSideBar">
+					<div id="rightCompactContent">
+
+					</div>
+					<div id="rightRestContent">
+
+					</div>
+				</div>*@
+		</div>
+
+
+	</div>
+	<script type="text/javascript">
+		var decimalSeparator = ',';
+		var thousandSeparator = '.';
+		var loadSelected = @loadSelected.ToString().ToLower();
+	</script>
+	@Scripts.Render("~/bundles/_LayoutKatalog")
+	@RenderSection("Scripts", required: false)
+
+</body>
+</html>

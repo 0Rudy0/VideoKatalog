@@ -1,0 +1,6 @@
+*.suo
+*.vssscc
+bin\*
+debug\*
+release\*
+*csproj.user*

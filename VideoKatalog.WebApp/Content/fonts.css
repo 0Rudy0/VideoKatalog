@@ -1,0 +1,41 @@
+@font-face {
+	font-family: Dungeon;
+	font-style:normal;
+	src: url('fonts/Dungeon.ttf');	
+}
+
+@font-face {
+	font-family: DungeonIE;
+	font-style:normal;
+	src: url('fonts/Dungeon.eot');
+}
+
+@font-face {
+	font-family: UpperCase;
+	font-style:normal;
+	src: url('fonts/BNKGOTHM.TTF');	
+}
+
+@font-face {
+	font-family: NiceFontIE;
+	font-style:normal;
+	src: url('fonts/ALBMT___.eot');
+}
+
+@font-face {
+	font-family: NiceFont;
+	font-style:normal;
+	src: url('fonts/ALBMT___.TTF');
+}
+
+@font-face {
+	font-family: Digital;
+	font-style:normal;
+	src: url('fonts/Digirtu_.ttf');
+}
+
+@font-face {
+	font-family: DigitalIE;
+	font-style:normal;
+	src: url('fonts/Digirtu_.eot');
+}

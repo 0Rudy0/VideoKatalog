@@ -1,0 +1,219 @@
+[data-role="footer"] {
+    display: none !important;
+}
+
+.ui-content {
+    margin-bottom: 1px;
+}
+
+#posterDiv {
+    position: absolute;
+    width: 200px;
+    height: 300px;
+    left:10px;
+}
+
+#moviePoster {
+    position: absolute;
+    top: 4px;
+    left: 11px;
+    z-index: 0;
+    width: 213px;
+    height: 307px;
+}
+
+#posterCase {
+    position: absolute;
+    top: -4px;
+    z-index: 1;
+    width: 235px;
+    height: 332px;
+}
+
+#ratingIcon {
+}
+
+#directorIcon {
+    //background-image: url(../images/director40p.png);
+}
+#genresText {
+    font-style:italic !important;
+}
+#directorDiv {
+    position:absolute;
+    top:10px;
+}
+
+@media screen and (max-width: 600px) {
+    #posterDiv {
+        top:75px;
+    }
+    #genresDiv {
+        position:absolute;
+        top:48px;
+        right:20px;
+        left:20px;
+        width:auto;
+        text-align:center;
+    }
+
+    #ratingDiv {
+        position:absolute;
+        top:80px;
+        width: 100%;
+        -moz-box-sizing: padding-box;
+        -webkit-box-sizing: padding-box;
+        box-sizing: padding-box;
+        padding-left: 280px;
+        right:5%;
+        text-align:center;
+        font-family:'Courier New';
+        font-weight:600;
+        font-size:20px;
+    }
+
+    #runtimeDiv {
+        position:absolute;
+        top:190px;
+        width: 100%;
+        -moz-box-sizing: padding-box;
+        -webkit-box-sizing: padding-box;
+        box-sizing: padding-box;
+        padding-left: 280px;
+        right:5%;
+        text-align:center;
+        font-family:'Courier New';
+    }
+
+    #sizeDiv {
+        position:absolute;
+        top:310px;
+        width: 100%;
+        -moz-box-sizing: padding-box;
+        -webkit-box-sizing: padding-box;
+        box-sizing: padding-box;
+        padding-left: 280px;
+        right:5%;
+        text-align:center;
+        font-family:'Courier New';
+    }
+
+    #directorDiv {
+        position:absolute;
+        right:20px;
+        left:20px;
+        width:auto;
+        top:410px;
+        font-size:11px;
+    }
+
+    #castDiv {
+        position:absolute;
+        right:20px;
+        left:20px;
+        width:auto;
+        top:455px;
+        font-size:11px;
+    }
+
+    #plotDiv {
+        position:absolute;
+        right:20px;
+        left:20px;
+        width:auto;
+        top:520px;
+        font-size:11px;
+    }
+    .ui-grid-a {
+        position:absolute;
+        top:600px;
+        left:20px !important;
+        right:200px !important;
+        width:90%;
+        margin:auto;
+    }
+}
+
+@media screen and (max-width: 1920px) and (min-width: 601px) {
+    #posterDiv {
+        top:80px;
+    }
+    #genresDiv {
+        position:absolute;
+        left:20px;
+        top:52px;
+    }
+
+    #directorDiv {
+        position:absolute;
+        right:50px;
+        left:260px;
+        width:auto;
+        top:100px;
+    }
+
+    #castDiv {
+        position:absolute;
+        right:50px;
+        left:260px;
+        width:auto;
+        top:180px;
+        font-size:16px;
+    }
+
+    #plotDiv {
+        position:absolute;
+        right:50px;
+        left:260px;
+        width:auto;
+        top:285px;
+        margin-bottom:20px;
+        padding-bottom:20px;
+        font-size:16px;
+    }
+
+    #runtimeDiv {
+        position:absolute;
+        top:50px;
+        right:115px;
+        text-align:center;
+        font-family:'Courier New';
+        font-weight:800;
+        padding:5px;
+       -webkit-box-shadow: 0 2px 6px 1px black;
+	   -moz-box-shadow: 0 2px 6px 1px black;
+	   box-shadow: 0 2px 6px 1px black;
+    }
+
+    #sizeDiv {
+        position: absolute;
+        top: 50px;
+        right: 10px;
+        text-align: center;
+        font-family: 'Courier New';
+        font-weight: 800;
+        padding: 5px;
+        -webkit-box-shadow: 0 2px 6px 1px black;
+        -moz-box-shadow: 0 2px 6px 1px black;
+        box-shadow: 0 2px 6px 1px black;
+    }
+
+    #ratingDiv {
+        position:absolute;
+        top:50px;
+        right:200px;
+        text-align:center;
+        font-family:'Courier New';
+        font-weight:800;
+        font-size:20px;
+    }
+    
+    .ui-grid-a {
+        position:absolute;
+        top:410px;
+        left:20px;
+        right:200px;
+        width:90%;
+        margin:auto;
+    }
+}

@@ -1,0 +1,114 @@
+﻿@{
+    ViewBag.Title = "Filtriraj filmove";
+    Layout = "~/Views/Shared/_LayoutMobile.cshtml";
+}
+
+<link rel="stylesheet" href="../Content/filterMovieMobileList.css" type="text/css" />
+
+<select name="selectSortAttr" id="selectSortAttr" data-native-menu="false">
+    <option>Atribut za sortiranje</option>
+    <option value="name">Naziv</option>
+    <option value="rating">Ocjena</option>
+    <option value="year">Godina</option>
+    <option value="runtime">Trajanje</option>
+    <option value="addDate">Datum dodavanja</option>
+</select>
+<label for="movieName">Naziv filma:</label>
+<input name="movieName" id="movieName" value="" type="text">
+<label for="cast">Glumac:</label>
+<input name="cast" id="cast" value="" type="text">
+<label for="dir">Redatelj:</label>
+<input name="dir" id="dir" value="" type="text">
+<br /><br />
+<div data-role="collapsible">
+    <h4>Žanrovi</h4>
+    <fieldset data-role="controlgroup">
+        <input name="Akcija" id="Akcija" type="checkbox">
+        <label for="Akcija">Akcija</label>
+        <input name="Animacija" id="Animacija" type="checkbox">
+        <label for="Animacija">Animacija</label>
+        <input name="Avantura" id="Avantura" type="checkbox">
+        <label for="Avantura">Avantura</label>
+        <input name="Crtani" id="Crtani" type="checkbox">
+        <label for="Crtani">Crtani</label>
+        <input name="Drama" id="Drama" type="checkbox">
+        <label for="Drama">Drama</label>
+        <input name="Dokumentarni" id="Dokumentarni" type="checkbox">
+        <label for="Dokumentarni">Dokumentarni</label>
+        <input name="Fantastika" id="Fantastika" type="checkbox">
+        <label for="Fantastika">Fantastika</label>
+        <input name="Horor" id="Horor" type="checkbox">
+        <label for="Horor">Horor</label>
+        <input name="Komedija" id="Komedija" type="checkbox">
+        <label for="Komedija">Komedija</label>
+        <input name="Krimi" id="Krimi" type="checkbox">
+        <label for="Krimi">Krimi</label>
+        <input name="Misterija" id="Misterija" type="checkbox">
+        <label for="Misterija">Misterija</label>
+        <input name="Muzicki" id="Muzicki" type="checkbox">
+        <label for="Muzicki">Muzicki</label>
+        <input name="Obiteljski" id="Obiteljski" type="checkbox">
+        <label for="Obiteljski">Obiteljski</label>
+        <input name="Povijesni" id="Povijesni" type="checkbox">
+        <label for="Povijesni">Povijesni</label>
+        <input name="Ratni" id="Ratni" type="checkbox">
+        <label for="Ratni">Ratni</label>
+        <input name="Romantika" id="Romantika" type="checkbox">
+        <label for="Romantika">Romantika</label>
+        <input name="Sportski" id="Sportski" type="checkbox">
+        <label for="Sportski">Sportski</label>
+        <input name="Vestern" id="Vesterna" type="checkbox">
+        <label for="Vestern">Vestern</label>
+        <input name="Triler" id="Triler" type="checkbox">
+        <label for="Triler">Triler</label>
+        <input name="ZnanstvenaFantastika" id="ZnanstvenaFantastika" type="checkbox">
+        <label for="ZnanstvenaFantastika">Znanstvena fantastika</label>
+    </fieldset>
+</div>
+
+<br />
+<div data-role="rangeslider">
+    <label for="ratingMin">Ocjena (IMDb):</label>
+    <input name="ratingMin" id="ratingMin" min="1" max="10" value="1" type="range">
+    <label for="ratingMax">Rangeslider:</label>
+    <input name="ratingMax" id="ratingMax" min="1" max="10" value="10" type="range">
+</div>
+<div data-role="rangeslider">
+    <label for="runtimeMin">Trajanje (min):</label>
+    <input name="runtimeMin" id="runtimeMin" min="1" max="300" value="1" type="range">
+    <label for="runtimeMax">Rangeslider:</label>
+    <input name="runtimeMax" id="runtimeMax" min="1" max="300" value="300" type="range">
+</div>
+<div data-role="rangeslider">
+    <label for="yearMin">Godina:</label>
+    <input name="yearMin" id="yearMin" min="1937" max="2014" value="1937" type="range">
+    <label for="yearMax">Rangeslider:</label>
+    <input name="yearMax" id="yearMax" min="1937" max="2014" value="2014" type="range">
+</div>
+<div data-role="rangeslider">
+    <label for="sizeMin">Veličina (GB):</label>
+    <input name="sizeMin" id="sizeMin" min="1" max="50" value="1" type="range">
+    <label for="sizeMax">Rangeslider:</label>
+    <input name="sizeMax" id="sizeMax" min="1" max="50" value="50" type="range">
+</div>
+<br />
+<div data-role="collapsible">
+    <h4>Prijevod</h4>
+    <label for="croSub">Hrvatski prijevod:</label>
+    <select name="croSub" id="croSub" data-role="slider">
+        <option value="off">Off</option>
+        <option value="on">On</option>
+    </select>
+    <label for="engSub">Engleski prijevod:</label>
+    <select name="engSub" id="engSub" data-role="slider">
+        <option value="off">Off</option>
+        <option value="on">On</option>
+    </select>
+</div>
+
+
+<br/><br />
+<a href="#" onclick="saveFilters()" class="ui-shadow ui-btn ui-btn-b ui-corner-all">Filtriraj</a>
+@section scripts {
+    <script src="~/Scripts/filterMovieMobileList.js" type="text/javascript"></script>
+}

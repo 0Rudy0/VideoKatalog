@@ -1,0 +1,495 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{7B89CAAC-6D02-419F-911E-605709F264AF}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>VideoKatalog.View</RootNamespace>
+    <AssemblyName>VideoKatalog.View</AssemblyName>
+    <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <WarningLevel>4</WarningLevel>
+    <TargetFrameworkProfile />
+    <Utf8Output>true</Utf8Output>
+    <ExpressionBlendVersion>4.0.20525.0</ExpressionBlendVersion>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+    <SccProjectName>SAK</SccProjectName>
+    <SccLocalPath>SAK</SccLocalPath>
+    <SccAuxPath>SAK</SccAuxPath>
+    <SccProvider>SAK</SccProvider>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>x86</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup>
+    <ApplicationIcon>1381286564_131738.ico</ApplicationIcon>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="FolderPickerLib">
+      <HintPath>.\FolderPickerLib.dll</HintPath>
+    </Reference>
+    <Reference Include="mysql.data">
+      <HintPath>.\mysql.data.dll</HintPath>
+    </Reference>
+    <Reference Include="PresentationFramework.Aero" />
+    <Reference Include="System" />
+    <Reference Include="System.configuration" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.SqlServerCe, Version=4.0.0.0, Culture=neutral, PublicKeyToken=89845dcd8080cc91, processorArchitecture=MSIL" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Xaml">
+      <RequiredTargetFramework>4.0</RequiredTargetFramework>
+    </Reference>
+    <Reference Include="WindowsBase" />
+    <Reference Include="PresentationCore" />
+    <Reference Include="PresentationFramework" />
+    <Reference Include="Xceed.Wpf.Toolkit">
+      <HintPath>.\Xceed.Wpf.Toolkit.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <ApplicationDefinition Include="App.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </ApplicationDefinition>
+    <Compile Include="CatalogForm.xaml.cs">
+      <DependentUpon>CatalogForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Converters\AudioListToStringConverter.cs" />
+    <Compile Include="Converters\BitrateConverter.cs" />
+    <Compile Include="Converters\DateConverter.cs" />
+    <Compile Include="Converters\DateSpanConverter.cs" />
+    <Compile Include="Converters\GenresToStringConverter.cs" />
+    <Compile Include="Converters\HddIdToNameConverter.cs" />
+    <Compile Include="Converters\HomeVideoCategoriesToStringConverter.cs" />
+    <Compile Include="Converters\IsViewedConverter.cs" />
+    <Compile Include="Converters\LanguageToStringConverter.cs" />
+    <Compile Include="Converters\MoneyConverter.cs" />
+    <Compile Include="Converters\NameToImagePathConverter.cs" />
+    <Compile Include="Converters\PersonsToStringConverter.cs" />
+    <Compile Include="Converters\ProgressBarValueToBackground.cs" />
+    <Compile Include="Converters\RatingToStarsConverter.cs" />
+    <Compile Include="Converters\ReleaseDateToStampVisibility.cs" />
+    <Compile Include="Converters\ResolutionToFormatConverter.cs" />
+    <Compile Include="Converters\ResolutionToStringConverter.cs" />
+    <Compile Include="Converters\RuntimeConverter.cs" />
+    <Compile Include="Converters\SelectedPropertyToBackgroundConverter.cs" />
+    <Compile Include="Converters\SelectedPropertyToImageSource.cs" />
+    <Compile Include="Converters\SerieLanguagesConverterToString.cs" />
+    <Compile Include="Converters\SizeConverter.cs" />
+    <Compile Include="Converters\SliderValueToRangeConverter.cs" />
+    <Compile Include="Converters\StringListToStringConverter.cs" />
+    <Compile Include="Converters\SubtitleToFormatConverter.cs" />
+    <Compile Include="Converters\SummaryConverter.cs" />
+    <Compile Include="CustomControls\RangeSlider.xaml.cs">
+      <DependentUpon>RangeSlider.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="DatabaseManagers\DatabaseManagerSdf.cs" />
+    <Compile Include="DatabaseManagers\DatabaseManagerRemote.cs" />
+    <Compile Include="GeneralDBTables\Audio.cs" />
+    <Compile Include="GeneralDBTables\Camera.cs" />
+    <Compile Include="GeneralDBTables\Genre.cs" />
+    <Compile Include="GeneralDBTables\Language.cs" />
+    <Compile Include="GeneralDBTables\Person.cs" />
+    <Compile Include="GeneralDBTables\Selection.cs" />
+    <Compile Include="GeneralDBTables\Settings.cs" />
+    <Compile Include="HDD\HDD.cs" />
+    <Compile Include="HDD\HDDForm.xaml.cs">
+      <DependentUpon>HDDForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HDD\HDDsManagerForm.xaml.cs">
+      <DependentUpon>HDDsManagerForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HomeVideo\Camera.cs" />
+    <Compile Include="HomeVideo\CameraForm.xaml.cs">
+      <DependentUpon>CameraForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HomeVideo\CamerasManagerForm.xaml.cs">
+      <DependentUpon>CamerasManagerForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HomeVideo\Category.cs" />
+    <Compile Include="HomeVideo\CategoryForm.xaml.cs">
+      <DependentUpon>CategoryForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HomeVideo\HomeVideo.cs" />
+    <Compile Include="HomeVideo\HomeVideoForm.xaml.cs">
+      <DependentUpon>HomeVideoForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HomeVideo\PersonForm.xaml.cs">
+      <DependentUpon>PersonForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HomeVideo\PersonsManagerForm.xaml.cs">
+      <DependentUpon>PersonsManagerForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="HomeVideo\WishHomeVideo.cs" />
+    <Compile Include="IMDb\IMDb.cs" />
+    <Compile Include="IMDb\SearchForm.xaml.cs">
+      <DependentUpon>SearchForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="IMDb\SearchResult.cs" />
+    <Compile Include="InputDialog.xaml.cs">
+      <DependentUpon>InputDialog.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Movie\Movie.cs" />
+    <Compile Include="Movie\MovieForm.xaml.cs">
+      <DependentUpon>MovieForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Movie\WishMovie.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="SelectFromCollection.xaml.cs">
+      <DependentUpon>SelectFromCollection.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="SelectionWindow.xaml.cs">
+      <DependentUpon>SelectionWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Serie\SelectSerieForm.xaml.cs">
+      <DependentUpon>SelectSerieForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Serie\Serie.cs" />
+    <Compile Include="Serie\SerieEpisode.cs" />
+    <Compile Include="Serie\SerieForm.xaml.cs">
+      <DependentUpon>SerieForm.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Serie\SerieSeason.cs" />
+    <Compile Include="Serie\WishSerie.cs" />
+    <Compile Include="Serie\WishSerieEpisode.cs" />
+    <Compile Include="Serie\WishSerieSeason.cs" />
+    <Compile Include="WishListForm.xaml.cs">
+      <DependentUpon>WishListForm.xaml</DependentUpon>
+    </Compile>
+    <Page Include="CatalogForm.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="CustomControls\RangeSlider.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="HDD\HDDForm.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="HDD\HDDsManagerForm.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="HomeVideo\CameraForm.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="HomeVideo\CamerasManagerForm.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="HomeVideo\CategoryForm.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="HomeVideo\HomeVideoForm.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="HomeVideo\PersonForm.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="HomeVideo\PersonsManagerForm.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="IMDb\SearchForm.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="InputComboBox.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="InputDialog.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Compile Include="AbstractVideo.cs" />
+    <Compile Include="App.xaml.cs">
+      <DependentUpon>App.xaml</DependentUpon>
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Cloner.cs" />
+    <Compile Include="ComposeConnectionString.cs" />
+    <Compile Include="DatabaseManagers\DatabaseManager.cs" />
+    <Compile Include="DatabaseManagers\DatabaseManagerMySql.cs" />
+    <Compile Include="Enums.cs" />
+    <Compile Include="ExportToTxtCommands.cs" />
+    <Compile Include="FinderInCollection.cs" />
+    <Compile Include="FindTreeControls.cs" />
+    <Compile Include="HardcodedStrings.cs" />
+    <Compile Include="HelpFunctions.cs" />
+    <Compile Include="InputComboBox.xaml.cs">
+      <DependentUpon>InputComboBox.xaml</DependentUpon>
+    </Compile>
+    <Page Include="Movie\MovieForm.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Properties\DesignTimeResources.xaml" Condition="'$(DesignTime)'=='true' OR ('$(SolutionPath)'!='' AND Exists('$(SolutionPath)') AND '$(BuildingInsideVisualStudio)'!='true' AND '$(BuildingInsideExpressionBlend)'!='true')">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+      <ContainsDesignTimeResources>true</ContainsDesignTimeResources>
+    </Page>
+    <Page Include="SelectFromCollection.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="SelectionWindow.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Serie\SelectSerieForm.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Serie\SerieForm.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="Simple Styles.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="WishListForm.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="MediaInfoDLL.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs">
+      <SubType>Code</SubType>
+    </Compile>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <Fakes Include="Fakes\FolderPickerLib.fakes" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config">
+      <SubType>Designer</SubType>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="MediaInfo.dll" />
+    <Content Include="Xceed.Wpf.Toolkit.dll" />
+    <None Include="Resources\MediaInfo_x64.dll" />
+    <None Include="Resources\MediaInfo_x32.dll" />
+    <None Include="Resources\ratingStars.bmp" />
+    <Resource Include="Resources\1080p.png" />
+    <Resource Include="Resources\720p.png" />
+    <Resource Include="Resources\accept128p.png" />
+    <Resource Include="Resources\add.png" />
+    <Resource Include="Resources\aspect ratio.png" />
+    <Resource Include="Resources\aspect.png" />
+    <Resource Include="Resources\audio %282%29.png" />
+    <Resource Include="Resources\book.png" />
+    <Resource Include="Resources\browseVideo128p.png" />
+    <Resource Include="Resources\camera.png" />
+    <Resource Include="Resources\case.png" />
+    <Resource Include="Resources\cast.png" />
+    <Resource Include="Resources\clockS.png" />
+    <Resource Include="1381286306_45404.ico" />
+    <Resource Include="1381286359_32748.ico" />
+    <Resource Include="1381286395_79635.ico" />
+    <Resource Include="1381286564_131738.ico" />
+    <Content Include="FolderPickerLib.dll" />
+    <Content Include="mysql.data.dll" />
+    <Content Include="Resources\close5.wav" />
+    <Resource Include="Resources\coffeeBreak.png" />
+    <Resource Include="Resources\coinsS.png" />
+    <Resource Include="Resources\date.png" />
+    <Resource Include="Resources\date50p.png" />
+    <Resource Include="Resources\delete.png" />
+    <Resource Include="Resources\delete1.png" />
+    <Resource Include="Resources\delete2.png" />
+    <Resource Include="Resources\diagonal.png" />
+    <Resource Include="Resources\director.png" />
+    <Resource Include="Resources\director40p.png" />
+    <Resource Include="Resources\dismiss128p.png" />
+    <Resource Include="Resources\edit.png" />
+    <Resource Include="Resources\edit2-33p.png" />
+    <Resource Include="Resources\edit20p.png" />
+    <Resource Include="Resources\edit22p.png" />
+    <Resource Include="Resources\edit33p.png" />
+    <Resource Include="Resources\edit48p.png" />
+    <Resource Include="Resources\eyeIcon.png" />
+    <Resource Include="Resources\eyeS.png" />
+    <Resource Include="Resources\gnome_edit_delete.png" />
+    <Resource Include="Resources\greenCheck50p.png" />
+    <Resource Include="Resources\HD1080.png" />
+    <Resource Include="Resources\HD720.png" />
+    <Resource Include="Resources\HDD1.png" />
+    <Resource Include="Resources\hdd2-40p.png" />
+    <Resource Include="Resources\hdd40p.png" />
+    <Resource Include="Resources\hdd50p.png" />
+    <Resource Include="Resources\HomeVideo.png" />
+    <Resource Include="Resources\imdb.png" />
+    <Resource Include="Resources\link20p.png" />
+    <Resource Include="Resources\listTemplate1.png" />
+    <Resource Include="Resources\listTemplate2.png" />
+    <Resource Include="Resources\loading.gif" />
+    <Resource Include="Resources\minus20p.png" />
+    <Resource Include="Resources\minus30p.png" />
+    <Resource Include="Resources\money.png" />
+    <Resource Include="Resources\movie folder.png" />
+    <Resource Include="Resources\movieIcon.png" />
+    <Resource Include="Resources\new33p.png" />
+    <Resource Include="Resources\OK64p.png" />
+    <Resource Include="Resources\open.png" />
+    <None Include="Resources\imdb30p.png" />
+    <Content Include="Resources\open2.wav" />
+    <Resource Include="Resources\open64p.png" />
+    <Resource Include="Resources\outStamp.png" />
+    <Resource Include="Resources\paste20p.png" />
+    <Resource Include="Resources\paste50p.png" />
+    <Resource Include="Resources\plus20p.png" />
+    <Resource Include="Resources\plus30p.png" />
+    <Resource Include="Resources\ptohostop48p.png" />
+    <Resource Include="Resources\ratingStars18p.png" />
+    <Resource Include="Resources\ratingStarsSmall.png" />
+    <Resource Include="Resources\redCross50p.png" />
+    <Resource Include="Resources\refresh70p.png" />
+    <Resource Include="Resources\remove.png" />
+    <Resource Include="Resources\remove1-44p.png" />
+    <Resource Include="Resources\remove2-44p.png" />
+    <Resource Include="Resources\remove22p.png" />
+    <Resource Include="Resources\remove3-44p.png" />
+    <Resource Include="Resources\remove33p.png" />
+    <Resource Include="Resources\resolution.png" />
+    <Resource Include="Resources\runtime.png" />
+    <Resource Include="Resources\save.png" />
+    <Resource Include="Resources\save64p 2.png" />
+    <Resource Include="Resources\save64p.png" />
+    <Resource Include="Resources\SD.png" />
+    <Resource Include="Resources\search.png" />
+    <Resource Include="Resources\search30p.png" />
+    <Resource Include="Resources\search64p.png" />
+    <Resource Include="Resources\searchImdb.png" />
+    <Resource Include="Resources\searchImdb50p.png" />
+    <Resource Include="Resources\searchImdb79p.png" />
+    <Resource Include="Resources\select.png" />
+    <Resource Include="Resources\select2.png" />
+    <Resource Include="Resources\select4.png" />
+    <Resource Include="Resources\Selected.png" />
+    <Resource Include="Resources\serieIcon.png" />
+    <Resource Include="Resources\size.png" />
+    <Resource Include="Resources\sizeIcon.png" />
+    <Resource Include="Resources\sort-asc.png" />
+    <Resource Include="Resources\sort-desc.png" />
+    <Resource Include="Resources\sort.png" />
+    <Resource Include="Resources\sound.png" />
+    <Resource Include="Resources\star.png" />
+    <Resource Include="Resources\starmask.png" />
+    <Resource Include="Resources\star_yellow_24x24.png" />
+    <Resource Include="Resources\subtitle.png" />
+    <Resource Include="Resources\sync.png" />
+    <Resource Include="Resources\Tema.png" />
+    <Resource Include="Resources\transferToList.png" />
+    <Resource Include="Resources\trash.png" />
+    <Resource Include="Resources\upload.png" />
+    <Content Include="Resources\wav4.wav" />
+    <Content Include="Resources\wav5.wav" />
+    <Resource Include="Resources\wish.png" />
+    <Resource Include="Resources\wishlist.png" />
+    <Resource Include="Resources\wishListAdd.png" />
+    <Resource Include="Resources\wishListEdit.png" />
+    <Resource Include="Resources\wishListRemove.png" />
+    <Resource Include="Resources\youtube.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Client.3.5">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1 Client Profile</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+  </ItemGroup>
+  <ItemGroup>
+    <WCFMetadata Include="Service References\" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

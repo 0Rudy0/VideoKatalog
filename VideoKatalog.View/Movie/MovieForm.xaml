@@ -1,0 +1,230 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:localConverters ="clr-namespace:Video_katalog.Converters"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" x:Name="mainWindow" x:Class="Video_katalog.MovieForm"
+        mc:Ignorable="d"
+        WindowStartupLocation="CenterOwner" Title="Film" Height="726" Width="1128" Loaded="Window_Loaded">
+    
+    <Window.Resources>
+    	<localConverters:MoneyConverter x:Key="moneyConverter"/>
+    	<localConverters:PersonsToStringConverter x:Key="personsToStringConverter"/>
+    	<localConverters:LanguageToStringConverter x:Key="languageToStringConverter"/>
+    	<localConverters:SizeConverter x:Key="sizeConverter"/>
+    	<localConverters:BitrateConverter x:Key="bitrateConverter"/>
+    	<localConverters:RuntimeConverter x:Key="runtimeConverter"/>
+    	<localConverters:NameToImagePathConverter x:Key="nameToImagePathConverter"/>        
+    	<!--localConverters:HddIdToNameConverter x:Key="hddToNameConverter"/-->
+    </Window.Resources>
+    
+    <Grid x:Name="mainGrid" Margin="0,4,0,6" Height="678">
+        <xctk:BusyIndicator x:Name="busyIndicator" HorizontalAlignment="Left" Margin="10,8,0,0" VerticalAlignment="Top">
+			<Grid x:Name="imdbInfoGrid" OpacityMask="Black" Background="#FFE0E0E0" HorizontalAlignment="Left" Width="864" VerticalAlignment="Top" Height="544">
+				<Grid.Effect>
+					<DropShadowEffect BlurRadius="26"/>
+				</Grid.Effect>
+                <xctk:SplitButton x:Name="refreshSplitButton" HorizontalAlignment="Left" Margin="8,8,0,0" VerticalAlignment="Top" Width="93" Height="94.723" Background="#56000000" Click="refreshButton_Click" ToolTip="Osvježi informacije o filmu" IsOpen="False">
+                    <xctk:SplitButton.DropDownContent>
+						<StackPanel Background="{x:Null}">
+							<Button x:Name="refreshAllButPoster" Content="Sve osim postera" BorderBrush="{x:Null}" Background="{x:Null}" HorizontalContentAlignment="Left" Width="90" Height="25" FontSize="11" Click="refreshAllButPoster_Click" />
+							<Button x:Name="refreshOnlyPoster" Content="Samo poster" BorderBrush="{x:Null}" Background="{x:Null}" HorizontalContentAlignment="Left" Width="90" Height="25" FontSize="11" Click="refreshOnlyPoster_Click" />
+							<Button x:Name="refreshBudget" Content="Budget" BorderBrush="{x:Null}" Background="{x:Null}" HorizontalContentAlignment="Left" Width="90" Height="25" FontSize="11" Click="refreshBudget_Click" />
+							<Button x:Name="refreshEarnings" Content="Zarada" BorderBrush="{x:Null}" Background="{x:Null}" HorizontalContentAlignment="Left" Width="90" Height="25" FontSize="11" Click="refreshEarnings_Click" />
+							<Button x:Name="refreshSummary" Content="Radnja" BorderBrush="{x:Null}" Background="{x:Null}" HorizontalContentAlignment="Left" Width="90" Height="25" FontSize="11" Click="refreshSummary_Click" />
+							<Button x:Name="refreshCastAndCrew" Content="Glumci i redatelji" BorderBrush="{x:Null}" Background="{x:Null}" HorizontalContentAlignment="Left" Width="90" Height="25" FontSize="11" Click="refreshCastAndCrew_Click" />
+							<Button x:Name="refreshRating" Content="Ocjena" BorderBrush="{x:Null}" Background="{x:Null}" HorizontalContentAlignment="Left" Width="90" Height="25" FontSize="11" Click="refreshRating_Click" />
+							<Button x:Name="refreshGenres" Content="Žanrovi" BorderBrush="{x:Null}" Background="{x:Null}" HorizontalContentAlignment="Left" Width="90" Height="25" FontSize="11" Click="refreshGenres_Click" />
+						</StackPanel>
+                    </xctk:SplitButton.DropDownContent>
+                    <Image Height="80" Width="72" Source="/VideoKatalog.View;component/Resources/refresh70p.png"/>
+                </xctk:SplitButton>
+				<TextBox x:Name="customNameTextBox" HorizontalAlignment="Left" Height="28.133" Margin="105,22.959,0,0" VerticalAlignment="Top" Width="203.949" Text="{Binding Name}" FontSize="14.667" HorizontalScrollBarVisibility="Disabled" FontWeight="Bold" FontFamily="Calibri" Padding="1,2,1,1" BorderThickness="2" BorderBrush="Black" MaxLines="1" />
+				<TextBox x:Name="originalNameTextBox" Height="28.133" Margin="105,73.296,0,0" VerticalAlignment="Top" Text="{Binding OrigName}" FontSize="14.667" HorizontalScrollBarVisibility="Disabled" FontWeight="Bold" FontFamily="Calibri" Padding="1,2,1,1" HorizontalAlignment="Left" Width="203.949" BorderBrush="Black" BorderThickness="2" MaxLines="1" />
+				<TextBox x:Name="summaryTextBox" Margin="251.846,140.96,0,0" TextWrapping="Wrap" VerticalScrollBarVisibility="Auto" Text="{Binding Summary}" HorizontalAlignment="Left" Width="276.426" VerticalAlignment="Top" Height="296.603"/>
+				<TextBlock HorizontalAlignment="Left" Margin="105,8,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.673,0.597" Foreground="#B2000000"><Run Language="hr-hr" Text="Naziv"/></TextBlock>
+				<TextBlock HorizontalAlignment="Left" Margin="105,57.336,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Foreground="#B2000000"><Run Language="hr-hr" Text="Orginalni naziv"/></TextBlock>
+				<TextBlock HorizontalAlignment="Left" Margin="8.139,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Redatelj(i)" RenderTransformOrigin="1.12,0.334" Foreground="#B2000000" d:LayoutOverrides="VerticalAlignment"/>
+				<TextBlock HorizontalAlignment="Left" Margin="7.901,213.707,0,0" TextWrapping="Wrap" Foreground="#B2000000" VerticalAlignment="Top"><Run Language="hr-hr" Text="Glumci"/></TextBlock>
+				<TextBlock HorizontalAlignment="Left" Margin="251.846,125,0,0" TextWrapping="Wrap" VerticalAlignment="Top" d:LayoutOverrides="VerticalAlignment" Foreground="#B2000000" RenderTransformOrigin="0.526,0.594"><Run Language="hr-hr" Text="Radnja"/></TextBlock>
+				<TextBox x:Name="ratingTextBox" Margin="318.782,73.296,0,0" HorizontalAlignment="Left" Width="62.002" Text="{Binding Rating}" RenderTransformOrigin="0.702,0.597" FontSize="18.667" Height="28.133" VerticalAlignment="Top" HorizontalScrollBarVisibility="Disabled" d:LayoutOverrides="VerticalAlignment" Padding="1,0,1,1" MaxLines="1" />
+				<TextBlock Margin="318.782,57.336,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" RenderTransformOrigin="0.66,1.138" Foreground="#B2000000" d:LayoutOverrides="VerticalAlignment"><Run Language="hr-hr" Text="Ocjena"/></TextBlock>
+				<TextBox x:Name="budgetTextBox" Margin="66.017,0,0,138.702" TextWrapping="Wrap" Width="123.33" HorizontalAlignment="Left" Height="24" VerticalAlignment="Bottom" Text="{Binding Budget, Converter={StaticResource moneyConverter}}" FontSize="14.667" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" Padding="1,0,1,1" VerticalScrollBarVisibility="Disabled" d:LayoutOverrides="HorizontalAlignment" FontWeight="Bold" MaxLines="1" />
+				<TextBox x:Name="earningsTextBox" Margin="66.017,0,0,106.437" TextWrapping="Wrap" Height="24" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="123.092" Text="{Binding Earnings, Converter={StaticResource moneyConverter}}" FontSize="14.667" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Padding="1,0,1,1" VerticalScrollBarVisibility="Disabled" d:LayoutOverrides="HorizontalAlignment" FontWeight="Bold" Foreground="#FF133513" MaxLines="1" />
+				<TextBlock Margin="7.901,384.4,0,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0,2.694" HorizontalAlignment="Left" FontSize="13.333" Foreground="#B2000000"><Run Language="hr-hr" Text="Budget"/></TextBlock>
+				<TextBlock Margin="7.9,417.1,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="13.333" Foreground="#B2000000"><Run Language="hr-hr" Text="Zarada"/></TextBlock>
+				<Grid x:Name="posterGrid" Margin="549,70.629,0,0" Background="#FFEBEBEB" Width="300" Height="431" HorizontalAlignment="Left" VerticalAlignment="Top">
+					<Grid.Effect>
+						<DropShadowEffect BlurRadius="14"/>
+					</Grid.Effect>
+					<Image x:Name="posterImage" Width="300" Height="431" Stretch="Fill">
+						<Image.OpacityMask>
+							<LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+								<GradientStop Color="Black" Offset="0"/>
+								<GradientStop Color="#FF624545" Offset="1"/>
+							</LinearGradientBrush>
+						</Image.OpacityMask>
+					</Image>
+				</Grid>
+				<TextBox x:Name="internetLinkTextBox" Margin="8,482,0,0" RenderTransformOrigin="0.55,-0.25" FontSize="10.667" VerticalAlignment="Top" Height="20.1" Text="{Binding InternetLink}" HorizontalAlignment="Left" Width="205.109" HorizontalScrollBarVisibility="Disabled" MaxLines="1" />
+				<TextBox x:Name="trailerLinkTextBox" Margin="280,482,0,0" VerticalAlignment="Top" FontSize="10.667" HorizontalAlignment="Left" Width="248.136" Height="20.1" HorizontalScrollBarVisibility="Disabled" Text="{Binding TrailerLink}" MaxLines="1" />
+				<TextBlock Margin="8.513,467.725,0,0" TextWrapping="Wrap" HorizontalAlignment="Left" Height="14.275" VerticalAlignment="Top" Foreground="#B2000000"><Run Language="hr-hr" Text="Internet link"/></TextBlock>
+				<TextBlock Margin="280,467.725,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="#B2000000" RenderTransformOrigin="0.446,0.672"><Run Language="hr-hr" Text="Trailer link"/></TextBlock>
+				<Button x:Name="pasteImageButton" Margin="735,6.999,0,0" Click="pasteImageButton_Click" Height="55" VerticalAlignment="Top" HorizontalAlignment="Left" Width="55" Background="{x:Null}" BorderBrush="{x:Null}" ToolTip="Zalijepi poster">
+                    <Image Height="50" Width="50" Source="/VideoKatalog.View;component/Resources/paste50p.png" ToolTip="Zalijepi sliku"/>
+				</Button>
+				<Button x:Name="pasteTrailerLink" Height="24" Margin="503.136,502.1,0,0" VerticalAlignment="Top" FontSize="9.333" FontFamily="Verdana" HorizontalAlignment="Left" Width="25" Click="pasteTrailerLink_Click_1" Background="{x:Null}" BorderBrush="{x:Null}">
+                    <Image Height="20" Width="20" Source="/VideoKatalog.View;component/Resources/paste20p.png" ToolTip="Zalijepi link"/>
+				</Button>
+				<Button x:Name="pasteInternetLink" Margin="188.109,502.1,0,0" FontSize="9.333" FontFamily="Verdana" HorizontalAlignment="Left" Width="25" Click="pasteInternetLink_Click_1" Height="24" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}">
+                    <Image Height="20" Width="20" Source="/VideoKatalog.View;component/Resources/paste20p.png" ToolTip="zalijepi link"/>
+				</Button>
+				<TextBox HorizontalAlignment="Right" Margin="0,73.296,335.864,0" x:Name="yearTextBox" Width="64.135" Text="{Binding Year}" FontSize="18.667" Height="28.133" VerticalAlignment="Top" HorizontalScrollBarVisibility="Disabled" d:LayoutOverrides="VerticalAlignment" Padding="1,0,1,1" MaxLines="1" />
+				<TextBlock HorizontalAlignment="Right" Margin="0,57.336,361.865,0" TextWrapping="Wrap" VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Foreground="#B2000000" d:LayoutOverrides="VerticalAlignment"><Run Language="hr-hr" Text="Godina"/></TextBlock>
+				<ListBox Margin="7.901,229.667,0,182.64" x:Name="castListBox" HorizontalAlignment="Left" Width="181.208" ItemsSource="{Binding Actors}" d:LayoutOverrides="HorizontalAlignment"/>
+				<ListBox Height="44" Margin="8.139,140.96,0,0" x:Name="directorListBox" VerticalAlignment="Top" HorizontalAlignment="Left" Width="181.208" ItemsSource="{Binding Directors}" d:LayoutOverrides="HorizontalAlignment, VerticalAlignment"/>
+				<Button Height="20" HorizontalAlignment="Left" Margin="193.347,140.96,0,0" x:Name="addDirector" VerticalAlignment="Top" Width="20" Click="addDirector_Click" FontWeight="Bold" FontSize="18.667" Padding="-4,-13,-4,-4" ToolTip="Dodaj proizvoljnog redatelja" RenderTransformOrigin="0.704,0.235" Background="{x:Null}" BorderBrush="{x:Null}" d:LayoutOverrides="HorizontalAlignment, VerticalAlignment">
+                    <Image Height="16" Width="16" Source="/VideoKatalog.View;component/Resources/plus20p.png" Margin="0,8.9,0,0"/>
+				</Button>
+				<Button Height="20" HorizontalAlignment="Left" Margin="193.347,164.96,0,0" x:Name="removeDirector" VerticalAlignment="Top" Width="20" Click="removeDirector_Click" FontSize="18.667" Padding="-4,-12.3,-4,-4" FontWeight="Bold" ToolTip="Makni odabranog redatelja" Background="{x:Null}" BorderBrush="{x:Null}" d:LayoutOverrides="HorizontalAlignment, VerticalAlignment">
+                    <Image Height="16" Width="16" Source="/VideoKatalog.View;component/Resources/minus20p.png" Margin="0,8.5,0,0"/>
+				</Button>
+				<Button HorizontalAlignment="Left" Margin="193.109,229.667,0,0" x:Name="addActor" Width="20" Click="addActor_Click" FontWeight="Bold" FontSize="18.667" Padding="-4,-12,-4,-4" ToolTip="Dodaj proizvoljnog glumca" Height="20" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" d:LayoutOverrides="HorizontalAlignment">
+                    <Image Height="16" Width="16" Source="/VideoKatalog.View;component/Resources/plus20p.png" Margin="0,7.7,0,0"/>
+				</Button>
+				<Button HorizontalAlignment="Left" Margin="193.109,253.667,0,270.333" x:Name="removeActor" Width="20" Click="removeActor_Click" FontWeight="Bold" FontSize="18.667" Padding="-4,-12,-4,-4" RenderTransformOrigin="0.409,0.552" ToolTip="Makni odabranog glumca" Background="{x:Null}" BorderBrush="{x:Null}" d:LayoutOverrides="HorizontalAlignment">
+                    <Image Height="16" Width="16" Source="/VideoKatalog.View;component/Resources/minus20p.png" Margin="0,7.9,0,0"/>
+				</Button>
+				<Label Content="MAX:" Margin="97.915,202,0,0" x:Name="label1" HorizontalAlignment="Left" VerticalAlignment="Top"/>
+				<ComboBox x:Name="genresComboBox" Margin="318.782,21.959,335.728,0" VerticalAlignment="Top" Height="29.133" MaxDropDownHeight="479" SelectionChanged="genresComboBox_SelectionChanged" IsEditable="True" IsReadOnly="True" Text="" FontSize="13.333" Padding="3,4.5,3,3">
+					<CheckBox x:Name="actionCheckBox" Content="Akcija" Checked="RefreshGenres" Unchecked="RefreshGenres" Foreground="DimGray"/>
+					<CheckBox x:Name="adventureCheckBox" Content="Avantura" Checked="RefreshGenres" Unchecked="RefreshGenres" Foreground="DimGray"/>
+					<CheckBox x:Name="animationCheckBox" Content="Animacija" Checked="RefreshGenres" Unchecked="RefreshGenres" Foreground="DimGray"/>
+					<CheckBox x:Name="biographyCheckBox" Content="Biografija" Checked="RefreshGenres" Unchecked="RefreshGenres" Foreground="DimGray"/>
+					<CheckBox x:Name="comedyCheckBox" Content="Komedija" Checked="RefreshGenres" Unchecked="RefreshGenres" Foreground="DimGray"/>
+					<CheckBox x:Name="crimeCheckBox" Content="Krimi" Checked="RefreshGenres" Unchecked="RefreshGenres" Foreground="DimGray"/>
+					<CheckBox x:Name="documentaryCheckBox" Content="Dokumentarni" Checked="RefreshGenres" Unchecked="RefreshGenres" Foreground="DimGray"/>
+					<CheckBox x:Name="dramaCheckBox" Content="Drama" Checked="RefreshGenres" Unchecked="RefreshGenres" Foreground="DimGray"/>
+					<CheckBox x:Name="familyCheckBox" Content="Obiteljski" Checked="RefreshGenres" Unchecked="RefreshGenres" Foreground="DimGray"/>
+					<CheckBox x:Name="fantasyCheckBox" Content="Fantastika" Checked="RefreshGenres" Unchecked="RefreshGenres" Foreground="DimGray"/>
+					<CheckBox x:Name="filmNoirCheckBox" Content="Crno-bijeli" Checked="RefreshGenres" Unchecked="RefreshGenres" Foreground="DimGray"/>
+					<CheckBox x:Name="historyCheckBox" Content="Povijesni" Checked="RefreshGenres" Unchecked="RefreshGenres" Foreground="DimGray"/>
+					<CheckBox x:Name="horrorCheckBox" Content="Horor" Checked="RefreshGenres" Unchecked="RefreshGenres" Foreground="DimGray"/>
+					<CheckBox x:Name="musicCheckBox" Content="Muzički" Checked="RefreshGenres" Unchecked="RefreshGenres" Foreground="DimGray"/>
+					<CheckBox x:Name="musicalCheckBox" Content="Pjevan" Checked="RefreshGenres" Unchecked="RefreshGenres" Foreground="DimGray"/>
+					<CheckBox x:Name="misteryCheckBox" Content="Misterija" Checked="RefreshGenres" Unchecked="RefreshGenres" Foreground="DimGray"/>
+					<CheckBox x:Name="romanceCheckBox" Content="Romantika" Checked="RefreshGenres" Unchecked="RefreshGenres" Foreground="DimGray"/>
+					<CheckBox x:Name="sciFiCheckBox" Content="Znanstvena fantastika" Checked="RefreshGenres" Unchecked="RefreshGenres" Foreground="DimGray"/>
+					<CheckBox x:Name="sportCheckBox" Content="Sportski" Checked="RefreshGenres" Unchecked="RefreshGenres" Foreground="DimGray"/>
+					<CheckBox x:Name="thrillerCheckBox" Content="Triler" Checked="RefreshGenres" Unchecked="RefreshGenres" Foreground="DimGray"/>
+					<CheckBox x:Name="warCheckBox" Content="Ratni" Checked="RefreshGenres" Unchecked="RefreshGenres" Foreground="DimGray"/>
+					<CheckBox x:Name="westernCheckBox" Content="Vestern" Checked="RefreshGenres" Unchecked="RefreshGenres" Foreground="DimGray"/>
+				</ComboBox>
+				<TextBlock Margin="318.782,5.999,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Žanrovi" HorizontalAlignment="Left" RenderTransformOrigin="0.628,0.461" Foreground="#B2000000"/>
+				<RadioButton x:Name="posterImpAwardsRadio" Content="IMP Awards" Margin="548.999,26.959,0,0" VerticalAlignment="Top" IsChecked="True" GroupName="posters" HorizontalAlignment="Left" />
+				<RadioButton x:Name="posterGoogleRadio" Content="Google" Margin="548.999,45.919,0,0" VerticalAlignment="Top" GroupName="posters" HorizontalAlignment="Left" />
+				<RadioButton x:Name="posterMoviePosterDBRadio" Content="Movie Poster DB" Margin="548.999,6.999,0,0" VerticalAlignment="Top" GroupName="posters" HorizontalAlignment="Left" />
+				<Button x:Name="searchPosterBTN" Height="55" Margin="676,6.999,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="55" FontWeight="Bold" Click="searchPoster_Click" Background="{x:Null}" BorderBrush="{x:Null}" Foreground="Black" BorderThickness="0" Padding="-4" ToolTip="Trazi poster" >
+                    <Image Height="45" Width="45" Source="/VideoKatalog.View;component/Resources/search64p.png" Stretch="UniformToFill"/>
+				</Button>
+				<RadioButton x:Name="trailerYoutubeRadio" Content="Youtube" HorizontalAlignment="Left" Margin="397.391,456,0,0" VerticalAlignment="Top" IsChecked="True" GroupName="trailer" FontSize="8" />
+				<RadioButton x:Name="trailerGoogleRadio" Content="Google" Margin="0,456,369.159,0" VerticalAlignment="Top" GroupName="trailer" FontSize="8" HorizontalAlignment="Right" />
+				<Button x:Name="searchTrailer" Height="28" Margin="498.841,451.725,0,0" VerticalAlignment="Top" FontSize="9.333" FontFamily="Verdana" HorizontalAlignment="Left" Width="29.431" Click="searchTrailer_Click" Background="{x:Null}" BorderBrush="{x:Null}" ToolTip="Traži trailer" >
+                    <Image Height="23" Width="23" Source="/VideoKatalog.View;component/Resources/search30p.png"/>
+				</Button>
+				<Button x:Name="openTrailerLink" Height="24" Margin="474.136,502.1,0,0" VerticalAlignment="Top" FontSize="9.333" FontFamily="Verdana" HorizontalAlignment="Left" Width="25" Click="openTrailerLink_Click" Background="{x:Null}" BorderBrush="{x:Null}" ToolTip="Otvori link" >
+                    <Image Height="20" Width="20" Source="/VideoKatalog.View;component/Resources/link20p.png" VerticalAlignment="Top" HorizontalAlignment="Left"/>
+				</Button>
+				<Button x:Name="openInternetLink" Margin="159.109,502.1,0,0" FontSize="9.333" FontFamily="Verdana" HorizontalAlignment="Left" Width="25" Click="openInternetLink_Click" Height="24" VerticalAlignment="Top" Background="{x:Null}" BorderBrush="{x:Null}" ToolTip="Otvori link" >
+                    <Image Height="18" Width="18" Source="/VideoKatalog.View;component/Resources/link20p.png" ToolTip=""/>
+				</Button>
+				<CheckBox x:Name="useOriginalNameCB" Content="Koristi samo orginalni naziv" HorizontalAlignment="Left" Margin="176.272,8.959,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.484,0.747" Checked="useOriginalNameCB_Checked" Unchecked="useOriginalNameCB_Unchecked" FontSize="9.333" />
+				<Button Height="55" Margin="794,6.999,0,0" x:Name="copyAndOpenEditorBTN" VerticalAlignment="Top" FontSize="10.667" Click="copyAndOpenEditorBTN_Click" ToolTip="Kopiraj sliku i otvori slikovni editor" HorizontalAlignment="Left" Width="55" Background="{x:Null}" BorderBrush="{x:Null}">
+                    <Image Height="47" Width="50" Source="/VideoKatalog.View;component/Resources/ptohostop48p.png"/>
+				</Button>
+				<Slider Margin="560,512,0,0" Style="{DynamicResource SimpleSlider}" VerticalAlignment="Top" Maximum="100" Minimum="1" Value="70" UseLayoutRounding="True" x:Name="imageQualityLevelSlider" ValueChanged="imageQualityLevelSlider_ValueChanged" ToolTip="Kvaliteta" Height="18" Background="#FF661B1B" Foreground="{x:Null}" BorderBrush="{x:Null}" HorizontalAlignment="Left" Width="281"/>
+                <xctk:IntegerUpDown x:Name="castLimit" Margin="136.109,204,0,0" VerticalAlignment="Top" ValueChanged="castLimit_ValueChanged" HorizontalAlignment="Left" Width="51" />
+			</Grid>
+        </xctk:BusyIndicator>
+		<Button x:Name="cancelNewMovieButton" HorizontalAlignment="Right" Height="85" Margin="0,0,300,15" VerticalAlignment="Bottom" Width="110" FontWeight="Bold" FontSize="14.667" Click="cancelNewMovieButton_Click" ToolTip="Odbaci i zatvori">
+			<Button.Background>
+				<LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+					<GradientStop Color="#FFF3F3F3" Offset="0"/>
+					<GradientStop Color="#FFF5B6AF" Offset="1"/>
+					<GradientStop Color="#FFF1E6E5" Offset="0.435"/>
+				</LinearGradientBrush>
+			</Button.Background>
+            <Image Height="70" Width="70" Source="/VideoKatalog.View;component/Resources/dismiss128p.png"/>
+		</Button>
+		<Button x:Name="acceptNewMovieButton" Height="85" FontWeight="Bold" FontSize="14.667" Click="acceptNewMovieButton_Click" RenderTransformOrigin="0.5,0.5" ToolTip="Prihvati" HorizontalAlignment="Left" VerticalAlignment="Bottom" Width="110" Margin="300,0,0,15">
+			<Button.RenderTransform>
+				<TransformGroup>
+					<ScaleTransform/>
+					<SkewTransform/>
+					<RotateTransform Angle="-0.642"/>
+					<TranslateTransform/>
+				</TransformGroup>
+			</Button.RenderTransform>
+			<Button.Background>
+				<LinearGradientBrush EndPoint="0,1" StartPoint="0,0">
+					<GradientStop Color="White" Offset="0.01"/>
+					<GradientStop Color="#FFE4FDE4" Offset="0.474"/>
+					<GradientStop Color="#FFB5FFB2" Offset="0.974"/>
+				</LinearGradientBrush>
+			</Button.Background>
+            <Image Height="70" Width="70" Source="/VideoKatalog.View;component/Resources/accept128p.png"/>
+		</Button>
+		<CheckBox x:Name="viewedCheckBox" Content="Pogledano" Margin="0,0,56,97.17" VerticalAlignment="Bottom" FontSize="18.667" IsChecked="{Binding IsViewed}" HorizontalAlignment="Right"/>
+		<Grid x:Name="releaseDateGrid" HorizontalAlignment="Left" Height="62" Margin="10,0,0,38" VerticalAlignment="Bottom" Width="128">
+			<Grid.Effect>
+				<DropShadowEffect BlurRadius="11"/>
+			</Grid.Effect>
+			<Grid.Background>
+				<SolidColorBrush Color="{DynamicResource {x:Static SystemColors.ActiveBorderColorKey}}"/>
+			</Grid.Background>
+			<TextBlock Margin="8,8.04,0,0" TextWrapping="Wrap" Text="Datum izlaska:" VerticalAlignment="Top" FontSize="13.333" HorizontalAlignment="Left" Width="88"/>
+			<DatePicker x:Name="releaseDatePicker" Margin="8,30,8,0" VerticalAlignment="Top" d:LayoutOverrides="HorizontalAlignment"/>
+		</Grid>
+        <xctk:BusyIndicator x:Name="busyIndicatorScanningVideo" Margin="926,8,0,126" HorizontalAlignment="Left" Width="168">
+			<Grid x:Name="movieTechInfoGrid" OpacityMask="Black" Background="#FFBAD6DA" VerticalAlignment="Top" Height="544" HorizontalAlignment="Left" Width="168">
+				<Grid.Effect>
+					<DropShadowEffect BlurRadius="26"/>
+				</Grid.Effect>
+				<TextBox x:Name="widthTextBox" Margin="10.759,316.894,0,0" TextWrapping="Wrap" Text="{Binding Width}" HorizontalAlignment="Left" Width="64.983" IsEnabled="False" FontFamily="/Zavrsni Rad;component/Fonts/#Cambria Math" FontSize="16" Foreground="Black" VerticalAlignment="Top" />
+				<TextBox Margin="92.713,316.894,0,0" x:Name="heightTextBox" TextWrapping="Wrap" IsEnabled="False" HorizontalAlignment="Left" Width="67.287" Text="{Binding Height}" FontFamily="/Zavrsni Rad;component/Fonts/#Cambria Math" FontSize="16" Foreground="Black" VerticalAlignment="Top" />
+				<TextBox x:Name="bitrateTextBox" Margin="10.759,270.901,0,0" TextWrapping="Wrap" Text="{Binding Bitrate, Converter={StaticResource bitrateConverter}}" IsEnabled="False" FontSize="16" Width="149.241" HorizontalAlignment="Left" Height="24" VerticalAlignment="Top" FontFamily="/Zavrsni Rad;component/Fonts/#Cambria Math" Foreground="Black" />
+				<TextBox x:Name="runtimeTextBox" Margin="92.713,367.041,0,0" TextWrapping="Wrap" RenderTransformOrigin="0.444,0.736" Text="{Binding Runtime, Converter={StaticResource runtimeConverter}}" IsEnabled="False" HorizontalAlignment="Left" Width="67.287" Height="24" VerticalAlignment="Top" FontFamily="/Zavrsni Rad;component/Fonts/#Cambria Math" FontSize="16" Foreground="Black" />
+				<TextBox x:Name="aspectRatioTextBox" Height="24" Margin="10.996,367.041,0,0" TextWrapping="Wrap" VerticalAlignment="Top" HorizontalAlignment="Left" Width="64.746" Text="{Binding AspectRatio}" IsEnabled="False" FontFamily="/Zavrsni Rad;component/Fonts/#Cambria Math" FontSize="16" Foreground="Black" />
+				<TextBox x:Name="sizeTextBox" Height="26.08" Margin="10.996,222.861,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="{Binding Size, Converter={StaticResource sizeConverter}}" IsEnabled="False" FontSize="16" HorizontalAlignment="Left" Width="149.004" Foreground="Black" FontFamily="/Zavrsni Rad;component/Fonts/#Cambria Math" />
+				<TextBlock HorizontalAlignment="Left" Margin="9.976,301.041,0,0" TextWrapping="Wrap" Text="Rezolucija" Height="15.854" VerticalAlignment="Top" Foreground="#BF000000"/>
+				<TextBlock HorizontalAlignment="Left" Margin="11.709,352.04,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Aspect ratio" Foreground="#BF000000" FontSize="10.667"/>
+				<TextBlock Margin="11.497,254.94,0,0" TextWrapping="Wrap" Text="Bitrate" HorizontalAlignment="Left" VerticalAlignment="Top" Foreground="#B2000000" d:LayoutOverrides="VerticalAlignment"/>
+				<TextBlock Height="20" Margin="8,152,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="14.667" Text="# HDD" HorizontalAlignment="Left" Foreground="#B2000000"/>
+				<TextBlock HorizontalAlignment="Left" Margin="11.497,206.9,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Veličina" RenderTransformOrigin="0.617,0.433" Foreground="#B2000000"/>
+				<TextBlock Margin="92.713,352.04,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Text="Trajanje" RenderTransformOrigin="0.496,0.687" HorizontalAlignment="Left" Foreground="#BF000000"/>
+				<TextBlock HorizontalAlignment="Left" Margin="11.901,403.667,0,0" TextWrapping="Wrap" FontSize="13.333" Text="Audio" VerticalAlignment="Top" Width="73" Height="17.74" Foreground="#B2000000"/>
+				<ListBox Margin="11.17,421.667,0,0" x:Name="audioLanguagesListBox" ItemsSource="{Binding AudioList}" Height="44" VerticalAlignment="Top" HorizontalAlignment="Left" Width="148.83"/>
+				<Button Margin="140,401.407,0,0" x:Name="addAudioLng" FontWeight="Bold" FontSize="14.667" Padding="-4,-11,-4,-4" Click="editAudioLng_Click" Height="20" VerticalAlignment="Top" HorizontalAlignment="Left" Width="20" Background="{x:Null}" BorderBrush="{x:Null}" ToolTip="Izmijeni jezik audia" >
+					<Image Height="16" Width="16" Source="/VideoKatalog.View;component/Resources/edit20p.png" Margin="-0.2,6,0,-1.2" ToolTip="Izmijeni jezik audia"/>
+				</Button>
+				<TextBlock HorizontalAlignment="Left" Margin="11.17,466.667,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="13.333" Text="Jezici titlova" Height="17.733" Width="77.71" Foreground="#B2000000"/>
+				<ListBox Margin="11.17,484.667,0,0" x:Name="subtitleLangsListBox" ItemsSource="{Binding SubtitleLanguageList}" HorizontalAlignment="Left" Width="128.83" Height="44" VerticalAlignment="Top"/>
+				<Button Margin="140,484.667,0,0" x:Name="addSubtitleLng" FontWeight="Bold" FontSize="14.667" Padding="-4,-10.8,-4,-4" Click="addSubtitleLng_Click" VerticalAlignment="Top" Height="20" HorizontalAlignment="Left" Width="20" Background="{x:Null}" BorderBrush="{x:Null}" ToolTip="Dodaj prozvoljni jezik titla" >
+					<Image Height="16" Width="16" Source="/VideoKatalog.View;component/Resources/plus20p.png" Margin="0,6.8,0,0" ToolTip="Dodaj novi jezik titla"/>
+				</Button>
+				<Button Height="20" HorizontalAlignment="Left" Margin="140,508.667,0,0" x:Name="removeSubtitleLng" VerticalAlignment="Top" Width="20" FontWeight="Bold" FontSize="14.667" Padding="-4,-11,-4,-4" Click="removeSubtitleLng_Click" Background="{x:Null}" BorderBrush="{x:Null}" ToolTip="Makni odabrani jezik" >
+					<Image Height="16" Width="16" Source="/VideoKatalog.View;component/Resources/minus20p.png" Margin="0,6.8,0,0" ToolTip="Makni odabrani jezik titla"/>
+				</Button>
+				<ComboBox x:Name="hddComboBox" Margin="8.5,172,0,0" VerticalAlignment="Top" Height="24" FontSize="13.333" HorizontalAlignment="Left" Width="127.5" ItemsSource="{Binding}" SelectedItem="{Binding Hdd}" />
+				<Button x:Name="loadFileButton" Height="132.43" Margin="8,8,0,0" VerticalAlignment="Top" FontWeight="Bold" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" FontSize="24" Click="loadFileButton_Click" HorizontalAlignment="Left" Width="141" Background="#57000000">
+					<Image Height="128" Width="128" Source="/VideoKatalog.View;component/Resources/browseVideo128p.png" ToolTip="Učitaj video datoteku filma"/>
+				</Button>
+				<TextBlock Margin="79.976,320,79.12,0" TextWrapping="Wrap" Text="X" FontSize="13.333" VerticalAlignment="Top" FontWeight="Bold"/>
+				<Button Margin="140,172,0,0" x:Name="addNewHdd" FontWeight="Bold" FontSize="14.667" Padding="-4,-10.8,-4,-4" VerticalAlignment="Top" Height="24" HorizontalAlignment="Left" Width="24" Background="{x:Null}" BorderBrush="{x:Null}" ToolTip="Dodaj novi HDD" d:LayoutOverrides="VerticalAlignment" Click="addNewHdd_Click">
+					<Image Height="20" Width="20" Source="/VideoKatalog.View;component/Resources/plus20p.png" Margin="0,6.8,0,0" ToolTip="Dodaj novi HDD"/>
+				</Button>
+			</Grid>
+        </xctk:BusyIndicator>
+        <Button Content="Pause" Height="23" HorizontalAlignment="Left" Margin="1019,643,0,0" Name="pauseTimer" VerticalAlignment="Top" Width="75" Click="pauseTimer_Click"  Visibility="Hidden"/>
+        <TextBlock Height="16.667" HorizontalAlignment="Right" Margin="0,623.333,18,0" Name="timerValueTB" VerticalAlignment="Top" Width="69" TextAlignment="Center" Text="0.0 / 1.0" />
+    </Grid>
+</Window>

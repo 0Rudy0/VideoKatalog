@@ -1,0 +1,20 @@
+﻿@model IEnumerable<VideoKatalog.WebApp.Movie>
+@using VideoKatalog.WebApp;
+
+@{
+    ViewBag.Title = "Lista filmova";
+    Layout = "~/Views/Shared/_LayoutMobile.cshtml";
+}
+
+<a href="#" class="ui-btn ui-icon-recycle ui-btn-icon-left  ui-mini" id="checkNewMovies" onclick="reloadData()">Ažuriranje popisa</a>
+<ul id="movieList" data-role="listview" data-split-icon="plus" data-split-theme="b" data-inset="true"></ul>
+<div class="ui-grid-a">
+    <div class="ui-block-a"><a href="#" onclick="previousPage()" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-l ui-btn-icon-left">Prehodna</a></div>
+    <div class="ui-block-b"><a href="#" onclick="nextPage()" class="ui-btn ui-shadow ui-corner-all ui-icon-carat-r ui-btn-icon-right">Sljedeća</a></div>
+</div>
+
+@section scripts {
+    <script src="~/Scripts/movieMobileList.js" type="text/javascript"></script>
+}
+
+

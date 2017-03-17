@@ -1,0 +1,114 @@
+﻿@model VideoKatalog.WebApp.Movie
+@using VideoKatalog.WebApp
+
+@{
+    ViewBag.Title = String.Format("{0} ({1})", Model.customName, Model.year);
+    Layout = "~/Views/Shared/_LayoutMobile.cshtml";
+    string genresString = "";
+    string castString = "";
+    string dirString = "";
+    try {
+        foreach (Movie_Genre g in Model.Movie_Genre) {
+            genresString += g.Genre.genreName + ", ";
+        }
+        genresString = genresString.Substring(0, genresString.Length - 2);
+    }
+    catch { }
+
+    try {
+        int countCast = 0;
+        foreach (Movie_Cast c in Model.Movie_Cast) {
+            castString += c.Person.personName + ", ";
+            if (countCast++ > 5) {
+                break;
+            }
+        }
+        castString = castString.Substring(0, castString.Length - 2);
+    }
+    catch { }
+
+    try {
+        foreach (Movie_Director d in Model.Movie_Director) {
+            dirString += d.Person.personName + ", ";
+        }
+        dirString = dirString.Substring(0, dirString.Length - 2);
+    }
+    catch { }
+    
+    string posterSource = "http://hddpunjenje.herobo.com/posters/movie/" + Model.customName.Replace("&#39;", "'") + ".jpg";
+
+    string runtimeText = "";
+    double valueInMinutes = Model.runtime / 60000;
+    double valueInHours = valueInMinutes / 60;
+    valueInMinutes = valueInMinutes % 60;
+    if (valueInHours > 0) {
+        runtimeText = Math.Floor(valueInHours) + "h " + Math.Round(valueInMinutes) + "m";
+    }
+    else {
+        runtimeText = Math.Round(valueInMinutes) + "m"; ;
+    }
+
+    string sizeText = (Model.size / (1024.0 * 1024 * 1024)).ToString(".00") + " GB";
+}
+
+<link rel="stylesheet" type="text/css" href="~/Content/movieDetails.css" />
+
+
+<div id="posterDiv">
+    <img id="posterCase" src="../../Content/images/case.png" />
+    <img id="moviePoster" src="@posterSource" />
+</div>
+
+<div id="genresDiv">
+    <div id="genresText">@genresString</div>
+</div>
+
+<div id="ratingDiv">
+    <div id="ratingIcon"><img width="25" height="25" src="~/images/ratingIcon.png" /></div>
+    <div id="ratingValue">@Model.rating.ToString("0.0")/10</div>
+</div>
+
+<div id="directorDiv">
+    <div id="directorIcon"><img width="25" height="25" src="~/images/director40p.png" /></div>
+    <div id="directorText">@Html.Raw(dirString)</div>
+</div>
+
+<div id="castDiv">
+    <div id="castIcon"><img width="25" height="25" src="~/images/cast 1.png" /></div>
+    <div id="castText">@Html.Raw(castString)</div>
+</div>
+
+<div id="plotDiv">
+    <div id="plotIcon"><img width="25" height="25" src="~/images/plot%205.png" /></div>
+    <div id="plotText">@Html.Raw(Model.plot)</div>
+</div>
+
+<div id="runtimeDiv">
+    <div id="runtimeIcon"><img width="25" height="25" src="~/images/runtimeIcon.png" /></div>
+    <div id="runtimeText">@runtimeText</div>
+</div>
+
+<div id="sizeDiv">
+    <div id="sizeIcon"><img width="25" height="25" src="~/images/sizeIcon.png" /></div>
+    <div id="sizeText">@sizeText</div>
+</div>
+
+<div class="ui-grid-a">
+    <div class="ui-block-a">
+        <a class="ui-btn ui-corner-all" href="@Model.internetLink" target="_blank">IMDb</a>
+    </div>
+    <div class="ui-block-b">
+        <a class="ui-btn ui-corner-all" href="http://@Model.trailerLink" target="_blank">Trailer</a>
+    </div>
+    <a href="#" onclick="goBack()" class="ui-btn" data-ajax="false">Povratak</a>
+</div>
+
+<script type="text/javascript">
+    $(document).ready(function () {
+        var i;
+    });
+    function goBack() {
+        window.history.back();
+    }
+</script>
+<script src="~/Scripts/movieDetails.js" type="text/javascript"></script>

@@ -1,0 +1,259 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:localConverters ="clr-namespace:Video_katalog.Converters"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" mc:Ignorable="d" x:Name="wishListWindow" x:Class="Video_katalog.WishListForm"
+        WindowStartupLocation="CenterOwner" Title="Lista želja" Height="598" Width="816" Loaded="wishListWindow_Loaded">
+    <Window.Resources>
+    	<localConverters:DateConverter x:Key="dateConverter"/>
+    	<localConverters:PersonsToStringConverter x:Key="personsToStringConverter"/>
+    	<localConverters:GenresToStringConverter x:Key="genresToStringConverter"/>
+    	<localConverters:NameToImagePathConverter x:Key="nameToImagePathConverter"/>
+    	<localConverters:ReleaseDateToStampVisibility x:Key="releaseDateToStampVisibility"/>
+        <localConverters:DateSpanConverter x:Key="dateSpanConverter"/>
+        
+    	<SolidColorBrush x:Key="wishSummaryBackground" Color="#FFDEDEDE"/>
+    	<DataTemplate x:Key="wishMovieLBTemplate">
+    		<Grid Height="222" Width="735" Background="#74E5E5E5" RenderTransformOrigin="0.5,0.5" Margin="0,5">
+    			<Grid.RenderTransform>
+    				<TransformGroup>
+    					<ScaleTransform/>
+    					<SkewTransform AngleX="-0.337"/>
+    					<RotateTransform/>
+    					<TranslateTransform X="-0.494"/>
+    				</TransformGroup>
+    			</Grid.RenderTransform>
+    			<Image x:Name="movieImage" HorizontalAlignment="Left" Margin="8,8,0,28" Width="130" Height="186.76" Source="{Binding Name, ConverterParameter=movie, Converter={StaticResource nameToImagePathConverter}}" Stretch="UniformToFill"/>
+    			<TextBlock x:Name="movieNameTB" HorizontalAlignment="Stretch" Margin="149,7.74,166.954,0" TextWrapping="NoWrap" VerticalAlignment="Top" FontSize="26.667" FontFamily="Buxton Sketch" TextOptions.TextFormattingMode="Display" Foreground="#FF071C74" Text="{Binding OrigName}" TextTrimming="WordEllipsis" />
+    			<TextBlock x:Name="movieYearTB" HorizontalAlignment="Right" Margin="0,7.74,8,0" TextWrapping="Wrap" Text="{Binding Year}" VerticalAlignment="Top" Width="66.141" FontSize="18.667" FontFamily="Papyrus" TextOptions.TextFormattingMode="Display"/>
+    			<TextBlock x:Name="movieSummaryTB" HorizontalAlignment="Left" Margin="149,89,0,0" TextWrapping="WrapWithOverflow" Text="{Binding Summary}" VerticalAlignment="Top" TextOptions.TextFormattingMode="Display" TextTrimming="WordEllipsis" Background="{DynamicResource wishSummaryBackground}" Padding="5" TextOptions.TextHintingMode="Animated" Height="96" Width="578">
+    				<TextBlock.Effect>
+    					<DropShadowEffect ShadowDepth="1"/>
+    				</TextBlock.Effect>
+    			</TextBlock>
+    			<TextBlock x:Name="movieReleaseDateTB" HorizontalAlignment="Left" Margin="45.104,0,0,7.28" TextWrapping="Wrap" Text="{Binding ReleaseDate, Converter={StaticResource dateConverter}}" VerticalAlignment="Bottom" Width="88.777" TextOptions.TextFormattingMode="Display"/>
+    			<TextBlock HorizontalAlignment="Left" Margin="12.537,0,0,7.28" TextWrapping="Wrap" Text="Izlazi:" VerticalAlignment="Bottom" RenderTransformOrigin="0.002,0.516" TextOptions.TextFormattingMode="Display"/>
+    			<TextBlock HorizontalAlignment="Left" Margin="149,43.08,0,0" TextWrapping="Wrap" Text="Redatelj:" VerticalAlignment="Top" FontWeight="Bold"/>
+    			<TextBlock HorizontalAlignment="Left" Margin="149,63.04,0,0" TextWrapping="Wrap" Text="Uloge:" VerticalAlignment="Top" FontWeight="Bold"/>
+    			<TextBlock HorizontalAlignment="Stretch" Margin="208.094,43.08,8,0" TextWrapping="NoWrap" Text="{Binding Directors, Converter={StaticResource personsToStringConverter}}" VerticalAlignment="Top" TextTrimming="WordEllipsis" />
+    			<TextBlock HorizontalAlignment="Stretch" Margin="208.094,63.04,8,0" TextWrapping="NoWrap" Text="{Binding Actors, Converter={StaticResource personsToStringConverter}}" VerticalAlignment="Top" TextTrimming="WordEllipsis" />
+    			<Image Height="160" Width="400" Margin="216.941,27,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Source="Resources/outStamp.png" Opacity="0.71" Visibility="{Binding ReleaseDate, Converter={StaticResource releaseDateToStampVisibility}}" RenderTransformOrigin="0.5,0.5" >
+    				<Image.RenderTransform>
+    					<TransformGroup>
+    						<ScaleTransform/>
+    						<SkewTransform/>
+    						<RotateTransform Angle="-4.861"/>
+    						<TranslateTransform/>
+    					</TransformGroup>
+    				</Image.RenderTransform>
+    			</Image>
+    			<Button HorizontalAlignment="Right" Margin="0,0,8.007,3.25" VerticalAlignment="Bottom" Width="41.316" Height="28.917" Name="wishMovieToRegular" Click="wishMovieToRegular_Click">
+    				<Image Height="22.75" Width="37.707" Source="Resources/transferToList.png" ToolTip="Dodaj u glavnu listu"/>
+    			</Button>
+    			<Button x:Name="moveRemove" HorizontalAlignment="Right" Margin="0,0,97.878,5" VerticalAlignment="Bottom" Width="26.325" Height="26" Click="moveRemove_Click">
+    				<Image Height="20" Width="21" Source="Resources/remove22p.png" ToolTip="Izbriši iz liste želja" Stretch="Fill"/>
+    			</Button>
+    			<Button x:Name="movieEdit" HorizontalAlignment="Right" Margin="0,0,67.878,5" VerticalAlignment="Bottom" Width="26" ToolTip="Izmijeni" Click="movieEdit_Click">
+    				<Image Height="20" Width="20" Source="Resources/edit22p.png"/>
+    			</Button>
+    		</Grid>
+    	</DataTemplate>
+    	<ControlTemplate x:Key="ListBoxControlTemplate1" TargetType="{x:Type ListBox}">
+    		<Grid Background="{TemplateBinding Background}">
+    			<ItemsPresenter Margin="0,-5"/>
+    		</Grid>
+    	</ControlTemplate>
+    	<DataTemplate x:Key="wishHomeVideoTemplate">
+    		<Grid Height="160" Width="735" Background="#74E5E5E5" RenderTransformOrigin="0.5,0.5" Margin="0,5">
+    			<Grid.RenderTransform>
+    				<TransformGroup>
+    					<ScaleTransform/>
+    					<SkewTransform AngleX="-0.337"/>
+    					<RotateTransform/>
+    					<TranslateTransform X="-0.494"/>
+    				</TransformGroup>
+    			</Grid.RenderTransform>
+    			<Image x:Name="homeVideoImage" HorizontalAlignment="Left" Margin="8,8,0,0" Width="100" Height="143.667" Source="{Binding Name, ConverterParameter=homeVideo, Converter={StaticResource nameToImagePathConverter}}" Stretch="UniformToFill" VerticalAlignment="Top"/>
+    			<TextBlock x:Name="homeVideoNameTB" HorizontalAlignment="Stretch" Margin="128.724,8,226.492,0" TextWrapping="NoWrap" VerticalAlignment="Top" FontSize="26.667" FontFamily="Buxton Sketch" TextOptions.TextFormattingMode="Display" Foreground="#FF071C74" Text="{Binding Name}" TextTrimming="CharacterEllipsis" />
+    			<TextBlock x:Name="homeVideoComment" HorizontalAlignment="Stretch" Margin="128.724,56,8,0" TextWrapping="NoWrap" Text="{Binding Comment}" VerticalAlignment="Top" TextOptions.TextFormattingMode="Display" TextTrimming="WordEllipsis" Height="58.1" Background="{DynamicResource wishSummaryBackground}" Padding="5">
+    				<TextBlock.Effect>
+    					<DropShadowEffect ShadowDepth="1"/>
+    				</TextBlock.Effect>
+    			</TextBlock>
+    			<TextBlock x:Name="homeVideoDueDateTB" HorizontalAlignment="Right" Margin="0,16.666,8,0" TextWrapping="Wrap" Text="{Binding FilmDate, Converter={StaticResource dateConverter}}" VerticalAlignment="Top" Width="81.015" TextOptions.TextFormattingMode="Display" TextAlignment="Right"/>
+    			<TextBlock HorizontalAlignment="Right" Margin="0,16.666,98.881,0" TextWrapping="Wrap" Text="Zakazan datum:" VerticalAlignment="Top" RenderTransformOrigin="0.002,0.516" TextOptions.TextFormattingMode="Display" Width="Auto"/>
+    			<Image Height="160" Width="400" Margin="121.206,232,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Source="Resources/outStamp.png" Opacity="0.71" Visibility="{Binding ReleaseDate, Converter={StaticResource releaseDateToStampVisibility}}" RenderTransformOrigin="0.5,0.5" >
+    				<Image.RenderTransform>
+    					<TransformGroup>
+    						<ScaleTransform/>
+    						<SkewTransform/>
+    						<RotateTransform Angle="-4.861"/>
+    						<TranslateTransform/>
+    					</TransformGroup>
+    				</Image.RenderTransform>
+    			</Image>
+    			<Button HorizontalAlignment="Right" Margin="0,123.083,8,0" VerticalAlignment="Top" Width="41.316" Height="28.917" x:Name="wishHomeVideoToRegular" Click="wishHomeVideoToRegular_Click">
+    				<Image Height="22.75" Width="37.707" Source="Resources/transferToList.png" ToolTip="Dodaj u glavnu listu"/>
+    			</Button>
+    			<TextBlock HorizontalAlignment="Left" Margin="132.882,0,0,14" TextWrapping="Wrap" Text="Kategorija:" VerticalAlignment="Bottom" RenderTransformOrigin="0.002,0.516" TextOptions.TextFormattingMode="Display" Width="Auto"/>
+    			<TextBlock x:Name="homeVideoCategoryTB" HorizontalAlignment="Stretch" Margin="192.882,0,362.536,14" TextWrapping="NoWrap" Text="{Binding VideoCategory}" VerticalAlignment="Bottom" Width="Auto" TextOptions.TextFormattingMode="Display" TextTrimming="WordEllipsis"/>
+    			<Button x:Name="homeVideoRemove" HorizontalAlignment="Right" Margin="0,0,93.015,8" VerticalAlignment="Bottom" Width="28.917" Height="28.917" Click="homeVideoRemove_Click">
+    				<Image Height="22" Width="23.2" Source="Resources/remove22p.png" ToolTip="Izbriši iz liste želja" Stretch="Fill"/>
+    			</Button>
+    			<Button x:Name="homeVideoEdit" HorizontalAlignment="Right" Margin="0,0,60.098,8" VerticalAlignment="Bottom" Width="28.917" ToolTip="Izmijeni" Height="28.917" Click="homeVideoEdit_Click">
+    				<Image Height="22" Width="22" Source="Resources/edit22p.png"/>
+    			</Button>
+    		</Grid>
+    	</DataTemplate>
+    	<DataTemplate x:Key="serieTemplate">
+            <Grid Height="256" Width="735" Background="#74E5E5E5" RenderTransformOrigin="0.5,0.5" Margin="0,8">
+    			<Grid.RenderTransform>
+    				<TransformGroup>
+    					<ScaleTransform/>
+    					<SkewTransform AngleX="-0.337"/>
+    					<RotateTransform/>
+    					<TranslateTransform X="-0.494"/>
+    				</TransformGroup>
+    			</Grid.RenderTransform>
+    			<Image x:Name="serieImage" HorizontalAlignment="Left" Margin="8,8,0,0" Width="140" Height="201" Source="{Binding Name, ConverterParameter=serie, Converter={StaticResource nameToImagePathConverter}}" Stretch="UniformToFill" VerticalAlignment="Top"/>
+    			<TextBlock x:Name="serieNameTB" HorizontalAlignment="Stretch" Margin="158.644,7.74,255.824,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="26.667" FontFamily="Buxton Sketch" TextOptions.TextFormattingMode="Display" Foreground="#FF071C74" Text="{Binding OrigName}" />
+    			<TextBlock x:Name="serieSummaryTB" HorizontalAlignment="Right" Margin="0,24,8.007,0" TextWrapping="WrapWithOverflow" Text="{Binding Summary}" VerticalAlignment="Top" TextOptions.TextFormattingMode="Display" TextTrimming="WordEllipsis" Width="221.912" Background="{DynamicResource wishSummaryBackground}" Padding="5" Height="188.5">
+    				<TextBlock.Effect>
+    					<DropShadowEffect ShadowDepth="1"/>
+    				</TextBlock.Effect>
+    			</TextBlock>
+                <TextBlock x:Name="serieReleaseDateTB" HorizontalAlignment="Left" Margin="4,227,0,0" TextWrapping="Wrap" VerticalAlignment="Center" Width="149" TextOptions.TextFormattingMode="Display" TextAlignment="Center" Text="{Binding WishSeasons, Converter={StaticResource dateSpanConverter}, ConverterParameter=serie}" FontWeight="Bold" Loaded="serieReleaseDateTB_Loaded" />
+    			<TextBlock HorizontalAlignment="Left" Margin="39.949,0,0,27.5" TextWrapping="Wrap" Text="Datum izlaska" VerticalAlignment="Bottom" RenderTransformOrigin="0.002,0.516" TextOptions.TextFormattingMode="Display"/>
+    			<TextBlock HorizontalAlignment="Left" Margin="158.644,43.08,0,0" TextWrapping="Wrap" Text="Redatelj:" VerticalAlignment="Top" FontWeight="Bold" TextOptions.TextFormattingMode="Display"/>
+    			<TextBlock HorizontalAlignment="Left" Margin="158.644,63.04,0,0" TextWrapping="Wrap" Text="Uloge:" VerticalAlignment="Top" FontWeight="Bold" TextOptions.TextFormattingMode="Display"/>
+    			<TextBlock x:Name="serieDirectors" HorizontalAlignment="Stretch" Margin="212.094,43.08,239.07,0" TextWrapping="NoWrap" Text="{Binding Directors, Converter={StaticResource personsToStringConverter}}" VerticalAlignment="Top" TextTrimming="WordEllipsis" TextOptions.TextFormattingMode="Display" />
+    			<TextBlock x:Name="serieCast" HorizontalAlignment="Stretch" Margin="212.094,63.04,239.07,0" TextWrapping="NoWrap" Text="{Binding Actors, Converter={StaticResource personsToStringConverter}}" VerticalAlignment="Top" TextTrimming="WordEllipsis" TextOptions.TextFormattingMode="Display" />
+    			<Image Height="160" Width="400" Margin="498.282,280,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Source="Resources/outStamp.png" Opacity="0.71" Visibility="{Binding ReleaseDate, Converter={StaticResource releaseDateToStampVisibility}}" RenderTransformOrigin="0.5,0.5" >
+    				<Image.RenderTransform>
+    					<TransformGroup>
+    						<ScaleTransform/>
+    						<SkewTransform/>
+    						<RotateTransform Angle="-4.861"/>
+    						<TranslateTransform/>
+    					</TransformGroup>
+    				</Image.RenderTransform>
+    			</Image>
+    			<Button HorizontalAlignment="Right" Margin="0,0,8.007,3.25" VerticalAlignment="Bottom" Width="41.316" Height="28.917" x:Name="wishSerieToRegular" Click="wishSerieToRegular_Click">
+    				<Image Height="22.75" Width="37.707" Source="Resources/transferToList.png" ToolTip="Dodaj u glavnu listu"/>
+    			</Button>
+    			<Button x:Name="serieRemove" HorizontalAlignment="Right" Margin="0,0,91.823,5" VerticalAlignment="Bottom" Width="26.325" Height="26" Click="serieRemove_Click">
+    				<Image Height="20" Width="21" Source="Resources/remove22p.png" ToolTip="Izbriši iz liste želja" Stretch="Fill"/>
+    			</Button>
+    			<Button x:Name="serieEdit" HorizontalAlignment="Right" Margin="0,0,61.823,5" VerticalAlignment="Bottom" Width="26" ToolTip="Izmijeni" Click="serieEdit_Click">
+    				<Image Height="20" Width="20" Source="Resources/edit22p.png"/>
+    			</Button>
+    			<TabControl x:Name="serieEpisodeTabControl" Height="125" Margin="158.644,88.5,0,0" VerticalAlignment="Top" HorizontalAlignment="Left" Width="337.286">
+    				<TabItem x:Name="seasonsTab" Header="Sezone" TextOptions.TextFormattingMode="Display">
+    					<Grid x:Name="bla" Background="#FFE5E5E5">
+    						<ListBox x:Name="seasonListBox" Margin="8,8,107.836,7" HorizontalAlignment="Stretch" Width="Auto" ItemsSource="{Binding WishSeasons}" IsSynchronizedWithCurrentItem="True" TextOptions.TextFormattingMode="Display" SelectionChanged="seasonListBox_SelectionChanged" FontSize="13.333" Loaded="seasonListBox_Loaded" />
+    						<TextBlock HorizontalAlignment="Right" Margin="0,7.6,15.8,0" TextWrapping="Wrap" Text="Datum izlaska" VerticalAlignment="Top"/>
+    						<Button HorizontalAlignment="Right" Margin="0,0,8,8" VerticalAlignment="Bottom" Width="38.566" Height="23.75" x:Name="wishSeasonToRegular" ToolTip="" Click="wishSeasonToRegular_Click">
+    							<Image Height="17.904" Width="29.675" Source="Resources/transferToList.png" ToolTip="Dodaj sezonu u glavnu listu"/>
+    						</Button>
+    						<Button x:Name="seasonRemove" HorizontalAlignment="Right" Margin="0,0,81.836,8" VerticalAlignment="Bottom" Width="22" Height="22" ToolTip="" Click="seasonRemove_Click">
+    							<Image Height="14.5" Width="15.985" Source="Resources/remove22p.png" ToolTip="Izbriši sezonu iz liste želja" Stretch="Fill"/>
+    						</Button>
+    						<Button x:Name="seasonEdit" HorizontalAlignment="Right" Margin="0,0,55.836,8" VerticalAlignment="Bottom" Width="22" ToolTip="" Height="22" Click="seasonEdit_Click">
+    							<Image Height="17" Width="15.482" Source="Resources/edit22p.png" ToolTip="Izmijeni sezonu"/>
+    						</Button>
+                            <TextBlock x:Name="seasonReleaseDate" HorizontalAlignment="Right" Margin="0,-10.1,0,0" TextWrapping="Wrap" Text="{Binding WishEpisodes, Converter={StaticResource dateSpanConverter}, ConverterParameter=serie}" VerticalAlignment="Center" Width="107.5" TextAlignment="Center" FontSize="13.333" Foreground="#FF116800" FontWeight="Bold"/>
+    					</Grid>
+    				</TabItem>
+    				<TabItem x:Name="episodesTab" Header="Epizode" TextOptions.TextFormattingMode="Display">
+    					<Grid Background="#FFE5E5E5">
+    						<TextBlock HorizontalAlignment="Right" Margin="0,7.6,15.8,0" TextWrapping="Wrap" Text="Datum izlaska" VerticalAlignment="Top" TextOptions.TextFormattingMode="Display"/>
+    						<ListBox x:Name="episodesListBox" Margin="8,8,107.836,0" IsSynchronizedWithCurrentItem="True"  HorizontalAlignment="Stretch" Width="Auto" ItemsSource="{Binding}" TextOptions.TextFormattingMode="Display" ScrollViewer.HorizontalScrollBarVisibility="Disabled" VerticalAlignment="Top" Height="80" />
+    						<Button x:Name="episodeRemove" HorizontalAlignment="Right" Margin="0,0,81.836,8" VerticalAlignment="Bottom" Width="22" Height="22" Click="episodeRemove_Click">
+    							<Image Height="14.5" Width="15.985" Source="Resources/remove22p.png" ToolTip="Izbriši iz liste želja" Stretch="Fill"/>
+    						</Button>
+    						<Button HorizontalAlignment="Right" Margin="0,0,8,8" VerticalAlignment="Bottom" Width="38.566" Height="23.75" x:Name="wishEpisodeToRegular" Click="wishEpisodeToRegular_Click">
+    							<Image Height="17.904" Width="29.675" Source="Resources/transferToList.png" ToolTip="Dodaj u glavnu listu"/>
+    						</Button>
+    						<Button x:Name="episodeEdit" HorizontalAlignment="Right" Margin="0,0,55.836,8" VerticalAlignment="Bottom" Width="22" ToolTip="Izmijeni" Height="22" Click="episodeEdit_Click">
+    							<Image Height="17" Width="15.482" Source="Resources/edit22p.png"/>
+    						</Button>
+                            <TextBlock x:Name="episodeReleaseDate" HorizontalAlignment="Right" Margin="0,-10.1,0,0" TextWrapping="Wrap" Text="{Binding AirDate, Converter={StaticResource dateConverter}}" VerticalAlignment="Center" Width="107.5" TextAlignment="Center" FontSize="14.667" Foreground="#FF116800" FontWeight="Bold" TextOptions.TextFormattingMode="Display"/>
+    					</Grid>
+    				</TabItem>
+    			</TabControl>
+    		</Grid>
+    	</DataTemplate>
+	</Window.Resources>
+    <Grid>
+    	<TabControl Margin="8,8,0,0" HorizontalAlignment="Left" VerticalAlignment="Top" Height="544" Width="784">
+    		<TabItem Header="Filmovi">
+    			<Grid Background="#FFE5E5E5">
+                    <ListBox Margin="6,53.04,8,6" ScrollViewer.CanContentScroll="False" ScrollViewer.VerticalScrollBarVisibility="Visible" IsSynchronizedWithCurrentItem="True" x:Name="wishMovieListBox" ItemTemplate="{DynamicResource wishMovieLBTemplate}" ItemsSource="{Binding}" Width="760"/>
+                    <Button HorizontalAlignment="Right" Margin="0,4.79,8,0" VerticalAlignment="Top" Width="45.75" Click="newWishMovie_Click" Background="{x:Null}" Height="44.25" Name="addWishMovie">
+                    	<Image Height="40" Width="40" Source="Resources/wishListAdd.png" ToolTip="Dodaj novi film u listu želja"/>
+                    </Button>
+                    <xctk:WatermarkTextBox HorizontalAlignment="Left" Margin="12,13.04,0,0" Watermark="Upiši naziv za pretragu" VerticalAlignment="Top" Width="215" Height="24.96" FontSize="16" FontFamily="Tw Cen MT" Name="searchWishMovieTB" TextChanged="searchWishMovieTB_TextChanged" Padding="3,3,21,3" MaxLines="1" />
+    				<Image Height="35.333" Margin="-125,9.333,0,0" VerticalAlignment="Top" Source="Resources/sort.png" Width="36" HorizontalAlignment="Center"/>
+    				<ComboBox Margin="65,16.04,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Width="143" ToolTip="Opcije sortiranja" Name="movieSortCategory" SelectionChanged="movieSortCategory_SelectionChanged">
+                        <ComboBoxItem Content="Po vremenu izlaska" />
+                        <ComboBoxItem Content="Po nazivu" />
+                        <ComboBoxItem Content="Po godini" />
+                    </ComboBox>
+                    <Button x:Name="movieClearSearchName" HorizontalAlignment="Left" Margin="208.542,18.207,0,0" VerticalAlignment="Top" Width="15.333" Height="15.5" Padding="-3" Background="{x:Null}" BorderBrush="{x:Null}" Click="movieClearSearchName_Click">
+    					<Image Height="15" Width="15" Source="Resources/delete.png"/>
+    				</Button>
+    			</Grid>
+    		</TabItem>
+    		<TabItem Header="Serije">
+    			<Grid Background="#FFE5E5E5" Margin="0">
+    				<ListBox Margin="6,53.04,8,6" ScrollViewer.CanContentScroll="False" IsSynchronizedWithCurrentItem="True" ScrollViewer.VerticalScrollBarVisibility="Visible" x:Name="wishSerieListBox" ItemsSource="{Binding}" Width="760" ItemTemplate="{DynamicResource serieTemplate}"/>
+    				<Button HorizontalAlignment="Right" Margin="0,16.04,156,0" VerticalAlignment="Top" Width="33" Background="{x:Null}" Height="33" x:Name="addWishSerie" Padding="0" Click="addWishSerie_Click">
+    					<Image Height="30" Width="30" Source="Resources/wishListAdd.png" ToolTip="Dodaj novi film u listu želja"/>
+    				</Button>
+                    <xctk:WatermarkTextBox HorizontalAlignment="Left" Margin="12,13.04,0,0" Watermark="Upiši naziv za pretragu" VerticalAlignment="Top" Width="215" Height="24.96" FontSize="16" FontFamily="Tw Cen MT" x:Name="searchWishSerie" Padding="3,3,21,3" MaxLines="1" TextChanged="searchWishSerie_TextChanged" />
+    				<Image Height="35.333" Margin="-125,9.333,0,0" VerticalAlignment="Top" Source="Resources/sort.png" Width="36" HorizontalAlignment="Center"/>
+    				<ComboBox Margin="65,16.04,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Width="143" ToolTip="Opcije sortiranja" x:Name="serieSortCategory" SelectionChanged="serieSortCategory_SelectionChanged">
+    					<ComboBoxItem Content="Po vremenu izlaska" />
+    					<ComboBoxItem Content="Po nazivu" />
+                    </ComboBox>
+    				<Button x:Name="serieClearSearch" HorizontalAlignment="Left" Margin="208.542,18.207,0,0" VerticalAlignment="Top" Width="15.333" Height="15.5" Padding="-3" Background="{x:Null}" BorderBrush="{x:Null}" Click="serieClearSearch_Click">
+    					<Image Height="15" Width="15" Source="Resources/delete.png"/>
+    				</Button>
+    				<TextBlock HorizontalAlignment="Right" Margin="0,0.08,157.726,0" TextWrapping="Wrap" Text="Serija" VerticalAlignment="Top" FontWeight="Bold"/>
+    				<Button HorizontalAlignment="Right" Margin="0,16.04,85,0" VerticalAlignment="Top" Width="33" Background="{x:Null}" Height="33" x:Name="addWishSerieSeason" Padding="0" Click="addWishSerieSeason_Click">
+    					<Image Height="30" Width="30" Source="Resources/wishListAdd.png" ToolTip="Dodaj novi film u listu želja"/>
+    				</Button>
+    				<TextBlock HorizontalAlignment="Right" Margin="0,0,80.666,0" TextWrapping="Wrap" Text="Sezona" VerticalAlignment="Top" FontWeight="Bold"/>
+    				<Button HorizontalAlignment="Right" Margin="0,16.04,18,0" VerticalAlignment="Top" Width="33" Background="{x:Null}" Height="33" x:Name="addWishSerieEpisode" Padding="0" Click="addWishSerieEpisode_Click">
+    					<Image Height="30" Width="30" Source="Resources/wishListAdd.png" ToolTip="Dodaj novi film u listu želja"/>
+    				</Button>
+    				<TextBlock HorizontalAlignment="Right" Margin="0,0.08,11,0" TextWrapping="Wrap" Text="Epizoda" VerticalAlignment="Top" FontWeight="Bold"/>
+    			</Grid>
+    		</TabItem>
+            <TabItem Header="Kućni video">
+                <Grid Background="#FFE5E5E5" Margin="0">
+                	<ListBox Margin="6,53.04,8,6" ScrollViewer.CanContentScroll="False" IsSynchronizedWithCurrentItem="True" ScrollViewer.VerticalScrollBarVisibility="Visible" x:Name="wishHomeVideoListBox" ItemsSource="{Binding}" Width="760" ItemTemplate="{DynamicResource wishHomeVideoTemplate}"/>
+                	<Button x:Name="addWishHomeVideo" HorizontalAlignment="Right" Margin="0,4.79,8,0" VerticalAlignment="Top" Width="45.75" Background="{x:Null}" Height="44.25" ToolTip="Dodaj kućni video u listu želja" Click="addWishHomeVideo_Click" >
+                		<Image Height="40" Width="40" Source="Resources/wishListAdd.png" ToolTip="Dodaj novi film u listu želja"/>
+                	</Button>
+                	<!--Button x:Name="removeWishHomeVideo" HorizontalAlignment="Right" Margin="0,4.79,57.75,0" VerticalAlignment="Top" Width="45.75" Background="{x:Null}" Height="44.25" Click="removeWishHomeVideo_Click" >
+                		<Image Height="40" Width="40" Source="Resources/wishListRemove.png" ToolTip="Izbriši označeni kućni video iz liste želja"/>
+                	</Button>
+                	<Button x:Name="editWishHomeVideo" HorizontalAlignment="Right" Margin="0,4.79,8,0" VerticalAlignment="Top" Width="45.75" Background="{x:Null}" Height="44.25" Click="editWishHomeVideo_Click" >
+                		<Image Height="40" Width="40" Source="Resources/wishListEdit.png" ToolTip="Izmijeni označeni kućni video"/>
+                	</Button-->
+                    <xctk:WatermarkTextBox HorizontalAlignment="Left" Margin="12,13.04,0,0" Watermark="Upiši naziv za pretragu" VerticalAlignment="Top" Width="215" Height="24.96" FontSize="16" FontFamily="Tw Cen MT" x:Name="searchWishHomeVideo" Padding="3,3,21,3" MaxLines="1" TextChanged="searchWishHomeVideo_TextChanged" />
+                	<Image Height="35.333" Margin="-125,9.333,0,0" VerticalAlignment="Top" Source="Resources/sort.png" Width="36" HorizontalAlignment="Center"/>
+                	<ComboBox Margin="79,16.04,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Width="159" ToolTip="Opcije sortiranja" x:Name="homeVideoSortCategory" SelectionChanged="homeVideoSortCategory_SelectionChanged">
+                        <ComboBoxItem Content="Po zakazanom datumu" />
+                        <ComboBoxItem Content="Po nazivu" />
+                    </ComboBox>
+                    <Button x:Name="homeVideoClearSearch" HorizontalAlignment="Left" Margin="208.542,18.207,0,0" VerticalAlignment="Top" Width="15.333" Height="15.5" Padding="-3" Background="{x:Null}" BorderBrush="{x:Null}" Click="homeVideoClearSearch_Click">
+                		<Image Height="15" Width="15" Source="Resources/delete.png"/>
+                	</Button>
+                </Grid>
+            </TabItem>
+    	</TabControl>
+        
+    </Grid>
+</Window>

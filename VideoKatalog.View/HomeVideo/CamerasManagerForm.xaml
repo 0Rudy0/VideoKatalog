@@ -1,0 +1,30 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+         xmlns:Video_katalog_Converters="clr-namespace:Video_katalog.Converters" xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" mc:Ignorable="d" x:Class="Video_katalog.CamerasManagerForm"
+         WindowStartupLocation="CenterOwner" Title="Kamere" Height="278" Width="360">
+	<Window.Resources>
+	
+		<Video_katalog_Converters:DateConverter x:Key="dateConverter"/>
+	</Window.Resources>
+    <Grid>
+    	<Image HorizontalAlignment="Right" Margin="0,56,8,72" Width="112" Source="/Video%20Katalog;component/Resources/camera.png"/>
+        
+    	<ComboBox x:Name="cameraComboBox" Margin="8,56,168.802,0" Style="{DynamicResource SimpleComboBox}" IsSynchronizedWithCurrentItem="True" VerticalAlignment="Top" FontSize="16" ItemsSource="{Binding}" MaxDropDownHeight="200" FontFamily="Trajan Pro" SelectionChanged="cameraComboBox_SelectionChanged" />
+    	<TextBlock x:Name="buyDateTB" Margin="90.198,106,0,0" TextWrapping="Wrap" Text="{Binding PurchaseDate, Converter={StaticResource dateConverter}}" VerticalAlignment="Top" HorizontalAlignment="Left" FontSize="13.333" FontWeight="Bold" Width="85" d:LayoutOverrides="VerticalAlignment"/>
+    	<TextBlock x:Name="warrantyLengthTB" HorizontalAlignment="Left" Margin="90,0,0,63" TextWrapping="Wrap" Text="{Binding WarrantyLengt}" FontSize="13.333" FontWeight="Bold" Height="17.733" VerticalAlignment="Bottom" Width="74"/>
+    	<TextBlock Margin="16,104,0,0" TextWrapping="Wrap" Text="Kupljena:" HorizontalAlignment="Left" FontSize="13.333" VerticalAlignment="Top"/>
+    	<TextBlock HorizontalAlignment="Left" Margin="16,158.266,0,0" TextWrapping="Wrap" Text="Garancija:" VerticalAlignment="Top" FontSize="13.333"/>
+    	<TextBlock x:Name="warrantyValidTB" HorizontalAlignment="Left" Margin="90.198,181.7,0,0" TextWrapping="Wrap" VerticalAlignment="Top" FontSize="13.333" FontWeight="Bold" Foreground="#FFE20707" Width="96"/>
+    	<Button x:Name="addNewCameraBTN" HorizontalAlignment="Left" Margin="8,8,0,0" VerticalAlignment="Top" Width="28" Height="28" ToolTip="Dodaj novi" Click="addNewCameraBTN_Click">
+    		<Image Height="20" Width="20" Source="/Video%20Katalog;component/Resources/plus20p.png" ToolTip="Dodaj novi"/>
+    	</Button>
+    	<Button x:Name="removeCameraBtn" HorizontalAlignment="Left" Margin="40,8,0,0" VerticalAlignment="Top" Width="28" Height="28" ToolTip="Izbriši" Click="removeCameraBtn_Click">
+    		<Image Height="20" Width="20" Source="/Video%20Katalog;component/Resources/minus20p.png" ToolTip="Izbriši"/>
+    	</Button>
+    	<Button x:Name="editCameraBTN" HorizontalAlignment="Left" Margin="72,8,0,0" VerticalAlignment="Top" Width="28" Height="28" ToolTip="Izmijeni" Click="editCameraBTN_Click">
+    		<Image Height="20" Width="20" Source="/Video%20Katalog;component/Resources/edit20p.png" ToolTip="Izmijeni"/>
+    	</Button>
+        
+    </Grid>
+</Window>

@@ -1,0 +1,340 @@
+@media screen {
+
+    [data-role="footer"] {
+        display: none !important;
+    }
+
+    #genresDiv {
+        position: absolute;
+        left: 20px;
+    }
+
+    #genresText {
+        font-style: italic !important;
+    }
+
+
+    /*#region poster, director, cast, plot */
+
+    #mainInfo {
+        width: 100%;
+        height: 360px;
+    }
+
+    #posterDiv {
+        position: relative;
+        width: 200px;
+        height: 300px;
+    }
+
+    #moviePoster {
+        position: absolute;
+        top: 4px;
+        left: 11px;
+        z-index: 0;
+        width: 213px;
+        height: 307px;
+    }
+
+    #posterCase {
+        position: absolute;
+        top: -4px;
+        z-index: 1;
+        width: 235px;
+        height: 332px;
+    }
+
+    #directorIcon {
+        /*background-image: url(../images/director40p.png);*/
+    }
+
+    #directorDiv {
+        position: absolute;
+    }
+
+    #castDiv {
+        position: absolute;
+        width: auto;
+    }
+
+    #plotDiv {
+        position: absolute;
+        width: auto;
+    }
+
+
+    /*#endregion */
+
+    /*#region rating, runtime, size */
+
+    #ratingDiv {
+        position: absolute;
+        text-align: center;
+        font-family: 'Courier New';
+        font-size: 20px;
+    }
+
+    #ratingIcon {
+    }
+
+    #runtimeDiv {
+        position: absolute;
+        text-align: center;
+        font-family: 'Courier New';
+    }
+
+    #sizeDiv {
+        position: absolute;
+        text-align: center;
+        font-family: 'Courier New';
+    }
+
+    /*#endregion */
+
+    #episodesDiv {
+        width: 100%;
+    }
+
+    #buttonsDiv {
+        width: 100%;
+    }
+
+    .ui-content {
+        margin-bottom: 1px;
+    }
+
+    .ui-grid-a {
+        position: relative;
+        /*left: 20px !important;
+        right: 200px !important;
+        width: 90%;*/
+        margin: auto;
+    }
+}
+
+@media screen and (max-width: 6px) {
+
+    #genresDiv {
+        right: 20px;
+        width: auto;
+        text-align: center;
+    }
+
+    /*#region poster, director, cast, plot */
+
+    #mainInfo {
+        /*background-color: red;*/
+    }
+
+    #posterDiv {
+        top: 5px;
+    }
+
+    #directorDiv {
+        right: 20px;
+        left: 20px;
+        width: auto;
+        top: 400px;
+        font-size: 11px;
+    }
+
+    #castDiv {
+        right: 20px;
+        left: 20px;
+        top: 445px;
+        font-size: 11px;
+    }
+
+    #plotDiv {
+        position: absolute;
+        right: 20px;
+        left: 20px;
+        top: 510px;
+        font-size: 11px;
+    }
+
+    /*#endregion*/
+
+    /*#region rating, runtime, size */
+
+    #ratingDiv {
+        top: 80px;
+        right: 5%;
+        font-weight: 600;
+    }
+
+    #runtimeDiv {
+        top: 190px;
+        right: 5%;
+    }
+
+    #sizeDiv {
+        top: 310px;
+        right: 5%;
+    }
+
+    /*#endregion*/
+
+
+    .ui-grid-a {
+        top: 590px;
+    }
+}
+
+@media screen and (max-width: 600px) {
+
+    #genresDiv {
+        top: 52px;
+        font-size:12px;
+    }
+
+    /*#region poster, director, cast, plot */
+
+    #posterDiv {
+        top: 25px;
+    }
+
+
+    #directorDiv {
+        right: 50px;
+        left: 270px;
+        width: auto;
+        top: 110px;
+        font-size: 11px;
+    }
+
+    #castDiv {
+        right: 50px;
+        left: 270px;
+        top: 185px;
+        font-size: 11px;
+    }
+
+    #plotDiv {
+        right: 50px;
+        left: 270px;
+        top: 290px;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        font-size: 11px;
+    }
+
+    /*#endregion*/
+
+
+    /*#region rating, runtime, size */
+
+    #runtimeDiv {
+        top: 50px;
+        right: 90px;
+        font-weight: 800;
+        padding: 5px;
+        -webkit-box-shadow: 0 2px 6px 1px black;
+        -moz-box-shadow: 0 2px 6px 1px black;
+        box-shadow: 0 2px 6px 1px black;
+        font-size:12px;
+    }
+
+    #sizeDiv {
+        top: 50px;
+        right: 10px;
+        font-weight: 800;
+        padding: 5px;
+        -webkit-box-shadow: 0 2px 6px 1px black;
+        -moz-box-shadow: 0 2px 6px 1px black;
+        box-shadow: 0 2px 6px 1px black;
+        font-size:12px;
+    }
+
+    #ratingDiv {
+        top: 55px;
+        right: 160px;
+        font-weight: 800;
+        font-size:13px;
+    }
+
+    /*#endregion*/
+        
+    #episodesDiv {
+        margin-top:30px;
+    }
+
+    .ui-grid-a {
+    }
+}
+
+@media screen and (min-width: 601px) {
+
+    #genresDiv {
+        top: 52px;
+    }
+
+    /*#region poster, director, cast, plot */
+
+    #posterDiv {
+        top: 25px;
+    }
+
+
+    #directorDiv {
+        right: 50px;
+        left: 270px;
+        width: auto;
+        top: 100px;
+    }
+
+    #castDiv {
+        right: 50px;
+        left: 270px;
+        top: 180px;
+        font-size: 16px;
+    }
+
+    #plotDiv {
+        right: 50px;
+        left: 270px;
+        top: 285px;
+        margin-bottom: 20px;
+        padding-bottom: 20px;
+        font-size: 16px;
+    }
+
+    /*#endregion*/
+
+
+    /*#region rating, runtime, size */
+
+    #runtimeDiv {
+        top: 50px;
+        right: 120px;
+        font-weight: 800;
+        padding: 5px;
+        -webkit-box-shadow: 0 2px 6px 1px black;
+        -moz-box-shadow: 0 2px 6px 1px black;
+        box-shadow: 0 2px 6px 1px black;
+    }
+
+    #sizeDiv {
+        top: 50px;
+        right: 10px;
+        font-weight: 800;
+        padding: 5px;
+        -webkit-box-shadow: 0 2px 6px 1px black;
+        -moz-box-shadow: 0 2px 6px 1px black;
+        box-shadow: 0 2px 6px 1px black;
+    }
+
+    #ratingDiv {
+        top: 50px;
+        right: 220px;
+        font-weight: 800;
+    }
+
+    /*#endregion*/
+        
+    .ui-grid-a {
+    }
+}
+
+@media screen and (min-width: 1921px) {
+}

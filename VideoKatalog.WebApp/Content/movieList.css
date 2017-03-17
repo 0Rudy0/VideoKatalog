@@ -1,0 +1,971 @@
+body {	
+	background-color:#1d1d1d;
+	font-size:100%;
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+
+/*========   GLAVNO   ========*/
+
+
+#mainContent {
+	background-image:url(../images/mainContentBcg2.jpg);
+	position:absolute;
+	width:50%;
+    top:8%;
+	//min-width:650px;
+	/*max-width:680px;*/
+	left:25%;
+	height:800px;
+	border:1px solid black;
+	background-color:#999;
+}
+
+/*#region RELOADING*/
+
+#reloadDiv {
+    position:fixed;
+    width:100%;
+    height: 100%;
+    background-color:white;
+    z-index:2;
+    display:none;
+    opacity:0.2;
+}
+#reloadIndicator {
+    position:absolute;
+    top:40%;
+    bottom:40%;
+    left:40%;
+    right:40%;
+    width: auto;
+    height: auto;
+    z-index:3;
+}
+#miniReloadDiv {    
+    position:fixed;
+    bottom:5px;
+    right:5px;
+    width:200px;
+    height:100px;
+    z-index:2;
+    background-color:white;
+    opacity:0.5;
+    box-shadow: -5px -5px 50px #0C8E8E;
+    border-radius:7px;
+    display:none;
+}
+#miniReloadIndicator {
+    position:absolute;
+    left:75px;
+    top:25px;
+    width:50px;
+
+}
+#miniReloadText {
+    position:absolute;
+    font-size:14px;
+    left:10px;
+}
+
+
+
+/*#endregion*/
+
+/*#region SEARCH */
+
+
+/*=============================================*/
+/*=================   SEARCH   ================*/
+/*=============================================*/
+
+#searchDiv {
+    position:fixed;
+	top:-300px;
+    width:auto;
+	width:85%;
+	left:7%;
+    right:7%;
+	height:300px;
+	z-index:1;
+    //border:1px solid #0C8E8E;
+    //background-color:#0C8E8E;
+    background-color:#8a94a8
+}
+
+/*#region MAIN SEARCH */
+
+
+#searchMainDiv {
+	position:absolute;
+	top:226px;
+	left:80px;
+    right:80px;
+	width:auto;
+	height:72px;	
+	border:0px solid #CCC;
+	/*-moz-box-shadow:10px 10px 5px #888;;
+	-webkit-box-shadow:10px 10px 5px #888;
+	-box-shadow:10px 10px 5px #888;*/
+	/*outline:none;*/
+}
+#searchMainInputDiv {
+	position:absolute;
+	top:0px;
+	width:50%;
+	height:100%;	
+	border: 0px solid #CCC;
+	/*-webkit-box-shadow: -2px -2px 1px black;
+	-moz-box-shadow: -2px -2px 1px black;
+	-o-box-shadow: -2px -2px 1px black;
+	-ms-box-shadow: -2px -2px 1px black;*/
+}
+#searchMainInput {
+    position:absolute;
+	border:2px solid #fff;	
+	font-size:20px;
+	font-family:"Myriad Pro", "Trebuchet MS", sans-serif;	
+	padding:3px 17px 4px 12px;
+	height:40px;
+    top:15px;
+    right:72px;
+}
+#searchMainIconDiv {
+	position:absolute;
+	width:45px;
+	right:30px;
+	top:12px;
+	height:45px;
+	background:#f2f2f2 url(../images/search.png) no-repeat center center;	
+	border:1px solid #fff;	
+}
+#sortDiv {
+	position:absolute;
+	top:14px;
+    right:15%;
+	height:100%;	
+	border: 0px solid #CCC;
+}
+#sortSelectProperty {
+	position:absolute;
+    left:200px;
+    width:30px;
+    color:red !important;
+}
+
+
+
+/*#endregion */
+
+
+/*#region ADVANCED SEARCH */
+
+
+#searchAdvanced {
+    position:absolute;
+	width:100%;
+    top:5px;
+    height:220px;
+    background-color:#0C7575;
+}
+
+
+/*#region BUTTONS */
+/*================   GUMBI   ===============*/
+
+.showSearch {
+    position:absolute;
+	top:101%;
+	height:60px;
+    z-index:2;
+	width:70px;
+}
+#showSearch {  
+    left:0;  
+}
+#hideSearch {
+    left:0;  
+    display:none;
+}
+#showSearchAdvanced {
+    left:100px;
+	padding:0;
+}
+#hideSearchAdvanced {
+    left:100px;
+	padding:0;
+	display:none;
+}
+#reloadIcon {    
+	position:absolute;
+    cursor:pointer;
+	right:10px;
+    bottom:7px;
+	width:50px;
+	height:50px;
+	border:1px solid #999;
+	background:#f2f2f2;
+    background-image:url(images/reload.png);
+}
+#reloadIcon:hover {
+	background:#c6c6c6;   
+    background-image:url(images/reload.png); 
+}
+#resetFormIcon {    
+	position:absolute;
+    cursor:pointer;
+    left:10px;
+    bottom:7px;
+	width:50px;
+	height:50px;
+	background:#f2f2f2;
+    background-image:url(images/remove.png);
+}
+#resetFormIcon:hover {
+	background:#c6c6c6;   
+    background-image:url(images/remove.png);
+}
+
+
+/*#endregion */
+
+
+/*================  ZANR   ==================*/
+
+
+#searchGenre {
+	position:absolute;
+	width:40%;
+	left:3%;
+	height:34px;	
+	top:15px;
+    display:none;
+}
+#searchGenreIcon {
+	position:absolute;
+	left:5px;
+	width:35px;
+	height:34px;
+	border:1px solid #999;
+	background:#f2f2f2 url(../images/searchGenre.png) no-repeat center center;
+}
+#selectGenreDiv {
+    position:absolute;
+    left:39px;
+	width:87%;
+}
+
+
+/*==============   GLUMCI   ==============*/
+
+
+#searchActorDiv {
+	position:absolute;
+	width:40%;
+	left:3%;
+	height:34px;	
+	top:60px;
+	border:0 solid #999;
+    display:none;
+}
+#searchActorIconDiv {
+	position:absolute;
+	left:5px;
+	width:35px;
+	height:34px;
+	border:1px solid #999;
+	background:#f2f2f2 url(../images/searchCast.png) no-repeat center center;
+}
+#searchActor {
+    position:absolute;
+    left:39px;
+    top:2px;
+	font-size:15px;
+	font-family:"Myriad Pro", "Trebuchet MS", sans-serif;	
+    font-weight:200;
+	padding:4px 17px 4px 12px;
+	/*text-shadow:1px 1px 1px #fff;*/
+	width:87%;
+	height:30px;
+	float:left;
+	margin:0 0;
+}
+
+
+/*==============   REDATELJ   ==============*/
+
+
+#searchDirectorDiv {
+	position:absolute;
+	width:40%;
+	left:3%;
+	height:34px;	
+	top:107px;
+	border:0 solid #999;
+    display:none;
+}
+#searchDirectorIconDiv {
+	position:absolute;
+	left:5px;
+	width:35px;
+	height:34px;
+	border:1px solid #999;
+	background:#f2f2f2 url(../images/searchDirector.png) no-repeat center center;
+}
+#searchDirector {
+	position:absolute;
+    left:39px;
+    top:2px;
+	font-size:15px;
+	font-family:"Myriad Pro", "Trebuchet MS", sans-serif;	
+    font-weight:200;
+	padding:4px 17px 4px 12px;
+	/*text-shadow:1px 1px 1px #fff;*/
+	width:87%;
+	height:30px;
+	float:left;
+	margin:0 0;
+}
+
+/*#region SUBTITLES */
+/*======   PRIJEVOD   ======*/
+
+.toggle {
+	height: 30px;
+}
+.toggle.off .noUi-handle {
+	border-color: red;
+}
+#croatianSubSearchDiv {
+    position:absolute;
+    left:6%;
+    bottom:22px;
+    display:none;
+}
+#englishSubSearchDiv {
+    position:absolute;
+    right:72%;
+    bottom:22px;
+    display:none;
+}
+#croatianSubLabel {
+    position:absolute;
+    left:35px;
+    top:5px;
+    width:100px;
+    font-size:12px;
+}
+#englishSubLabel {
+    position:absolute;
+    left:35px;
+    top:5px;
+    width:100px;
+    font-size:12px;
+}
+.subLabel {
+    color:white;
+}
+
+
+/*#endregion */
+
+
+/*#region SLIDERI */
+/*================    SLIDERI    ==================*/
+
+
+
+
+.advSearchSliderDiv {
+	position:absolute;	
+	width: auto;
+    right:3%;
+    left:45%;
+    background-color:aqua;
+    display:none;
+}
+.sliderDiv {    
+	position:absolute;
+	width:auto;
+	right:95px;
+    left:53px;
+	height:34px;	
+    top:8px;
+}
+.sliderIconDiv {
+	position:absolute;
+    right:0;
+	width:35px;
+	height:34px;
+	border:1px solid #999;
+}
+.sliderValueText {    
+	position:absolute;	
+    top:9px;    
+	font-size:11px;
+	font-family:Verdana;
+    font-weight:800;
+    color:white;
+}
+.minText {
+    left:0; 
+}
+.maxText {
+    right:40px;  
+}
+
+/*========   IMDB OCJENA   =======*/
+
+#searchImdbRating {
+	top:15px;
+}
+#searchImdbRatingIcon {
+	background:#f2f2f2 url(../images/searchImdbRating.png) no-repeat center center;
+}
+
+/*========    VELICINA    ==========*/
+
+
+#searchSize {
+	top:60px;
+}
+#searchSizeIcon {
+	background:#f2f2f2 url(../images/searchSize.png) no-repeat center center;
+}
+
+/*==========   RUNTIME   ==========*/
+
+#searchRuntime {
+	top:105px;
+}
+#searchRuntimeIcon {
+	background:#f2f2f2 url(../images/searchRuntime.png) no-repeat center center;
+}
+
+/*==========   GODINA   ===========*/
+
+#searchYear {
+	top:150px;
+}
+#searchYearIcon {
+	background:#f2f2f2 url(../images/searchYear.png) no-repeat center center;
+}
+
+
+/*#endregion */
+
+
+
+
+/*#endregion */
+
+
+
+/*#endregion */
+
+
+/*#region SELECTING */
+
+
+
+/*****   ADD - REMOVE BUTTONS   ********/
+
+
+#addButtonDiv {
+	position:absolute;
+	top:10px;
+	right:-34px;
+	width:30px;
+	height:30px;
+}
+#addIconGl {
+	/*background:transparent;// url(../images/addButton.png) no-repeat center center;*/
+	/*background-image:url(../images/addIcon.png) center;*/
+	background-color:transparent;
+	border:none;
+	width:48px;
+	height:48px;
+    cursor:pointer;
+}
+
+
+
+/******   CURRENT SESSION   **********/
+
+
+
+#currentSession {
+	position:absolute;
+	top:70px;
+	width:40%;
+	height:370px;
+	border:1px solid black;	
+	right:0;
+	z-index:-2;
+	//background-image:url(../images/currentSessionBcg.jpg);
+    background-color:#828ca1;
+}
+#currentSessionInfo {
+	position:absolute;
+	top:380px;
+	width:40%;
+	height:47px;
+	border:1px solid black;	
+	right:0;
+    font-size:13px;
+    font-weight:600;
+    color:white;
+	z-index:-3;
+	//background-image:url(../images/currentSessionBcg.jpg);
+    background-color:#828ca1;
+}
+#sessionSelected {
+	position:absolute;
+	top:15px;
+	left:4%;
+	width:92%;
+	height:81%;
+	border:1px solid black;
+	z-index:-1;
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size:14px;
+}
+
+#removeButtonDiv {
+	width:30px;
+	height:30px;
+	position:absolute;
+	bottom:15px;
+	right:20px;
+}
+#removeIconSp {
+	border:none;
+	width:35px;
+	height:35px;
+    cursor:pointer;
+}
+#saveSelectedMovies {
+    cursor:pointer;
+    position:absolute;
+    bottom:8px;
+}
+#saveSessionDiv {
+	position:absolute;
+	bottom:5px;
+	left:15px;
+	border:0 solid black;
+}
+#refresh {
+	font-size:80%;
+	width:130px;
+	height:30px;
+}
+
+
+/*#endregion */
+
+
+/*#region MOVIE LIST AND INFO */
+
+
+/***********   MAIN LIST   *********/
+
+#placeForList {
+    position:absolute;
+    width: 100%;
+    height: 460px;
+    padding-left: 10px;
+    padding-top:2px;
+    padding-right: 350px;
+    -moz-box-sizing: padding-box;
+    -webkit-box-sizing: padding-box;
+    box-sizing: padding-box;
+}
+#movieList {
+    width: 100%;
+    height: 420px;
+    margin-top:-2px;
+    padding-left:10px;
+    padding-right:10px;
+    padding-top:5px;
+    padding-bottom:5px;
+    z-index: 0;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+    font-size: 17px;
+    font-weight:100;
+}
+#CountDiv {
+	width:250px;
+	height:25px;
+	z-index:0;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:13px
+}
+#labelCount {
+	font-family:"Courier New", Courier, monospace;
+	font-size:14px;
+	font-weight:bold;
+}
+#moviePoster {
+    position:absolute;
+    top:3px;
+    right:15px;
+    z-index:0;
+    width:290px;
+}
+#posterCase {
+    position:absolute;
+    top:-8px;
+    right:0px;
+    z-index:1;
+    height:455px;
+
+}
+
+
+/*********    MOVIE POSTER   ***********/
+
+
+#PosterDiv {
+	position:absolute;
+	top:15px;
+	right:10px;
+	width:300px;
+	height:422px;
+	z-index:0;
+}
+
+
+/*==== MAIN DIV ====*/
+
+#infoDiv {
+	position:absolute;
+	top:460px;
+	left:3%;
+	width:94%;
+	height:400px;
+	border-top:1px solid Gray;
+}
+
+/*==== NAME ====*/
+
+#nameDiv {
+	width:80%;
+	position:absolute;
+	top:0;
+	left:0;
+	font-weight:bold;
+	font-size:18px;
+	color:#6F3513;	
+}
+
+
+/*==== GENRE ====*/
+
+#genreDiv {
+	position:absolute;
+	top:28px;
+	left:10px;
+	font-style:italic;
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size:15px;
+	color:#9B4B1C;
+	font-weight:700;
+}
+
+
+/*====  RATING  ====*/
+
+#ratingDiv {
+	position:absolute;
+	top:5px;
+	right:0;	
+	width:82px;
+	height:60px;
+}
+#ratingMaskDiv {
+	position:absolute;
+	top:1px;
+	left:1px;
+	width:80px;
+	height:16px;
+	background-image:url(../images/ratingMask.png);
+}
+#ratingIconsDiv {
+	position:absolute;
+	top:1px;
+	left:1px;
+	width:60px;
+	height:16px;
+	background-image:url(../images/ratingIcons.png);
+}
+#ratingTextDiv {
+	position:absolute;
+	width:100%;
+	height:15px;
+	top:25px;
+	text-align:center;
+	vertical-align:middle;
+	line-height:15px;
+	color:#666;
+	font-family:Verdana, Geneva, sans-serif;
+	font-size:15px;
+}
+#rating {
+	font-size:17px;
+	font-family:Verdana, Geneva, sans-serif;
+	color:#686D0A;
+	font-weight:bold;
+}
+
+
+
+/*==== DIRECTOR ====*/
+
+#directorDiv {
+	position:absolute;
+	top:60px;
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size:16px;
+	left:0;
+	font-weight:bold;
+}
+#director {
+	font-size:14px;
+	font-weight:500;
+    position:relative;
+    top:0px;
+}
+
+
+
+/*====  CAST  ====*/
+
+#castDiv {
+	position:absolute;
+    width:90%;
+	top:109px;
+	left:0;
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size:16px;
+	font-weight:bold;
+}
+#cast {	
+    position:absolute;
+	font-size:14px;
+	font-weight:500;
+    top:0;
+    left:35px;
+}
+
+
+
+/*====  PLOT  ====*/
+
+#plotDiv {
+	position:absolute;
+    width:90%;
+	top:170px;
+	left:0;
+	font-family:"Palatino Linotype", "Book Antiqua", Palatino, serif;
+	font-size:16px;
+	font-weight:bold;
+	text-align:justify;
+
+}
+#plot {
+	position:absolute;
+	font-size:14px;
+	font-weight:500;
+	text-align:justify;
+    left:35px;
+}
+
+
+/*#region TECH INFO */
+
+/**  RUNTIME  **/
+
+#runtimeDiv {
+	position:absolute;
+	left:-5%;
+	top:270px;
+	width:130px;
+	height:50px;
+	text-align:center;
+}
+#runtimeIconDiv {
+	position:absolute;
+	width:30px;
+	height:30px;
+	left:50px;
+}
+#runtimeIcon {
+	width:100%;
+	height:100%;
+}
+#runtime {
+	position:relative;
+	top:15px;
+	font-family:"Courier New", Courier, monospace;
+	font-weight:bold;
+	font-size:15px;
+}
+
+/**  RESOLUTION  **/
+
+#rezolutionDiv {
+	position:absolute;
+	top:270px;
+	left:10%;
+	width:130px;
+	height:50px;
+	font-family:"Courier New", Courier, monospace;
+	text-align:center;
+}
+#rezolutionIconDiv {
+	position:absolute;
+	width:40px;
+	height:33px;
+	left:45px;
+}
+#resolutionIcon {
+	width:100%;
+	height:100%;
+}
+#resolution {
+	position:relative;
+	top:14px;
+	font-family:"Courier New", Courier, monospace;
+	font-weight:bold;
+	font-size:15px;
+}
+
+/**  SIZE  **/
+
+#sizeDiv {
+	position:absolute;
+	top:270px;
+	left:25%;
+	width:130px;
+	height:50px;
+	font-family:"Courier New", Courier, monospace;
+	text-align:center;
+}
+#sizeIconDiv {
+	position:absolute;
+	width:35px;
+	height:30px;
+	left:46px;
+}
+#sizeIcon {
+	width:100%;
+	height:100%;
+}
+#size {
+	position:relative;
+	top:15px;
+	font-family:"Courier New", Courier, monospace;
+	font-weight:bold;
+    font-size:15px;
+}
+
+/**  SUBTITLE  **/
+
+#subtitleCroDiv {
+	position:absolute;
+	top:270px;
+	left:41%;
+	width:130px;
+	height:50px;
+	text-align:center;
+}
+#subtitleCroIconDiv {
+	position:absolute;
+	width:50px;
+	height:50px;
+	left:42px;
+}
+#subtitleCroIcon {
+	width:100%;
+	height:100%;
+}
+
+#subtitleEngDiv {
+	position:absolute;
+	top:270px;
+	left:55%;
+	width:130px;
+	height:50px;
+	text-align:center;
+}
+#subtitleEngIconDiv {
+	position:absolute;
+	width:50px;
+	height:50px;
+	left:42px;
+}
+#subtitleEngIcon {
+	width:100%;
+	height:100%;
+}
+
+
+/*#endregion */
+
+/**  IMDB  **/
+
+#imdbDiv {
+	position:absolute;
+	top:280px;
+	left:70%;
+	width:130px;
+	height:50px;
+	text-align:center;
+}
+#imdbIconDiv {
+	position:absolute;
+	width:55px;
+	height:30px;
+	left:42px;
+}
+#imdbIcon {
+	width:100%;
+	height:100%;
+    cursor:pointer;
+}
+
+/**  Trailer  **/
+
+#trailerDiv {
+	position:absolute;
+	top:280px;
+	left:87%;
+	width:130px;
+	height:50px;
+	text-align:center;
+}
+#trailerIconDiv {
+	position:absolute;
+	width:42px;
+	height:32px;
+	left:42px;
+}
+#trailerIcon {
+	width:100%;
+	height:100%;
+    cursor:pointer;
+}
+
+
+/*#endregion */
+
+
+#adminOptions {
+    position:relative;
+    top:785px;
+	height:50px;
+    align-content:center;
+    align-items:flex-end;
+    text-align:right;
+}

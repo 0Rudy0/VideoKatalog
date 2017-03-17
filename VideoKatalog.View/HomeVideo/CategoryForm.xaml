@@ -1,0 +1,18 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:ec="http://schemas.microsoft.com/expression/2010/controls" x:Class="Video_katalog.CategoryForm"
+         WindowStartupLocation="CenterOwner" Title="Kategorije" Height="236" Width="318">
+    <Grid Width="297" Height="199">
+    	<ListBox x:Name="categoriesListBox" FontSize="16" Height="150" HorizontalAlignment="Left" Margin="10,42,0,0" VerticalAlignment="Top" Width="278" IsSynchronizedWithCurrentItem="True" ItemsSource="{Binding}" SelectionMode="Single" FontFamily="Trajan Pro" />
+    	<Button Height="28" HorizontalAlignment="Left" Margin="10,10,0,0" x:Name="addNewCategoryBTN" ToolTip="Dodaj novi" VerticalAlignment="Top" Width="28" Click="addNewCategoryBTN_Click">
+    		<Image Height="20" Source="/Video%20Katalog;component/Resources/plus20p.png" ToolTip="Dodaj novu" Width="20" />
+    	</Button>
+    	<Button Height="28" HorizontalAlignment="Left" Margin="42,10,0,0" x:Name="removeCategoryBTN" ToolTip="Izbriši" VerticalAlignment="Top" Width="28" Click="removeCategoryBTN_Click">
+    		<Image Height="20" Source="/Video%20Katalog;component/Resources/minus20p.png" ToolTip="Izbriši odabranu" Width="20" />
+    	</Button>
+    	<Button Height="28" HorizontalAlignment="Left" Margin="74,10,0,0" x:Name="editCategoryBTN" ToolTip="Izmijeni" VerticalAlignment="Top" Width="28" Click="editCategoryBTN_Click">
+    		<Image Height="20" Source="/Video%20Katalog;component/Resources/edit20p.png" ToolTip="Izmijeni odabranu" Width="20" />
+    	</Button>
+    </Grid>
+</Window>

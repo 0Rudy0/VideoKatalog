@@ -1,0 +1,35 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008" xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" xmlns:xctk="http://schemas.xceed.com/wpf/xaml/toolkit" mc:Ignorable="d" x:Class="Video_katalog.SearchForm"
+        x:Name="Window"
+	    Title="Pretraga IMDba"
+	    Width="522" Height="430"
+        WindowStartupLocation="CenterOwner" Loaded="Window_Loaded" MinHeight="336" MinWidth="522">
+    <Grid>
+		<TextBox x:Name="searchTextBox" Margin="41.001,21.366,188,0" Text="" GotFocus="searchTextBox_GotFocus" TabIndex="0" FontSize="24" BorderThickness="2" LostFocus="searchTextBox_LostFocus" Height="56" VerticalAlignment="Top" TextChanged="searchTextBox_TextChanged" FontFamily="Candara" Background="White" Foreground="Black" Padding="8,10,1,1" TextWrapping="NoWrap" MaxLines="1" />
+		<Button x:Name="searchButton" Margin="0,21.366,47.833,0" HorizontalAlignment="Right" Click="searchButton_Click" TabIndex="1" IsDefault="True" VerticalAlignment="Top" Width="105.441" ToolTip="Pretraži IMDb" >
+            <Image Height="50" Width="104.108" Source="/VideoKatalog.View;component/Resources/imdb.png"/>
+		</Button>
+		<Button Height="55" Margin="200,0,200,10" x:Name="confirmSelectionButton" VerticalAlignment="Bottom" Click="confirmSelectionButton_Click" Background="{x:Null}" TabIndex="3" IsDefault="False" ToolTip="Odaberi označeno">
+			<Image Height="50" Width="50" Source="/VideoKatalog.View;component/Resources/OK64p.png"/>
+		</Button>
+        <xctk:BusyIndicator x:Name="busyIndicator" Margin="10,96,10,79">
+			<ListBox x:Name="resultListBox" Margin="0" TabIndex="2" IsSynchronizedWithCurrentItem="True" BorderThickness="2" FontSize="16" ItemsSource="{Binding}" FontFamily="Tw Cen MT" ScrollViewer.HorizontalScrollBarVisibility="Disabled" >
+				<ListBox.Effect>
+					<DropShadowEffect/>
+				</ListBox.Effect>
+                <ListBox.ItemTemplate>
+                    <DataTemplate>
+                        <StackPanel Orientation="Horizontal" Height="35">
+                            <Image Name="ImageAsImdbLink" Source="/VideoKatalog.View;component/Resources/link20p.png" Height="20" Width="50" Cursor="Hand" MouseUp="ImageAsImdbLink_MouseUp" />
+                            <TextBlock Text="{Binding Name}" VerticalAlignment="Center" Padding="5,0,0,0" />                            
+                        </StackPanel>
+                    </DataTemplate>
+                </ListBox.ItemTemplate>
+            </ListBox>
+        </xctk:BusyIndicator>
+        <Button Content="Pause" Height="23" HorizontalAlignment="Left" Margin="413,356,0,0" Name="pauseTimer" VerticalAlignment="Top" Visibility="Hidden"  Width="75" Click="pauseTimer_Click" />
+        <TextBlock Height="17" HorizontalAlignment="Right" Margin="0,0,18,40" Name="timerValueTB" VerticalAlignment="Bottom" Width="69" TextAlignment="Center" Text="0.0 / 1.0" />
+    </Grid>
+</Window>

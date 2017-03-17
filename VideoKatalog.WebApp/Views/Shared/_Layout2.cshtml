@@ -1,0 +1,37 @@
+﻿@using VideoKatalog.WebApp;
+
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+    <title>@ViewBag.Title</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+
+    <link rel="stylesheet" href="~/Scripts/jqwidgets/styles/jqx.base.css" type="text/css" />
+
+    <!-- add the jQuery script -->
+    <script type="text/javascript" src="~/Scripts/jquery-1.10.2.min.js"></script>	
+    <!-- add the jQWidgets framework -->
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxcore.js"></script>
+    <!-- add one or more widgets -->
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxbuttons.js"></script>
+    <!-- add one of the jQWidgets styles -->
+    <link rel="stylesheet" href="~/Scripts/jqwidgets/styles/jqx.darkblue.css" type="text/css" />
+
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxwindow.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxscrollbar.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxpanel.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxtabs.js"></script>
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxcheckbox.js"></script>
+    <script type="text/javascript" src="~/Scripts/scripts/demos.js"></script>    
+    <script type="text/javascript" src="~/Scripts/jqwidgets/jqxinput.js"></script>
+
+</head>
+<body>    
+    @RenderBody()
+    @RenderSection("Scripts", required:false)
+    
+</body>
+</html>

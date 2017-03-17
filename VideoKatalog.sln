@@ -1,0 +1,55 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.30501.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoKatalog.View", "VideoKatalog.View\VideoKatalog.View.csproj", "{7B89CAAC-6D02-419F-911E-605709F264AF}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "VideoKatalog.WebApp", "VideoKatalog.WebApp\VideoKatalog.WebApp.csproj", "{FD4A0180-1CA5-4D1D-A2D0-0854FA88ED2E}"
+EndProject
+Global
+	GlobalSection(TeamFoundationVersionControl) = preSolution
+		SccNumberOfProjects = 3
+		SccEnterpriseProvider = {4CA58AB2-18FA-4F8D-95D4-32DDF27D184C}
+		SccTeamFoundationServer = https://rudy.visualstudio.com/defaultcollection
+		SccLocalPath0 = .
+		SccProjectUniqueName1 = VideoKatalog.View\\VideoKatalog.View.csproj
+		SccProjectName1 = VideoKatalog.View
+		SccLocalPath1 = VideoKatalog.View
+		SccProjectUniqueName2 = VideoKatalog.WebApp\\VideoKatalog.WebApp.csproj
+		SccProjectName2 = VideoKatalog.WebApp
+		SccLocalPath2 = VideoKatalog.WebApp
+	EndGlobalSection
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		CD_ROM|Any CPU = CD_ROM|Any CPU
+		Debug|Any CPU = Debug|Any CPU
+		DVD-5|Any CPU = DVD-5|Any CPU
+		Release|Any CPU = Release|Any CPU
+		SingleImage|Any CPU = SingleImage|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{7B89CAAC-6D02-419F-911E-605709F264AF}.CD_ROM|Any CPU.ActiveCfg = Release|Any CPU
+		{7B89CAAC-6D02-419F-911E-605709F264AF}.CD_ROM|Any CPU.Build.0 = Release|Any CPU
+		{7B89CAAC-6D02-419F-911E-605709F264AF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B89CAAC-6D02-419F-911E-605709F264AF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{7B89CAAC-6D02-419F-911E-605709F264AF}.DVD-5|Any CPU.ActiveCfg = Debug|Any CPU
+		{7B89CAAC-6D02-419F-911E-605709F264AF}.DVD-5|Any CPU.Build.0 = Debug|Any CPU
+		{7B89CAAC-6D02-419F-911E-605709F264AF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{7B89CAAC-6D02-419F-911E-605709F264AF}.Release|Any CPU.Build.0 = Release|Any CPU
+		{7B89CAAC-6D02-419F-911E-605709F264AF}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
+		{7B89CAAC-6D02-419F-911E-605709F264AF}.SingleImage|Any CPU.Build.0 = Release|Any CPU
+		{FD4A0180-1CA5-4D1D-A2D0-0854FA88ED2E}.CD_ROM|Any CPU.ActiveCfg = Release|Any CPU
+		{FD4A0180-1CA5-4D1D-A2D0-0854FA88ED2E}.CD_ROM|Any CPU.Build.0 = Release|Any CPU
+		{FD4A0180-1CA5-4D1D-A2D0-0854FA88ED2E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD4A0180-1CA5-4D1D-A2D0-0854FA88ED2E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FD4A0180-1CA5-4D1D-A2D0-0854FA88ED2E}.DVD-5|Any CPU.ActiveCfg = Debug|Any CPU
+		{FD4A0180-1CA5-4D1D-A2D0-0854FA88ED2E}.DVD-5|Any CPU.Build.0 = Debug|Any CPU
+		{FD4A0180-1CA5-4D1D-A2D0-0854FA88ED2E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FD4A0180-1CA5-4D1D-A2D0-0854FA88ED2E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FD4A0180-1CA5-4D1D-A2D0-0854FA88ED2E}.SingleImage|Any CPU.ActiveCfg = Release|Any CPU
+		{FD4A0180-1CA5-4D1D-A2D0-0854FA88ED2E}.SingleImage|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal
