@@ -402,7 +402,7 @@ function changeSerieInfo(serieID, serieName) {
 
 	if (serieName != null) {
 	    
-		var posterLink = "http://hddpunjenje.herobo.com/posters/serie/" + serieName.replace("&#39;", "'").replace("&amp;", "&") + ".jpg";
+        var posterLink = "https://hddpunjenje.000webhostapp.com/posters/serie/" + serieName.replace("&#39;", "'").replace("&amp;", "&") + ".jpg";
 		var replaced = true;
 		while (replaced) {
 		    replaced = false;
@@ -413,7 +413,7 @@ function changeSerieInfo(serieID, serieName) {
 		}
 		$('#loadingPosterIndicator').css('display', 'block');
 		$('#seriePoster').css('display', 'none');
-		//$('#seriePoster').css('background-image', "url('http://hddpunjenje.herobo.com/posters/loader1.gif')");
+		//$('#seriePoster').css('background-image', "url('https://hddpunjenje.000webhostapp.com/posters/loader1.gif')");
 		//$('#moviePoster').css('background-image', "url('" + posterLink + "')");
 		$.ajax({
 			url: posterLink,

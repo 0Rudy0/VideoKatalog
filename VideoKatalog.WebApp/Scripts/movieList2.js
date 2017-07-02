@@ -298,7 +298,7 @@ function changeMovieInfo(selectedMovieID, listIndex) {
 	//if (selectedMovieGlobal != null && selectedMovieGlobal.id == selectedMovie.id && selectedMovieGlobal.full == true)
 	//	return;
     selectedMovieGlobal = getMovieWithId(selectedMovieID);
-	var posterLink = "http://hddpunjenje.herobo.com/posters/movie/" + selectedMovieGlobal.name.replace("&#39;", "'").replace("&amp;", "&") + ".jpg";
+    var posterLink = "https://hddpunjenje.000webhostapp.com/posters/movie/" + selectedMovieGlobal.name.replace("&#39;", "'").replace("&amp;", "&") + ".jpg";
 	var replaced = true;
 	while (replaced) {
 	    replaced = false;
@@ -380,7 +380,7 @@ function downloadMoviePosters(index) {
 	imgArray = new Array();
 
 	var img = new Image();
-	var posterLink = "http://hddpunjenje.herobo.com/posters/movie/" + movieArray[index].name.replace("&#39;", "'").replace("&amp;", "&") + ".jpg";
+    var posterLink = "https://hddpunjenje.000webhostapp.com/posters/movie/" + movieArray[index].name.replace("&#39;", "'").replace("&amp;", "&") + ".jpg";
 	img.src = posterLink;
 	imgArray.push(img);
 
