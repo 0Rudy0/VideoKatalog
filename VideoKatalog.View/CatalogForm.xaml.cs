@@ -24,11 +24,13 @@ using System.Windows.Media.Animation;
 using System.Drawing;
 using System.Data.SqlServerCe;
 using VideoKatalog.View;
+using System.Configuration;
 
 namespace Video_katalog {
     public partial class CatalogForm : Window {
 
-        Boolean loadData = true;
+        //Boolean loadData = true;
+        Boolean loadData = bool.Parse(ConfigurationManager.AppSettings["loadData"]);
 
         #region GLOBAL DATA
 

@@ -381,6 +381,28 @@ namespace Video_katalog {
         
         //**** POSTER MANAGEMENT ****//        
         private void searchPoster_Click (object sender, RoutedEventArgs e) {
+            string ImdbID = "";
+            foreach (char c in downloadedMovie.InternetLink)
+            {
+                if (Char.IsDigit(c))
+                {
+                    ImdbID += c.ToString();
+                }
+            }
+            ImdbID = ImdbID.Replace("tt", "");
+            ImdbID = "i" + ImdbID;
+            bool replaced = true;
+            string movieName = downloadedMovie.OrigName;
+            while (replaced)
+            {
+                replaced = false;
+                if (movieName.Contains(' '))
+                {
+                    replaced = true;
+                    movieName = movieName.Replace(' ', '-');
+                }
+            }
+
             if (posterImpAwardsRadio.IsChecked == true) {
                 System.Diagnostics.Process.Start (this.impAwardsPosterSearchPrefix + currMovie.OrigName + this.impAwardsPosterSearchSuffix);
                 this.settings.PosterProvider = "imp";
@@ -390,17 +412,11 @@ namespace Video_katalog {
                 this.settings.PosterProvider = "google";
             }
             else if (posterMoviePosterDBRadio.IsChecked == true) {
-                string ImdbID = null;
                 this.settings.PosterProvider = "posterDB";
-                foreach (char c in currMovie.InternetLink) {
-                    if (Char.IsDigit (c)) {
-                        ImdbID += c;
-                    }
-                }
-                Clipboard.SetText(this.moviePosterDBSearchPrefix + ImdbID);
                 //System.Diagnostics.Process.Start ((new System.Diagnostics.ProcessStartInfo("explorer.exe", 
                   //  this.moviePosterDBSearchPrefix + ImdbID)));
             }
+            Clipboard.SetText("https://www.cinematerial.com/movies/" + movieName + "-" + ImdbID);
             DatabaseManager.UpdateSettings (settings);
         }
         private void pasteImageButton_Click (object sender, RoutedEventArgs e) {
@@ -740,7 +756,6 @@ namespace Video_katalog {
         }
         public void DownloadInfoAndPoster () {
             DownloadAllInfo ();
-            DownloadAndSetPoster ();
         }
 
         //DOWNLOADES     
@@ -751,6 +766,7 @@ namespace Video_katalog {
             if (downloadedMovie == null) {
                 return;
             }
+            DownloadAndSetPoster();
             notFetched = moviePage.notFetched;
             downloadingAll = true;
         }        
@@ -803,7 +819,7 @@ namespace Video_katalog {
             try {                
                 posterImage.Dispatcher.Invoke (DispatcherPriority.Normal, new Action (
                     delegate () {
-                        posterImage.Source = new BitmapImage (new Uri (HelpFunctions.GetPosterImageUrl(currMovie.InternetLink)));
+                        posterImage.Source = new BitmapImage (new Uri (HelpFunctions.GetPosterImageUrl(currMovie.InternetLink, downloadedMovie.OrigName, "movies")));
                         posterEdited = true;
                     }
                 ));

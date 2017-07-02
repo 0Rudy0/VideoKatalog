@@ -765,14 +765,14 @@ namespace Video_katalog {
         }
         private void DownloadInfoAndPoster () {           
             DownloadAllInfo ();
-            DownloadAndSetPoster ();
         }
 
         //DOWNLOADES     
         bool downloadingAll = false;    
         private void DownloadAllInfo () {
             IMDb webPage = new IMDb ();
-            downloadedSerie = webPage.GetSerieInfo (this.currSerie.InternetLink);
+            downloadedSerie = webPage.GetSerieInfo(this.currSerie.InternetLink);
+            DownloadAndSetPoster();
             this.notFetched = webPage.notFetched;
             downloadingAll = true;
         }        
@@ -807,7 +807,7 @@ namespace Video_katalog {
             try {                
                 posterImage.Dispatcher.Invoke (DispatcherPriority.Normal, new Action (
                     delegate () {
-                        posterImage.Source = new BitmapImage (new Uri (HelpFunctions.GetPosterImageUrl (currSerie.InternetLink)));
+                        posterImage.Source = new BitmapImage (new Uri (HelpFunctions.GetPosterImageUrl (currSerie.InternetLink, downloadedSerie.OrigName, "tv")));
                     }
                 ));
             }

@@ -279,26 +279,29 @@ namespace Video_katalog {
             mainSource = ReturnWebPageSource (mainLink);
         }
         public void SetEarningsSource (Movie newMovie) {
-            if (GetMovieNumberInYear (mainSource) != "")
-                earningsSource = ReturnWebPageSource (VideoKatalog.View.Properties.Resources.earningsPrefix +
-                FormatStringForUrl (HttpUtility.HtmlDecode (newMovie.OrigName)) + VideoKatalog.View.Properties.Resources.earningsPostfix + newMovie.Year + "/" + GetMovieNumberInYear (mainSource));
-            else
-                earningsSource = ReturnWebPageSource (VideoKatalog.View.Properties.Resources.earningsPrefix +
-                FormatStringForUrl (HttpUtility.HtmlDecode (newMovie.OrigName)) + VideoKatalog.View.Properties.Resources.earningsPostfix + newMovie.Year);
+            string url = "http://www.worldwideboxoffice.com/movie.cgi?title=" +
+                FormatStringForUrl(HttpUtility.HtmlDecode(newMovie.OrigName)) + "&year=" + newMovie.Year;
+            if (GetMovieNumberInYear(mainSource) != "")
+            {
+                url += "/" + GetMovieNumberInYear(mainSource);
+            }
+
+            earningsSource = ReturnWebPageSource(url);
         }
 
         public Movie GetMovieInfo (string mainLink) {
             this.mainLink = mainLink;
             SetMainSource ();
-            string castAndCrewSource = ReturnWebPageSource (mainLink + "/fullcredits");
-            string budgetSource = ReturnWebPageSource (mainLink + "/business");
+            string castAndCrewSource = ReturnWebPageSource (mainLink + "fullcredits");
+            string budgetSource = ReturnWebPageSource (mainLink + "business");
             string summarySource = ReturnWebPageSource (mainLink + "plotsummary");
 
             if (string.IsNullOrEmpty (mainSource))
                 return null;
             Movie newMovie = new Movie ();
             newMovie.Name = HttpUtility.HtmlDecode (GetName (mainSource));
-            newMovie.OrigName = HttpUtility.HtmlDecode (GetOriginalName (mainSource)); 
+            //newMovie.OrigName = newMovie.Name;
+            newMovie.OrigName = HttpUtility.HtmlDecode(GetOriginalName(mainSource)); 
             newMovie.Year = GetYear (mainSource);                               
             if (String.IsNullOrWhiteSpace (newMovie.OrigName)) {
                 newMovie.OrigName = newMovie.Name;
@@ -366,8 +369,8 @@ namespace Video_katalog {
         }
        
         public string GetName (string source) {
-            try {                
-                string movieName = GetStringBetweenStrings (source, "<h1 class=\"header\"> <span class=\"itemprop\" itemprop=\"name\">", "</span>");
+            try {
+                string movieName = GetStringBetweenStrings(source, "<h1 itemprop=\"name\" class=\"\">", "&nbsp;");
                 movieName = movieName.Trim ();
                 movieName = movieName.Replace ("IMDb - ", "");
                 return movieName;
@@ -379,7 +382,7 @@ namespace Video_katalog {
         }        
         public string GetOriginalName (string source) {
             try {                
-                string originalName = GetStringBetweenStrings (source, "<span class=\"title-extra\" itemprop=\"name\">", "<i>");
+                string originalName = GetStringBetweenStrings (source, "<div class=\"originalTitle\">", "<span class=\"description\">");
                 originalName = originalName.Replace ("\n", "");
                 originalName = originalName.Replace ("\r", "");
                 originalName = originalName.Trim ();
@@ -516,11 +519,11 @@ namespace Video_katalog {
         private ObservableCollection<Person> GetStarCast (string source) {
             ObservableCollection<Person> starCast = new ObservableCollection<Person> ();
             try {
-                string cast = GetStringBetweenStrings (source, "<h4 class=\"inline\">Stars:</h4>\n", "<span class=\"see-more inline nobr\">");
+                string cast = GetStringBetweenStrings (source, "<h4 class=\"inline\">Stars:</h4>\n", "<a href=\"fullcredits");
                 //cast = GetStringBetweenStrings(cast, this.starCastBeginsWith2, this.starCastEndsWith2);
                 //cast = cast.Substring (cast.IndexOf (this.starCastBeginsWith2) + this.starCastBeginsWith2.Length);
                 foreach (string actor in SplitByString (cast, "<a href=")) {
-                    if (string.IsNullOrEmpty(actor))
+                    if (string.IsNullOrEmpty(actor) || !actor.Contains("a href="))
                         continue;
                     string actorCopy = actor;
                     actorCopy = GetStringFromStringToEnd(actorCopy, "<span class=\"itemprop\" itemprop=\"name\">");
@@ -570,33 +573,20 @@ namespace Video_katalog {
         }
         public string GetSummary (string mainSource, string summarySource) {
             try {
-                throw new Exception ();
-                string fullSummary = GetStringBetweenStrings (summarySource, this.fullSummaryBeginsWith1, this.fullSummaryEndsWith);
-                if (string.IsNullOrWhiteSpace (fullSummary))
-                    throw new Exception ();
-                //    notFetched += "\r\nRadnja";
-                if (fullSummary.Length > 2999)
-                    return fullSummary.Substring (0, 2999);
+                string shortSummary = GetStringBetweenStrings(mainSource, "<div class=\"summary_text\" itemprop=\"description\">", "</div>");
+                //shortSummary = GetStringBetweenStrings (shortSummary, this.shortSummaryBeginsWith2, this.shortSummaryEndsWith);
+                shortSummary = shortSummary.Trim();
+                if (string.IsNullOrWhiteSpace(shortSummary))
+                    throw new Exception();
+                if (shortSummary.Length > 2999)
+                    return shortSummary.Substring(0, 2999);
                 else
-                    return fullSummary;
+                    return shortSummary;
             }
             catch {
-                try {
-                    string shortSummary = GetStringBetweenStrings(mainSource, "<p itemprop=\"description\">\n", "</p>");
-                    //shortSummary = GetStringBetweenStrings (shortSummary, this.shortSummaryBeginsWith2, this.shortSummaryEndsWith);
-                    shortSummary = shortSummary.Trim();
-                    if (string.IsNullOrWhiteSpace (shortSummary))
-                        throw new Exception ();
-                    if (shortSummary.Length > 2999)
-                        return shortSummary.Substring (0, 2999);
-                    else
-                        return shortSummary;
-                }
-                catch {
-                    notFetched += "\r\nRadnja";
-                    //Xceed.Wpf.Toolkit.MessageBox.Show ("Greška u dohvaćanju radnje");
-                    return "";
-                }
+                notFetched += "\r\nRadnja";
+                //Xceed.Wpf.Toolkit.MessageBox.Show ("Greška u dohvaćanju radnje");
+                return "";
             }
         }        
         public float GetBudget (string source) {
@@ -763,26 +753,30 @@ namespace Video_katalog {
 
                 return html;
 
-                //HttpWebRequest request = (HttpWebRequest) WebRequest.Create (link);
-                //HttpWebResponse response = (HttpWebResponse) request.GetResponse ();
-                //Stream resStream = response.GetResponseStream ();
+                //byte[] buf = [];
+                //var sb = new StringBuilder();
+                //HttpWebRequest request = (HttpWebRequest)WebRequest.Create(link);
+                //HttpWebResponse response = (HttpWebResponse)request.GetResponse();
+                //Stream resStream = response.GetResponseStream();
                 //string tempString = null;
                 //int count = 0;
-                //do {
+                //do
+                //{
                 //    // fill the buffer with data
-                //    count = resStream.Read (buf, 0, buf.Length);
+                //    count = resStream.Read(buf, 0, buf.Length);
 
                 //    // make sure we read some data
-                //    if (count != 0) {
+                //    if (count != 0)
+                //    {
                 //        // translate from bytes to ASCII text
-                //        tempString = Encoding.ASCII.GetString (buf, 0, count);
+                //        tempString = Encoding.ASCII.GetString(buf, 0, count);
 
                 //        // continue building the string
-                //        sb.Append (tempString);
+                //        sb.Append(tempString);
                 //    }
                 //}
                 //while (count > 0); // any more data to read
-                //return sb.ToString ();
+                //return sb.ToString();
             }
             catch {
                 MessageBox.Show ("Greška u internet konekciji");

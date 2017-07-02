@@ -13,28 +13,28 @@
         <member name="M:FolderPickerLib.Fakes.ShimDriveIconConverter.#ctor(FolderPickerLib.DriveIconConverter)">
             <summary>Initializes a new shim for the given instance</summary>
         </member>
+        <member name="T:FolderPickerLib.Fakes.ShimDriveIconConverter.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimDriveIconConverter.AllInstances.CreateImageString">
+            <summary>Sets the shim of DriveIconConverter.CreateImage(String uri)</summary>
+        </member>
         <member name="M:FolderPickerLib.Fakes.ShimDriveIconConverter.BehaveAsCurrent">
             <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
         </member>
         <member name="M:FolderPickerLib.Fakes.ShimDriveIconConverter.BehaveAsNotImplemented">
             <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
         </member>
-        <member name="M:FolderPickerLib.Fakes.ShimDriveIconConverter.Bind(System.Windows.Data.IValueConverter)">
-            <summary>Binds the members of the interface to the shim.</summary>
-        </member>
         <member name="P:FolderPickerLib.Fakes.ShimDriveIconConverter.Behavior">
             <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimDriveIconConverter.Bind(System.Windows.Data.IValueConverter)">
+            <summary>Binds the members of the interface to the shim.</summary>
         </member>
         <member name="P:FolderPickerLib.Fakes.ShimDriveIconConverter.Constructor">
             <summary>Sets the shim of DriveIconConverter.DriveIconConverter()</summary>
         </member>
         <member name="P:FolderPickerLib.Fakes.ShimDriveIconConverter.CreateImageString">
-            <summary>Sets the shim of DriveIconConverter.CreateImage(String uri)</summary>
-        </member>
-        <member name="T:FolderPickerLib.Fakes.ShimDriveIconConverter.AllInstances">
-            <summary>Define shims for all instances members</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.ShimDriveIconConverter.AllInstances.CreateImageString">
             <summary>Sets the shim of DriveIconConverter.CreateImage(String uri)</summary>
         </member>
         <member name="T:FolderPickerLib.Fakes.ShimDriveTreeItem">
@@ -46,17 +46,26 @@
         <member name="M:FolderPickerLib.Fakes.ShimDriveTreeItem.#ctor(FolderPickerLib.DriveTreeItem)">
             <summary>Initializes a new shim for the given instance</summary>
         </member>
+        <member name="T:FolderPickerLib.Fakes.ShimDriveTreeItem.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimDriveTreeItem.AllInstances.DriveTypeGet">
+            <summary>Sets the shim of DriveTreeItem.get_DriveType()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimDriveTreeItem.AllInstances.DriveTypeSetDriveType">
+            <summary>Sets the shim of DriveTreeItem.set_DriveType(DriveType value)</summary>
+        </member>
         <member name="M:FolderPickerLib.Fakes.ShimDriveTreeItem.BehaveAsCurrent">
             <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
         </member>
         <member name="M:FolderPickerLib.Fakes.ShimDriveTreeItem.BehaveAsNotImplemented">
             <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
         </member>
-        <member name="M:FolderPickerLib.Fakes.ShimDriveTreeItem.Bind(System.ComponentModel.INotifyPropertyChanged)">
-            <summary>Binds the members of the interface to the shim.</summary>
-        </member>
         <member name="P:FolderPickerLib.Fakes.ShimDriveTreeItem.Behavior">
             <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimDriveTreeItem.Bind(System.ComponentModel.INotifyPropertyChanged)">
+            <summary>Binds the members of the interface to the shim.</summary>
         </member>
         <member name="P:FolderPickerLib.Fakes.ShimDriveTreeItem.ConstructorStringDriveTypeTreeItem">
             <summary>Sets the shim of DriveTreeItem.DriveTreeItem(String name, DriveType driveType, TreeItem parent)</summary>
@@ -65,15 +74,6 @@
             <summary>Sets the shim of DriveTreeItem.get_DriveType()</summary>
         </member>
         <member name="P:FolderPickerLib.Fakes.ShimDriveTreeItem.DriveTypeSetDriveType">
-            <summary>Sets the shim of DriveTreeItem.set_DriveType(DriveType value)</summary>
-        </member>
-        <member name="T:FolderPickerLib.Fakes.ShimDriveTreeItem.AllInstances">
-            <summary>Define shims for all instances members</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.ShimDriveTreeItem.AllInstances.DriveTypeGet">
-            <summary>Sets the shim of DriveTreeItem.get_DriveType()</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.ShimDriveTreeItem.AllInstances.DriveTypeSetDriveType">
             <summary>Sets the shim of DriveTreeItem.set_DriveType(DriveType value)</summary>
         </member>
         <member name="T:FolderPickerLib.Fakes.ShimFolderPickerControl">
@@ -85,11 +85,74 @@
         <member name="M:FolderPickerLib.Fakes.ShimFolderPickerControl.#ctor(FolderPickerLib.FolderPickerControl)">
             <summary>Initializes a new shim for the given instance</summary>
         </member>
+        <member name="T:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances">
+            <summary>Define shims for all instances members</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances.Init">
+            <summary>Sets the shim of FolderPickerControl.Init()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances.InitialPathGet">
+            <summary>Sets the shim of FolderPickerControl.get_InitialPath()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances.InitialPathSetString">
+            <summary>Sets the shim of FolderPickerControl.set_InitialPath(String value)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances.InitializeComponent">
+            <summary>Sets the shim of FolderPickerControl.InitializeComponent()</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances.NotifyPropertyChangedOf1ExpressionOfFuncOfM0``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Action{FolderPickerLib.FolderPickerControl,System.Linq.Expressions.Expression{System.Func{``0}}})">
+            <summary>Sets the shim of FolderPickerControl.NotifyPropertyChanged(Expression`1&lt;Func`1&lt;!!0&gt;&gt; property)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances.OnPropertyChangedString">
+            <summary>Sets the shim of FolderPickerControl.OnPropertyChanged(String propertyName)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances.PropertyChangedAddPropertyChangedEventHandler">
+            <summary>Sets the shim of FolderPickerControl.add_PropertyChanged(PropertyChangedEventHandler value)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances.PropertyChangedRemovePropertyChangedEventHandler">
+            <summary>Sets the shim of FolderPickerControl.remove_PropertyChanged(PropertyChangedEventHandler value)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances.RootGet">
+            <summary>Sets the shim of FolderPickerControl.get_Root()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances.RootSetTreeItem">
+            <summary>Sets the shim of FolderPickerControl.set_Root(TreeItem value)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances.SelectedItemGet">
+            <summary>Sets the shim of FolderPickerControl.get_SelectedItem()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances.SelectedItemSetTreeItem">
+            <summary>Sets the shim of FolderPickerControl.set_SelectedItem(TreeItem value)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances.SelectedPathGet">
+            <summary>Sets the shim of FolderPickerControl.get_SelectedPath()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances.SelectedPathSetString">
+            <summary>Sets the shim of FolderPickerControl.set_SelectedPath(String value)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances.SystemWindowsMarkupIComponentConnectorConnectInt32Object">
+            <summary>Sets the shim of FolderPickerControl.System.Windows.Markup.IComponentConnector.Connect(Int32 connectionId, Object target)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances.TraverseUpToRootDirectoryInfo">
+            <summary>Sets the shim of FolderPickerControl.TraverseUpToRoot(DirectoryInfo child)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances.TreeView_ExpandedObjectRoutedEventArgs">
+            <summary>Sets the shim of FolderPickerControl.TreeView_Expanded(Object sender, RoutedEventArgs e)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances.TreeView_SelectedObjectRoutedEventArgs">
+            <summary>Sets the shim of FolderPickerControl.TreeView_Selected(Object sender, RoutedEventArgs e)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances.UpdateInitialPathUI">
+            <summary>Sets the shim of FolderPickerControl.UpdateInitialPathUI()</summary>
+        </member>
         <member name="M:FolderPickerLib.Fakes.ShimFolderPickerControl.BehaveAsCurrent">
             <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
         </member>
         <member name="M:FolderPickerLib.Fakes.ShimFolderPickerControl.BehaveAsNotImplemented">
             <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
         </member>
         <member name="M:FolderPickerLib.Fakes.ShimFolderPickerControl.Bind(System.Windows.IInputElement)">
             <summary>Binds the members of the interface to the shim.</summary>
@@ -115,12 +178,6 @@
         <member name="M:FolderPickerLib.Fakes.ShimFolderPickerControl.Bind(System.Windows.Markup.IQueryAmbient)">
             <summary>Binds the members of the interface to the shim.</summary>
         </member>
-        <member name="M:FolderPickerLib.Fakes.ShimFolderPickerControl.NotifyPropertyChangedOf1ExpressionOfFuncOfM0``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Action{System.Linq.Expressions.Expression{System.Func{``0}}})">
-            <summary>Sets the shim of FolderPickerControl.NotifyPropertyChanged(Expression`1&lt;Func`1&lt;!!0&gt;&gt; property)</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.Behavior">
-            <summary>Assigns the behavior for all methods of the shimmed type</summary>
-        </member>
         <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.Constructor">
             <summary>Sets the shim of FolderPickerControl.FolderPickerControl()</summary>
         </member>
@@ -135,6 +192,9 @@
         </member>
         <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.InitializeComponent">
             <summary>Sets the shim of FolderPickerControl.InitializeComponent()</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimFolderPickerControl.NotifyPropertyChangedOf1ExpressionOfFuncOfM0``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Action{System.Linq.Expressions.Expression{System.Func{``0}}})">
+            <summary>Sets the shim of FolderPickerControl.NotifyPropertyChanged(Expression`1&lt;Func`1&lt;!!0&gt;&gt; property)</summary>
         </member>
         <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.OnPropertyChangedString">
             <summary>Sets the shim of FolderPickerControl.OnPropertyChanged(String propertyName)</summary>
@@ -181,66 +241,6 @@
         <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.UpdateInitialPathUI">
             <summary>Sets the shim of FolderPickerControl.UpdateInitialPathUI()</summary>
         </member>
-        <member name="T:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances">
-            <summary>Define shims for all instances members</summary>
-        </member>
-        <member name="M:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances.NotifyPropertyChangedOf1ExpressionOfFuncOfM0``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Action{FolderPickerLib.FolderPickerControl,System.Linq.Expressions.Expression{System.Func{``0}}})">
-            <summary>Sets the shim of FolderPickerControl.NotifyPropertyChanged(Expression`1&lt;Func`1&lt;!!0&gt;&gt; property)</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances.Init">
-            <summary>Sets the shim of FolderPickerControl.Init()</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances.InitialPathGet">
-            <summary>Sets the shim of FolderPickerControl.get_InitialPath()</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances.InitialPathSetString">
-            <summary>Sets the shim of FolderPickerControl.set_InitialPath(String value)</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances.InitializeComponent">
-            <summary>Sets the shim of FolderPickerControl.InitializeComponent()</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances.OnPropertyChangedString">
-            <summary>Sets the shim of FolderPickerControl.OnPropertyChanged(String propertyName)</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances.PropertyChangedAddPropertyChangedEventHandler">
-            <summary>Sets the shim of FolderPickerControl.add_PropertyChanged(PropertyChangedEventHandler value)</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances.PropertyChangedRemovePropertyChangedEventHandler">
-            <summary>Sets the shim of FolderPickerControl.remove_PropertyChanged(PropertyChangedEventHandler value)</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances.RootGet">
-            <summary>Sets the shim of FolderPickerControl.get_Root()</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances.RootSetTreeItem">
-            <summary>Sets the shim of FolderPickerControl.set_Root(TreeItem value)</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances.SelectedItemGet">
-            <summary>Sets the shim of FolderPickerControl.get_SelectedItem()</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances.SelectedItemSetTreeItem">
-            <summary>Sets the shim of FolderPickerControl.set_SelectedItem(TreeItem value)</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances.SelectedPathGet">
-            <summary>Sets the shim of FolderPickerControl.get_SelectedPath()</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances.SelectedPathSetString">
-            <summary>Sets the shim of FolderPickerControl.set_SelectedPath(String value)</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances.SystemWindowsMarkupIComponentConnectorConnectInt32Object">
-            <summary>Sets the shim of FolderPickerControl.System.Windows.Markup.IComponentConnector.Connect(Int32 connectionId, Object target)</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances.TraverseUpToRootDirectoryInfo">
-            <summary>Sets the shim of FolderPickerControl.TraverseUpToRoot(DirectoryInfo child)</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances.TreeView_ExpandedObjectRoutedEventArgs">
-            <summary>Sets the shim of FolderPickerControl.TreeView_Expanded(Object sender, RoutedEventArgs e)</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances.TreeView_SelectedObjectRoutedEventArgs">
-            <summary>Sets the shim of FolderPickerControl.TreeView_Selected(Object sender, RoutedEventArgs e)</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerControl.AllInstances.UpdateInitialPathUI">
-            <summary>Sets the shim of FolderPickerControl.UpdateInitialPathUI()</summary>
-        </member>
         <member name="T:FolderPickerLib.Fakes.ShimFolderPickerDialog">
             <summary>Shim type of FolderPickerLib.FolderPickerDialog</summary>
         </member>
@@ -249,66 +249,6 @@
         </member>
         <member name="M:FolderPickerLib.Fakes.ShimFolderPickerDialog.#ctor(FolderPickerLib.FolderPickerDialog)">
             <summary>Initializes a new shim for the given instance</summary>
-        </member>
-        <member name="M:FolderPickerLib.Fakes.ShimFolderPickerDialog.BehaveAsCurrent">
-            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
-        </member>
-        <member name="M:FolderPickerLib.Fakes.ShimFolderPickerDialog.BehaveAsNotImplemented">
-            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
-        </member>
-        <member name="M:FolderPickerLib.Fakes.ShimFolderPickerDialog.Bind(System.Windows.IInputElement)">
-            <summary>Binds the members of the interface to the shim.</summary>
-        </member>
-        <member name="M:FolderPickerLib.Fakes.ShimFolderPickerDialog.Bind(System.Windows.Markup.IAddChild)">
-            <summary>Binds the members of the interface to the shim.</summary>
-        </member>
-        <member name="M:FolderPickerLib.Fakes.ShimFolderPickerDialog.Bind(System.Windows.Media.Animation.IAnimatable)">
-            <summary>Binds the members of the interface to the shim.</summary>
-        </member>
-        <member name="M:FolderPickerLib.Fakes.ShimFolderPickerDialog.Bind(System.Windows.IFrameworkInputElement)">
-            <summary>Binds the members of the interface to the shim.</summary>
-        </member>
-        <member name="M:FolderPickerLib.Fakes.ShimFolderPickerDialog.Bind(System.ComponentModel.ISupportInitialize)">
-            <summary>Binds the members of the interface to the shim.</summary>
-        </member>
-        <member name="M:FolderPickerLib.Fakes.ShimFolderPickerDialog.Bind(System.Windows.Markup.IComponentConnector)">
-            <summary>Binds the members of the interface to the shim.</summary>
-        </member>
-        <member name="M:FolderPickerLib.Fakes.ShimFolderPickerDialog.Bind(System.Windows.Markup.IQueryAmbient)">
-            <summary>Binds the members of the interface to the shim.</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerDialog.Behavior">
-            <summary>Assigns the behavior for all methods of the shimmed type</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerDialog.CancelButton_ClickObjectRoutedEventArgs">
-            <summary>Sets the shim of FolderPickerDialog.CancelButton_Click(Object sender, RoutedEventArgs e)</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerDialog.Constructor">
-            <summary>Sets the shim of FolderPickerDialog.FolderPickerDialog()</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerDialog.InitialPathGet">
-            <summary>Sets the shim of FolderPickerDialog.get_InitialPath()</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerDialog.InitialPathSetString">
-            <summary>Sets the shim of FolderPickerDialog.set_InitialPath(String value)</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerDialog.InitializeComponent">
-            <summary>Sets the shim of FolderPickerDialog.InitializeComponent()</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerDialog.OkButton_ClickObjectRoutedEventArgs">
-            <summary>Sets the shim of FolderPickerDialog.OkButton_Click(Object sender, RoutedEventArgs e)</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerDialog.SelectedPathGet">
-            <summary>Sets the shim of FolderPickerDialog.get_SelectedPath()</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerDialog.SelectedPathSetString">
-            <summary>Sets the shim of FolderPickerDialog.set_SelectedPath(String value)</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerDialog.SystemWindowsMarkupIComponentConnectorConnectInt32Object">
-            <summary>Sets the shim of FolderPickerDialog.System.Windows.Markup.IComponentConnector.Connect(Int32 connectionId, Object target)</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerDialog._CreateDelegateTypeString">
-            <summary>Sets the shim of FolderPickerDialog._CreateDelegate(Type delegateType, String handler)</summary>
         </member>
         <member name="T:FolderPickerLib.Fakes.ShimFolderPickerDialog.AllInstances">
             <summary>Define shims for all instances members</summary>
@@ -340,6 +280,66 @@
         <member name="P:FolderPickerLib.Fakes.ShimFolderPickerDialog.AllInstances._CreateDelegateTypeString">
             <summary>Sets the shim of FolderPickerDialog._CreateDelegate(Type delegateType, String handler)</summary>
         </member>
+        <member name="M:FolderPickerLib.Fakes.ShimFolderPickerDialog.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimFolderPickerDialog.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerDialog.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimFolderPickerDialog.Bind(System.Windows.IInputElement)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimFolderPickerDialog.Bind(System.Windows.Markup.IAddChild)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimFolderPickerDialog.Bind(System.Windows.Media.Animation.IAnimatable)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimFolderPickerDialog.Bind(System.Windows.IFrameworkInputElement)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimFolderPickerDialog.Bind(System.ComponentModel.ISupportInitialize)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimFolderPickerDialog.Bind(System.Windows.Markup.IComponentConnector)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimFolderPickerDialog.Bind(System.Windows.Markup.IQueryAmbient)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerDialog.CancelButton_ClickObjectRoutedEventArgs">
+            <summary>Sets the shim of FolderPickerDialog.CancelButton_Click(Object sender, RoutedEventArgs e)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerDialog.Constructor">
+            <summary>Sets the shim of FolderPickerDialog.FolderPickerDialog()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerDialog.InitialPathGet">
+            <summary>Sets the shim of FolderPickerDialog.get_InitialPath()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerDialog.InitialPathSetString">
+            <summary>Sets the shim of FolderPickerDialog.set_InitialPath(String value)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerDialog.InitializeComponent">
+            <summary>Sets the shim of FolderPickerDialog.InitializeComponent()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerDialog.OkButton_ClickObjectRoutedEventArgs">
+            <summary>Sets the shim of FolderPickerDialog.OkButton_Click(Object sender, RoutedEventArgs e)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerDialog.SelectedPathGet">
+            <summary>Sets the shim of FolderPickerDialog.get_SelectedPath()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerDialog.SelectedPathSetString">
+            <summary>Sets the shim of FolderPickerDialog.set_SelectedPath(String value)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerDialog.SystemWindowsMarkupIComponentConnectorConnectInt32Object">
+            <summary>Sets the shim of FolderPickerDialog.System.Windows.Markup.IComponentConnector.Connect(Int32 connectionId, Object target)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimFolderPickerDialog._CreateDelegateTypeString">
+            <summary>Sets the shim of FolderPickerDialog._CreateDelegate(Type delegateType, String handler)</summary>
+        </member>
         <member name="T:FolderPickerLib.Fakes.ShimNotifiableObject">
             <summary>Shim type of FolderPickerLib.NotifiableObject</summary>
         </member>
@@ -348,33 +348,6 @@
         </member>
         <member name="M:FolderPickerLib.Fakes.ShimNotifiableObject.#ctor(FolderPickerLib.NotifiableObject)">
             <summary>Initializes a new shim for the given instance</summary>
-        </member>
-        <member name="M:FolderPickerLib.Fakes.ShimNotifiableObject.BehaveAsCurrent">
-            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
-        </member>
-        <member name="M:FolderPickerLib.Fakes.ShimNotifiableObject.BehaveAsNotImplemented">
-            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
-        </member>
-        <member name="M:FolderPickerLib.Fakes.ShimNotifiableObject.Bind(System.ComponentModel.INotifyPropertyChanged)">
-            <summary>Binds the members of the interface to the shim.</summary>
-        </member>
-        <member name="M:FolderPickerLib.Fakes.ShimNotifiableObject.NotifyPropertyChangedOf1ExpressionOfFuncOfM0``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Action{System.Linq.Expressions.Expression{System.Func{``0}}})">
-            <summary>Sets the shim of NotifiableObject.NotifyPropertyChanged(Expression`1&lt;Func`1&lt;!!0&gt;&gt; property)</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.ShimNotifiableObject.Behavior">
-            <summary>Assigns the behavior for all methods of the shimmed type</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.ShimNotifiableObject.Constructor">
-            <summary>Sets the shim of NotifiableObject.NotifiableObject()</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.ShimNotifiableObject.OnPropertyChangedString">
-            <summary>Sets the shim of NotifiableObject.OnPropertyChanged(String propertyName)</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.ShimNotifiableObject.PropertyChangedAddPropertyChangedEventHandler">
-            <summary>Sets the shim of NotifiableObject.add_PropertyChanged(PropertyChangedEventHandler value)</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.ShimNotifiableObject.PropertyChangedRemovePropertyChangedEventHandler">
-            <summary>Sets the shim of NotifiableObject.remove_PropertyChanged(PropertyChangedEventHandler value)</summary>
         </member>
         <member name="T:FolderPickerLib.Fakes.ShimNotifiableObject.AllInstances">
             <summary>Define shims for all instances members</summary>
@@ -391,6 +364,33 @@
         <member name="P:FolderPickerLib.Fakes.ShimNotifiableObject.AllInstances.PropertyChangedRemovePropertyChangedEventHandler">
             <summary>Sets the shim of NotifiableObject.remove_PropertyChanged(PropertyChangedEventHandler value)</summary>
         </member>
+        <member name="M:FolderPickerLib.Fakes.ShimNotifiableObject.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimNotifiableObject.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimNotifiableObject.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimNotifiableObject.Bind(System.ComponentModel.INotifyPropertyChanged)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimNotifiableObject.Constructor">
+            <summary>Sets the shim of NotifiableObject.NotifiableObject()</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimNotifiableObject.NotifyPropertyChangedOf1ExpressionOfFuncOfM0``1(Microsoft.QualityTools.Testing.Fakes.FakesDelegates.Action{System.Linq.Expressions.Expression{System.Func{``0}}})">
+            <summary>Sets the shim of NotifiableObject.NotifyPropertyChanged(Expression`1&lt;Func`1&lt;!!0&gt;&gt; property)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimNotifiableObject.OnPropertyChangedString">
+            <summary>Sets the shim of NotifiableObject.OnPropertyChanged(String propertyName)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimNotifiableObject.PropertyChangedAddPropertyChangedEventHandler">
+            <summary>Sets the shim of NotifiableObject.add_PropertyChanged(PropertyChangedEventHandler value)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimNotifiableObject.PropertyChangedRemovePropertyChangedEventHandler">
+            <summary>Sets the shim of NotifiableObject.remove_PropertyChanged(PropertyChangedEventHandler value)</summary>
+        </member>
         <member name="T:FolderPickerLib.Fakes.ShimTreeItem">
             <summary>Shim type of FolderPickerLib.TreeItem</summary>
         </member>
@@ -399,48 +399,6 @@
         </member>
         <member name="M:FolderPickerLib.Fakes.ShimTreeItem.#ctor(FolderPickerLib.TreeItem)">
             <summary>Initializes a new shim for the given instance</summary>
-        </member>
-        <member name="M:FolderPickerLib.Fakes.ShimTreeItem.BehaveAsCurrent">
-            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
-        </member>
-        <member name="M:FolderPickerLib.Fakes.ShimTreeItem.BehaveAsNotImplemented">
-            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
-        </member>
-        <member name="M:FolderPickerLib.Fakes.ShimTreeItem.Bind(System.ComponentModel.INotifyPropertyChanged)">
-            <summary>Binds the members of the interface to the shim.</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.ShimTreeItem.Behavior">
-            <summary>Assigns the behavior for all methods of the shimmed type</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.ShimTreeItem.ChildsGet">
-            <summary>Sets the shim of TreeItem.get_Childs()</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.ShimTreeItem.ChildsSetObservableCollectionOfTreeItem">
-            <summary>Sets the shim of TreeItem.set_Childs(ObservableCollection`1&lt;TreeItem&gt; value)</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.ShimTreeItem.ConstructorStringTreeItem">
-            <summary>Sets the shim of TreeItem.TreeItem(String name, TreeItem parent)</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.ShimTreeItem.GetFullPath">
-            <summary>Sets the shim of TreeItem.GetFullPath()</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.ShimTreeItem.IsFullyLoadedGet">
-            <summary>Sets the shim of TreeItem.get_IsFullyLoaded()</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.ShimTreeItem.IsFullyLoadedSetBoolean">
-            <summary>Sets the shim of TreeItem.set_IsFullyLoaded(Boolean value)</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.ShimTreeItem.NameGet">
-            <summary>Sets the shim of TreeItem.get_Name()</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.ShimTreeItem.NameSetString">
-            <summary>Sets the shim of TreeItem.set_Name(String value)</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.ShimTreeItem.ParentGet">
-            <summary>Sets the shim of TreeItem.get_Parent()</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.ShimTreeItem.ParentSetTreeItem">
-            <summary>Sets the shim of TreeItem.set_Parent(TreeItem value)</summary>
         </member>
         <member name="T:FolderPickerLib.Fakes.ShimTreeItem.AllInstances">
             <summary>Define shims for all instances members</summary>
@@ -472,17 +430,59 @@
         <member name="P:FolderPickerLib.Fakes.ShimTreeItem.AllInstances.ParentSetTreeItem">
             <summary>Sets the shim of TreeItem.set_Parent(TreeItem value)</summary>
         </member>
+        <member name="M:FolderPickerLib.Fakes.ShimTreeItem.BehaveAsCurrent">
+            <summary>Assigns the &apos;Current&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimTreeItem.BehaveAsNotImplemented">
+            <summary>Assigns the &apos;NotImplemented&apos; behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimTreeItem.Behavior">
+            <summary>Assigns the behavior for all methods of the shimmed type</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.ShimTreeItem.Bind(System.ComponentModel.INotifyPropertyChanged)">
+            <summary>Binds the members of the interface to the shim.</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimTreeItem.ChildsGet">
+            <summary>Sets the shim of TreeItem.get_Childs()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimTreeItem.ChildsSetObservableCollectionOfTreeItem">
+            <summary>Sets the shim of TreeItem.set_Childs(ObservableCollection`1&lt;TreeItem&gt; value)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimTreeItem.ConstructorStringTreeItem">
+            <summary>Sets the shim of TreeItem.TreeItem(String name, TreeItem parent)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimTreeItem.GetFullPath">
+            <summary>Sets the shim of TreeItem.GetFullPath()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimTreeItem.IsFullyLoadedGet">
+            <summary>Sets the shim of TreeItem.get_IsFullyLoaded()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimTreeItem.IsFullyLoadedSetBoolean">
+            <summary>Sets the shim of TreeItem.set_IsFullyLoaded(Boolean value)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimTreeItem.NameGet">
+            <summary>Sets the shim of TreeItem.get_Name()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimTreeItem.NameSetString">
+            <summary>Sets the shim of TreeItem.set_Name(String value)</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimTreeItem.ParentGet">
+            <summary>Sets the shim of TreeItem.get_Parent()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.ShimTreeItem.ParentSetTreeItem">
+            <summary>Sets the shim of TreeItem.set_Parent(TreeItem value)</summary>
+        </member>
         <member name="T:FolderPickerLib.Fakes.StubDriveIconConverter">
             <summary>Stub type of FolderPickerLib.DriveIconConverter</summary>
         </member>
         <member name="M:FolderPickerLib.Fakes.StubDriveIconConverter.#ctor">
             <summary>Initializes a new instance</summary>
         </member>
-        <member name="M:FolderPickerLib.Fakes.StubDriveIconConverter.InitializeStub">
-            <summary>Initializes a new instance of type StubDriveIconConverter</summary>
-        </member>
         <member name="P:FolderPickerLib.Fakes.StubDriveIconConverter.CallBase">
             <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubDriveIconConverter.InitializeStub">
+            <summary>Initializes a new instance of type StubDriveIconConverter</summary>
         </member>
         <member name="P:FolderPickerLib.Fakes.StubDriveIconConverter.InstanceBehavior">
             <summary>Gets or sets the instance behavior.</summary>
@@ -496,11 +496,11 @@
         <member name="M:FolderPickerLib.Fakes.StubDriveTreeItem.#ctor(System.String,System.IO.DriveType,FolderPickerLib.TreeItem)">
             <summary>Initializes a new instance</summary>
         </member>
-        <member name="M:FolderPickerLib.Fakes.StubDriveTreeItem.InitializeStub">
-            <summary>Initializes a new instance of type StubDriveTreeItem</summary>
-        </member>
         <member name="P:FolderPickerLib.Fakes.StubDriveTreeItem.CallBase">
             <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubDriveTreeItem.InitializeStub">
+            <summary>Initializes a new instance of type StubDriveTreeItem</summary>
         </member>
         <member name="P:FolderPickerLib.Fakes.StubDriveTreeItem.InstanceBehavior">
             <summary>Gets or sets the instance behavior.</summary>
@@ -538,6 +538,9 @@
         <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.BeginInit01">
             <summary>Sets the stub of FrameworkElement.BeginInit()</summary>
         </member>
+        <member name="P:FolderPickerLib.Fakes.StubFolderPickerControl.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
         <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.EndInit">
             <summary>Sets the stub of FrameworkElement.EndInit()</summary>
         </member>
@@ -562,6 +565,9 @@
         <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.GetVisualChildInt32">
             <summary>Sets the stub of FrameworkElement.GetVisualChild(Int32 index)</summary>
         </member>
+        <member name="P:FolderPickerLib.Fakes.StubFolderPickerControl.HandlesScrolling">
+            <summary>Sets the stub of Control.get_HandlesScrolling()</summary>
+        </member>
         <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.HandlesScrollingGet">
             <summary>Sets the stub of Control.get_HandlesScrolling()</summary>
         </member>
@@ -580,8 +586,20 @@
         <member name="M:FolderPickerLib.Fakes.StubFolderPickerControl.InitializeStub">
             <summary>Initializes a new instance of type StubFolderPickerControl</summary>
         </member>
+        <member name="P:FolderPickerLib.Fakes.StubFolderPickerControl.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.StubFolderPickerControl.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.StubFolderPickerControl.IsEnabledCore">
+            <summary>Sets the stub of UIElement.get_IsEnabledCore()</summary>
+        </member>
         <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.IsEnabledCoreGet">
             <summary>Sets the stub of UIElement.get_IsEnabledCore()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.StubFolderPickerControl.LogicalChildren">
+            <summary>Sets the stub of ContentControl.get_LogicalChildren()</summary>
         </member>
         <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.LogicalChildrenGet">
             <summary>Sets the stub of ContentControl.get_LogicalChildren()</summary>
@@ -1294,28 +1312,10 @@
         <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.ToString01">
             <summary>Sets the stub of Control.ToString()</summary>
         </member>
-        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.VisualChildrenCountGet">
+        <member name="P:FolderPickerLib.Fakes.StubFolderPickerControl.VisualChildrenCount">
             <summary>Sets the stub of FrameworkElement.get_VisualChildrenCount()</summary>
         </member>
-        <member name="P:FolderPickerLib.Fakes.StubFolderPickerControl.CallBase">
-            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.StubFolderPickerControl.HandlesScrolling">
-            <summary>Sets the stub of Control.get_HandlesScrolling()</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.StubFolderPickerControl.InstanceBehavior">
-            <summary>Gets or sets the instance behavior.</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.StubFolderPickerControl.InstanceObserver">
-            <summary>Gets or sets the instance observer.</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.StubFolderPickerControl.IsEnabledCore">
-            <summary>Sets the stub of UIElement.get_IsEnabledCore()</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.StubFolderPickerControl.LogicalChildren">
-            <summary>Sets the stub of ContentControl.get_LogicalChildren()</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.StubFolderPickerControl.VisualChildrenCount">
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerControl.VisualChildrenCountGet">
             <summary>Sets the stub of FrameworkElement.get_VisualChildrenCount()</summary>
         </member>
         <member name="T:FolderPickerLib.Fakes.StubFolderPickerDialog">
@@ -1348,6 +1348,9 @@
         <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.BeginInit01">
             <summary>Sets the stub of FrameworkElement.BeginInit()</summary>
         </member>
+        <member name="P:FolderPickerLib.Fakes.StubFolderPickerDialog.CallBase">
+            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
         <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.EndInit">
             <summary>Sets the stub of FrameworkElement.EndInit()</summary>
         </member>
@@ -1372,6 +1375,9 @@
         <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.GetVisualChildInt32">
             <summary>Sets the stub of FrameworkElement.GetVisualChild(Int32 index)</summary>
         </member>
+        <member name="P:FolderPickerLib.Fakes.StubFolderPickerDialog.HandlesScrolling">
+            <summary>Sets the stub of Control.get_HandlesScrolling()</summary>
+        </member>
         <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.HandlesScrollingGet">
             <summary>Sets the stub of Control.get_HandlesScrolling()</summary>
         </member>
@@ -1390,8 +1396,20 @@
         <member name="M:FolderPickerLib.Fakes.StubFolderPickerDialog.InitializeStub">
             <summary>Initializes a new instance of type StubFolderPickerDialog</summary>
         </member>
+        <member name="P:FolderPickerLib.Fakes.StubFolderPickerDialog.InstanceBehavior">
+            <summary>Gets or sets the instance behavior.</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.StubFolderPickerDialog.InstanceObserver">
+            <summary>Gets or sets the instance observer.</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.StubFolderPickerDialog.IsEnabledCore">
+            <summary>Sets the stub of UIElement.get_IsEnabledCore()</summary>
+        </member>
         <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.IsEnabledCoreGet">
             <summary>Sets the stub of UIElement.get_IsEnabledCore()</summary>
+        </member>
+        <member name="P:FolderPickerLib.Fakes.StubFolderPickerDialog.LogicalChildren">
+            <summary>Sets the stub of Window.get_LogicalChildren()</summary>
         </member>
         <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.LogicalChildrenGet">
             <summary>Sets the stub of Window.get_LogicalChildren()</summary>
@@ -2146,28 +2164,10 @@
         <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.ToString01">
             <summary>Sets the stub of Control.ToString()</summary>
         </member>
-        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.VisualChildrenCountGet">
+        <member name="P:FolderPickerLib.Fakes.StubFolderPickerDialog.VisualChildrenCount">
             <summary>Sets the stub of FrameworkElement.get_VisualChildrenCount()</summary>
         </member>
-        <member name="P:FolderPickerLib.Fakes.StubFolderPickerDialog.CallBase">
-            <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.StubFolderPickerDialog.HandlesScrolling">
-            <summary>Sets the stub of Control.get_HandlesScrolling()</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.StubFolderPickerDialog.InstanceBehavior">
-            <summary>Gets or sets the instance behavior.</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.StubFolderPickerDialog.InstanceObserver">
-            <summary>Gets or sets the instance observer.</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.StubFolderPickerDialog.IsEnabledCore">
-            <summary>Sets the stub of UIElement.get_IsEnabledCore()</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.StubFolderPickerDialog.LogicalChildren">
-            <summary>Sets the stub of Window.get_LogicalChildren()</summary>
-        </member>
-        <member name="P:FolderPickerLib.Fakes.StubFolderPickerDialog.VisualChildrenCount">
+        <member name="F:FolderPickerLib.Fakes.StubFolderPickerDialog.VisualChildrenCountGet">
             <summary>Sets the stub of FrameworkElement.get_VisualChildrenCount()</summary>
         </member>
         <member name="T:FolderPickerLib.Fakes.StubNotifiableObject">
@@ -2176,11 +2176,11 @@
         <member name="M:FolderPickerLib.Fakes.StubNotifiableObject.#ctor">
             <summary>Initializes a new instance</summary>
         </member>
-        <member name="M:FolderPickerLib.Fakes.StubNotifiableObject.InitializeStub">
-            <summary>Initializes a new instance of type StubNotifiableObject</summary>
-        </member>
         <member name="P:FolderPickerLib.Fakes.StubNotifiableObject.CallBase">
             <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubNotifiableObject.InitializeStub">
+            <summary>Initializes a new instance of type StubNotifiableObject</summary>
         </member>
         <member name="P:FolderPickerLib.Fakes.StubNotifiableObject.InstanceBehavior">
             <summary>Gets or sets the instance behavior.</summary>
@@ -2194,11 +2194,11 @@
         <member name="M:FolderPickerLib.Fakes.StubTreeItem.#ctor(System.String,FolderPickerLib.TreeItem)">
             <summary>Initializes a new instance</summary>
         </member>
-        <member name="M:FolderPickerLib.Fakes.StubTreeItem.InitializeStub">
-            <summary>Initializes a new instance of type StubTreeItem</summary>
-        </member>
         <member name="P:FolderPickerLib.Fakes.StubTreeItem.CallBase">
             <summary>Gets or sets a value that indicates if the base method should be called instead of the fallback behavior</summary>
+        </member>
+        <member name="M:FolderPickerLib.Fakes.StubTreeItem.InitializeStub">
+            <summary>Initializes a new instance of type StubTreeItem</summary>
         </member>
         <member name="P:FolderPickerLib.Fakes.StubTreeItem.InstanceBehavior">
             <summary>Gets or sets the instance behavior.</summary>

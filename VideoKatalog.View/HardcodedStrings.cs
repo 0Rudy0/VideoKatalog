@@ -18,8 +18,8 @@ namespace Video_katalog {
         //FREE
         public static string ftpAdress = "ftp://files.000webhost.com/public_html/posters/";
         public static string ftpAppUpdatesPath = "ftp://ftp.hdfilmovi.org/public_html/updates/Video Katalog.exe"; 
-        public static string ftpUsername = "a7194937";
-        public static string ftpPassword = "rudXYZ1%";
+        public static string ftpUsername = "hddpunjenje";
+        public static string ftpPassword = "rudx1234";
 
         //HOSTING24
         /*public static string ftpAdress = "ftp://ftp.hdfilmovi.org/public_html/posters/";

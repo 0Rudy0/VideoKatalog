@@ -1,5 +1,5 @@
-C:\Projects\VideoKatalog\VideoKatalog.View\Fakes\FolderPickerLib.fakes : warning : Cannot generate stub for FolderPickerLib.Properties.Resources: type is not visible to exported or assembly(FolderPickerLib.Fakes).
-C:\Projects\VideoKatalog\VideoKatalog.View\Fakes\FolderPickerLib.fakes : warning : Cannot generate stub for FolderPickerLib.Properties.Settings: type is sealed.
-C:\Projects\VideoKatalog\VideoKatalog.View\Fakes\FolderPickerLib.fakes : warning : Cannot generate shim for FolderPickerLib.FolderPickerControl+<>c__DisplayClass4: type is not supported because of internal limitations.
-C:\Projects\VideoKatalog\VideoKatalog.View\Fakes\FolderPickerLib.fakes : warning : Cannot generate shim for FolderPickerLib.Properties.Resources: type is not visible to exported or assembly(FolderPickerLib.Fakes).
-C:\Projects\VideoKatalog\VideoKatalog.View\Fakes\FolderPickerLib.fakes : warning : Cannot generate shim for FolderPickerLib.Properties.Settings: type is not visible to exported or assembly(FolderPickerLib.Fakes).
+D:\Projects\Video Katalog\VideoKatalog\VideoKatalog.View\Fakes\FolderPickerLib.fakes : warning : Cannot generate stub for FolderPickerLib.Properties.Resources: type is not visible to exported or assembly(FolderPickerLib.Fakes).
+D:\Projects\Video Katalog\VideoKatalog\VideoKatalog.View\Fakes\FolderPickerLib.fakes : warning : Cannot generate stub for FolderPickerLib.Properties.Settings: type is sealed.
+D:\Projects\Video Katalog\VideoKatalog\VideoKatalog.View\Fakes\FolderPickerLib.fakes : warning : Cannot generate shim for FolderPickerLib.FolderPickerControl+<>c__DisplayClass4: type is not supported because of internal limitations.
+D:\Projects\Video Katalog\VideoKatalog\VideoKatalog.View\Fakes\FolderPickerLib.fakes : warning : Cannot generate shim for FolderPickerLib.Properties.Resources: type is not visible to exported or assembly(FolderPickerLib.Fakes).
+D:\Projects\Video Katalog\VideoKatalog\VideoKatalog.View\Fakes\FolderPickerLib.fakes : warning : Cannot generate shim for FolderPickerLib.Properties.Settings: type is not visible to exported or assembly(FolderPickerLib.Fakes).
