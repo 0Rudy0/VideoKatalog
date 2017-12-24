@@ -216,7 +216,7 @@ namespace Video_katalog {
             AudioList = new ObservableCollection<Audio> ();
         }
 
-        public virtual void GetTechInfo (string videoFilePath) {
+        public virtual void GetTechInfo (string videoFilePath) {           
             MediaInfo MI = new MediaInfo ();
             MI.Open (videoFilePath);            
             this.AudioList.Clear ();

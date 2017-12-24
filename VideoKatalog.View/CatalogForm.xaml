@@ -1896,7 +1896,7 @@
 							<Path Data="M388.01564,70.835642 C394.87579,66.99306 398.7378,67.5379 401.77124,67.391582 446.10803,65.253002 868.47916,67.007546 1030.6821,68.197959" Fill="Black" Height="3.121" Margin="353.787,40.334,-1.919,0" Stretch="Fill" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top"/>
 							<TextBlock x:Name="movieGenreTB" Height="20.536" Margin="364.75,49.295,332,0" TextWrapping="Wrap" VerticalAlignment="Top" FontStyle="Italic" Foreground="#FF5A6210" FontWeight="Bold" Text="{Binding Genres, ConverterParameter=50, Converter={StaticResource genresToStringConverter}}"/>
 							<Grid x:Name="moviePosterGrid" Margin="0,45.89,4.5,95.91" Panel.ZIndex="5" HorizontalAlignment="Right" Width="337">
-								<Image x:Name="moviePoster1" Height="431" Margin="17.8,12.9,19.2,0" Source="{Binding Name, ConverterParameter=movie, Converter={StaticResource nameToImagePathConverter}}"  VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Stretch="Fill"/>
+                                <Image x:Name="moviePoster1" Height="431" Margin="17.8,12.9,19.2,0" Source="{Binding Name, ConverterParameter=movie, Converter={StaticResource nameToImagePathConverter}}"  VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Stretch="Fill"/>
 								<Image x:Name="caseImage2" Source="Resources/case.png" HorizontalAlignment="Left" Width="337" Stretch="Fill" VerticalAlignment="Top" Height="471.2"/>
 							</Grid>
 							<Button x:Name="goToIMDbButton" Margin="254,0,0,3" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="42" Click="goToIMDbButton_Click" Height="42" Background="{x:Null}" BorderBrush="{x:Null}" Padding="-1" >
@@ -1905,7 +1905,7 @@
 							<Button x:Name="goToTrailerButton" HorizontalAlignment="Left" Margin="300,0,0,3" VerticalAlignment="Bottom" Width="42" Height="42" Click="goToTrailerButton_Click" RenderTransformOrigin="0.4,0.275" Background="{x:Null}" BorderBrush="{x:Null}" Padding="1,1,0,0" >
 								<Image Height="45" Width="45" Source="Resources/youtube.png" Margin="-2.5,-2.5,0,0"/>
 							</Button>
-							<Image x:Name="ratingMask" HorizontalAlignment="Left" Margin="441.667,83.5,0,0" VerticalAlignment="Top" Source="Resources/starmask.png" Stretch="None" Width="294" Height="29.3"/>
+							<Image x:Name="ratingMask" HorizontalAlignment="Left" Margin="441.667,83.5,0,0" VerticalAlignment="Top" Source="Resources/starmask.png" Stretch="Fill" Width="294" Height="29.3"/>
 							<Canvas x:Name="movieRatingCanvas" Height="29.3" Margin="441.667,83.5,0,0" VerticalAlignment="Top" Width="294" HorizontalAlignment="Left"/>
 							<TextBlock x:Name="ratingTextBlock" HorizontalAlignment="Right" Margin="0,77,370.5,0" TextWrapping="Wrap" Text="{Binding Rating}" VerticalAlignment="Top" FontSize="24" FontFamily="Segoe Print" Foreground="#FF766E16" RenderTransformOrigin="0.905,0.656" OpacityMask="#FFD01C1C" TextOptions.TextFormattingMode="Display" Width="62"/>
 							<Grid Height="54.5" Margin="551.25,0,525,47" VerticalAlignment="Bottom" Background="{DynamicResource infoBackgroundGradient}">
@@ -2289,7 +2289,7 @@
 							<Path Data="M388.01564,70.835642 C394.87579,66.99306 398.7378,67.5379 401.77124,67.391582 446.10803,65.253002 868.47916,67.007546 1030.6821,68.197959" Fill="Black" Height="3.121" Margin="353.787,40.334,-1.919,0" Stretch="Fill" Stroke="Black" StrokeThickness="0" VerticalAlignment="Top"/>
 							<TextBlock x:Name="serieGenresTB" Height="20.536" Margin="364.75,49.295,332,0" TextWrapping="Wrap" VerticalAlignment="Top" FontStyle="Italic" Foreground="#FF5A6210" FontWeight="Bold" Text="{Binding Genres, ConverterParameter=50, Converter={StaticResource genresToStringConverter}}"><Run Language="hr-hr" Text="Žanr, Žanr, Žanr"/></TextBlock>
 							<Grid x:Name="posterGridSerie" Width="337" HorizontalAlignment="Right" Margin="0,45.89,4.5,95.91">
-								<Image x:Name="seriePoster" Height="431" RenderOptions.BitmapScalingMode="NearestNeighbor"  Margin="17.8,12.9,19.2,0" RenderOptions.EdgeMode="Aliased" Source="{Binding Name, ConverterParameter=serie, Converter={StaticResource nameToImagePathConverter}}"  VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Stretch="Fill"/>
+                                <Image x:Name="seriePoster" Height="431"  RenderOptions.BitmapScalingMode="NearestNeighbor" RenderOptions.EdgeMode="Aliased"  Margin="17.8,12.9,19.2,0" Source="{Binding Name, ConverterParameter=serie, Converter={StaticResource nameToImagePathConverter}}"  VerticalAlignment="Top" RenderTransformOrigin="0.5,0.5" Stretch="Fill"/>
 								<Image x:Name="caseImage4" Source="Resources/case.png" HorizontalAlignment="Left" Width="337" Stretch="Fill" VerticalAlignment="Top" Height="471.2"/>
 							</Grid>
 							<Button x:Name="serieGoToIMDbButton" Margin="254,0,0,3" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="42" Click="serieGoToIMDbButton_Click" Height="42" Background="{x:Null}" BorderBrush="{x:Null}" Padding="-1" >

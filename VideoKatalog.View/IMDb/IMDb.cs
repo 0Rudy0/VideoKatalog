@@ -292,9 +292,9 @@ namespace Video_katalog {
         public Movie GetMovieInfo (string mainLink) {
             this.mainLink = mainLink;
             SetMainSource ();
-            string castAndCrewSource = ReturnWebPageSource (mainLink + "fullcredits");
-            string budgetSource = ReturnWebPageSource (mainLink + "business");
-            string summarySource = ReturnWebPageSource (mainLink + "plotsummary");
+            string castAndCrewSource = ReturnWebPageSource (mainLink + "/fullcredits");
+            string budgetSource = ReturnWebPageSource (mainLink + "/business");
+            string summarySource = ReturnWebPageSource (mainLink + "/plotsummary");
 
             if (string.IsNullOrEmpty (mainSource))
                 return null;
@@ -324,7 +324,7 @@ namespace Video_katalog {
             }
             newMovie.Summary = HttpUtility.HtmlDecode (GetSummary (mainSource, summarySource));
             newMovie.Rating = GetRating (mainSource);
-            newMovie.Budget = GetBudget (budgetSource);
+            newMovie.Budget = GetBudget (mainSource);
             newMovie.TrailerLink = GetTrailerLink (newMovie.OrigName);
             newMovie.Earnings = GetEarnings ();            
             newMovie.InternetLink = this.mainLink;
@@ -590,9 +590,11 @@ namespace Video_katalog {
             }
         }        
         public float GetBudget (string source) {
-            try {
-                string budgetString = HelpFunctions.GetStringBetweenStrings(source, "<h5>Budget</h5>\n", "<h5>");
-                budgetString = HelpFunctions.GetStringBetweenStrings(budgetString, "$", "(");
+            try
+            {
+                string budgetString = HelpFunctions.GetStringBetweenStrings(source, "id=\"titleDetails\"", "id=\"titleDidYouKnow\"");
+                budgetString = HelpFunctions.GetStringBetweenStrings(budgetString, "<h4 class=\"inline\">Budget:</h4>", "\n");
+                //budgetString = HelpFunctions.GetStringBetweenStrings(budgetString, "$", "(");
                 string budgetClean = null;
                 foreach (char c in budgetString) {
                     if (Char.IsDigit(c)) {

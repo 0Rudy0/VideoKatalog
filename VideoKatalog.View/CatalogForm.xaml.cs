@@ -405,7 +405,7 @@ namespace Video_katalog {
             ImageBrush myBrush = new ImageBrush ();
             myBrush.ImageSource = ratingStars;
             myBrush.TileMode = TileMode.Tile;
-            myBrush.Stretch = Stretch.None;
+            myBrush.Stretch = Stretch.Fill;
             int fullWidth = (int) this.ratingMask.Width;
             int width = (int) (ratingFloat * fullWidth / 10);
             myBrush.Viewport = new Rect (0, 0, 10 / ratingFloat * 0.202, 1);
