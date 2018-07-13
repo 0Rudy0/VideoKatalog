@@ -1,0 +1,74 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
+  <EntityContainerMapping StorageEntityContainer="VideoDatabaseModelStoreContainer" CdmEntityContainer="VideoDatabaseEntities">
+    <EntitySetMapping Name="Movie">
+      <EntityTypeMapping TypeName="VideoDatabaseModel.Movie">
+        <MappingFragment StoreEntitySet="Movie">
+          <ScalarProperty Name="genres" ColumnName="genres" />
+          <ScalarProperty Name="director" ColumnName="director" />
+          <ScalarProperty Name="cast" ColumnName="cast" />
+          <ScalarProperty Name="hasEngSub" ColumnName="hasEngSub" />
+          <ScalarProperty Name="hasCroSub" ColumnName="hasCroSub" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="hddNum" ColumnName="hddNum" />
+          <ScalarProperty Name="runtime" ColumnName="runtime" />
+          <ScalarProperty Name="size" ColumnName="size" />
+          <ScalarProperty Name="plot" ColumnName="plot" />
+          <ScalarProperty Name="trailerLink" ColumnName="trailerLink" />
+          <ScalarProperty Name="internetLink" ColumnName="internetLink" />
+          <ScalarProperty Name="rating" ColumnName="rating" />
+          <ScalarProperty Name="year" ColumnName="year" />
+          <ScalarProperty Name="addDate" ColumnName="addDate" />
+          <ScalarProperty Name="originalName" ColumnName="originalName" />
+          <ScalarProperty Name="customName" ColumnName="customName" />
+          <ScalarProperty Name="movieID" ColumnName="movieID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Serie">
+      <EntityTypeMapping TypeName="VideoDatabaseModel.Serie">
+        <MappingFragment StoreEntitySet="Serie">
+          <ScalarProperty Name="genres" ColumnName="genres" />
+          <ScalarProperty Name="director" ColumnName="director" />
+          <ScalarProperty Name="cast" ColumnName="cast" />
+          <ScalarProperty Name="trailerLink" ColumnName="trailerLink" />
+          <ScalarProperty Name="summary" ColumnName="summary" />
+          <ScalarProperty Name="internetLink" ColumnName="internetLink" />
+          <ScalarProperty Name="rating" ColumnName="rating" />
+          <ScalarProperty Name="origName" ColumnName="origName" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="serieID" ColumnName="serieID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SerieEpisode">
+      <EntityTypeMapping TypeName="VideoDatabaseModel.SerieEpisode">
+        <MappingFragment StoreEntitySet="SerieEpisode">
+          <ScalarProperty Name="hasEngSub" ColumnName="hasEngSub" />
+          <ScalarProperty Name="hasCroSub" ColumnName="hasCroSub" />
+          <ScalarProperty Name="version" ColumnName="version" />
+          <ScalarProperty Name="internetLink" ColumnName="internetLink" />
+          <ScalarProperty Name="hddID" ColumnName="hddID" />
+          <ScalarProperty Name="runtime" ColumnName="runtime" />
+          <ScalarProperty Name="size" ColumnName="size" />
+          <ScalarProperty Name="airDate" ColumnName="airDate" />
+          <ScalarProperty Name="seasonID" ColumnName="seasonID" />
+          <ScalarProperty Name="origName" ColumnName="origName" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="episodeID" ColumnName="episodeID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="SerieSeason">
+      <EntityTypeMapping TypeName="VideoDatabaseModel.SerieSeason">
+        <MappingFragment StoreEntitySet="SerieSeason">
+          <ScalarProperty Name="trailerLink" ColumnName="trailerLink" />
+          <ScalarProperty Name="internetLink" ColumnName="internetLink" />
+          <ScalarProperty Name="name" ColumnName="name" />
+          <ScalarProperty Name="serieID" ColumnName="serieID" />
+          <ScalarProperty Name="seasonID" ColumnName="seasonID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+  </EntityContainerMapping>
+</Mapping>

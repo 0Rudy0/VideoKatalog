@@ -1,0 +1,20 @@
+﻿VideoKatalog.View
+
+
+winexe
+C#
+.cs
+C:\Projects\VideoKatalog\VideoKatalog.View\obj\Debug\
+VideoKatalog.View
+none
+false
+DEBUG;TRACE
+C:\Projects\VideoKatalog\VideoKatalog.View\App.xaml
+20-2105730408
+81201134369
+85-160051955
+21-922762241
+CatalogForm.xaml;CustomControls\RangeSlider.xaml;HDD\HDDForm.xaml;HDD\HDDsManagerForm.xaml;HomeVideo\CameraForm.xaml;HomeVideo\CamerasManagerForm.xaml;HomeVideo\CategoryForm.xaml;HomeVideo\HomeVideoForm.xaml;HomeVideo\PersonForm.xaml;HomeVideo\PersonsManagerForm.xaml;IMDb\SearchForm.xaml;InputComboBox.xaml;InputDialog.xaml;Movie\MovieForm.xaml;SelectFromCollection.xaml;SelectionWindow.xaml;Serie\SelectSerieForm.xaml;Serie\SerieForm.xaml;Simple Styles.xaml;WishListForm.xaml;
+
+False
+

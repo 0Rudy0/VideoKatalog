@@ -1,0 +1,114 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="VideoDatabaseModel" Alias="Self" p1:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:p1="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
+  <EntityContainer Name="VideoDatabaseEntities" p1:LazyLoadingEnabled="true">
+    <EntitySet Name="Movie" EntityType="VideoDatabaseModel.Movie" />
+    <EntitySet Name="Serie" EntityType="VideoDatabaseModel.Serie" />
+    <EntitySet Name="SerieEpisode" EntityType="VideoDatabaseModel.SerieEpisode" />
+    <EntitySet Name="SerieSeason" EntityType="VideoDatabaseModel.SerieSeason" />
+    <AssociationSet Name="SerieSeason_FK_SerieSeason_Serie" Association="VideoDatabaseModel.SerieSeason_FK_SerieSeason_Serie">
+      <End Role="Serie" EntitySet="Serie" />
+      <End Role="SerieSeason" EntitySet="SerieSeason" />
+    </AssociationSet>
+    <AssociationSet Name="SerieEpisode_FK_SerieEpisode_SerieSeason" Association="VideoDatabaseModel.SerieEpisode_FK_SerieEpisode_SerieSeason">
+      <End Role="SerieSeason" EntitySet="SerieSeason" />
+      <End Role="SerieEpisode" EntitySet="SerieEpisode" />
+    </AssociationSet>
+  </EntityContainer>
+  <EntityType Name="Movie">
+    <Key>
+      <PropertyRef Name="movieID" />
+    </Key>
+    <Property Name="movieID" Type="Int32" Nullable="false" />
+    <Property Name="customName" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="originalName" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="addDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="year" Type="Int32" Nullable="false" />
+    <Property Name="rating" Type="Decimal" Nullable="false" Precision="2" Scale="1" />
+    <Property Name="internetLink" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="trailerLink" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="plot" Type="String" Nullable="false" MaxLength="3000" FixedLength="false" Unicode="true" />
+    <Property Name="size" Type="Int64" Nullable="false" />
+    <Property Name="runtime" Type="Int32" Nullable="false" />
+    <Property Name="hddNum" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="true" />
+    <Property Name="version" Type="Int32" Nullable="false" />
+    <Property Name="hasCroSub" Type="Byte" />
+    <Property Name="hasEngSub" Type="Byte" />
+    <Property Name="cast" Type="String" MaxLength="200" FixedLength="true" Unicode="true" />
+    <Property Name="director" Type="String" MaxLength="150" FixedLength="true" Unicode="true" />
+    <Property Name="genres" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+  </EntityType>
+  <EntityType Name="Serie">
+    <Key>
+      <PropertyRef Name="serieID" />
+    </Key>
+    <Property Name="serieID" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="origName" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="rating" Type="Decimal" Nullable="false" Precision="2" Scale="1" />
+    <Property Name="internetLink" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="summary" Type="String" Nullable="false" MaxLength="3000" FixedLength="false" Unicode="true" />
+    <Property Name="trailerLink" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="cast" Type="String" MaxLength="1000" FixedLength="true" Unicode="true" />
+    <Property Name="director" Type="String" MaxLength="1000" FixedLength="true" Unicode="true" />
+    <Property Name="genres" Type="String" MaxLength="100" FixedLength="true" Unicode="true" />
+    <NavigationProperty Name="SerieSeason" Relationship="VideoDatabaseModel.SerieSeason_FK_SerieSeason_Serie" FromRole="Serie" ToRole="SerieSeason" />
+  </EntityType>
+  <EntityType Name="SerieEpisode">
+    <Key>
+      <PropertyRef Name="episodeID" />
+    </Key>
+    <Property Name="episodeID" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="origName" Type="String" Nullable="false" MaxLength="150" FixedLength="false" Unicode="true" />
+    <Property Name="seasonID" Type="Int32" Nullable="false" />
+    <Property Name="airDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="size" Type="Int64" Nullable="false" />
+    <Property Name="runtime" Type="Int32" Nullable="false" />
+    <Property Name="hddID" Type="String" Nullable="false" MaxLength="10" FixedLength="false" Unicode="false" />
+    <Property Name="internetLink" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="version" Type="Byte" Nullable="false" />
+    <Property Name="hasCroSub" Type="Byte" />
+    <Property Name="hasEngSub" Type="Byte" />
+    <NavigationProperty Name="SerieSeason" Relationship="VideoDatabaseModel.SerieEpisode_FK_SerieEpisode_SerieSeason" FromRole="SerieEpisode" ToRole="SerieSeason" />
+  </EntityType>
+  <EntityType Name="SerieSeason">
+    <Key>
+      <PropertyRef Name="seasonID" />
+    </Key>
+    <Property Name="seasonID" Type="Int32" Nullable="false" />
+    <Property Name="serieID" Type="Int32" Nullable="false" />
+    <Property Name="name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="internetLink" Type="String" Nullable="false" MaxLength="300" FixedLength="false" Unicode="true" />
+    <Property Name="trailerLink" Type="String" MaxLength="300" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Serie" Relationship="VideoDatabaseModel.SerieSeason_FK_SerieSeason_Serie" FromRole="SerieSeason" ToRole="Serie" />
+    <NavigationProperty Name="SerieEpisode" Relationship="VideoDatabaseModel.SerieEpisode_FK_SerieEpisode_SerieSeason" FromRole="SerieSeason" ToRole="SerieEpisode" />
+  </EntityType>
+  <Association Name="SerieSeason_FK_SerieSeason_Serie">
+    <End Type="VideoDatabaseModel.Serie" Role="Serie" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="VideoDatabaseModel.SerieSeason" Role="SerieSeason" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Serie">
+        <PropertyRef Name="serieID" />
+      </Principal>
+      <Dependent Role="SerieSeason">
+        <PropertyRef Name="serieID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SerieEpisode_FK_SerieEpisode_SerieSeason">
+    <End Type="VideoDatabaseModel.SerieSeason" Role="SerieSeason" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Type="VideoDatabaseModel.SerieEpisode" Role="SerieEpisode" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SerieSeason">
+        <PropertyRef Name="seasonID" />
+      </Principal>
+      <Dependent Role="SerieEpisode">
+        <PropertyRef Name="seasonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+</Schema>

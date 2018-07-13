@@ -1,0 +1,110 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Schema Namespace="VideoDatabaseModel.Store" Provider="System.Data.SqlClient" ProviderManifestToken="2008" Alias="Self" xmlns:store="http://schemas.microsoft.com/ado/2007/12/edm/EntityStoreSchemaGenerator" xmlns="http://schemas.microsoft.com/ado/2009/11/edm/ssdl">
+  <EntityType Name="Movie">
+    <Key>
+      <PropertyRef Name="movieID" />
+    </Key>
+    <Property Name="movieID" Type="int" Nullable="false" />
+    <Property Name="customName" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="originalName" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="addDate" Type="datetime" Nullable="false" />
+    <Property Name="year" Type="int" Nullable="false" />
+    <Property Name="rating" Type="numeric" Precision="2" Scale="1" Nullable="false" />
+    <Property Name="internetLink" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="trailerLink" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="plot" Type="nvarchar" MaxLength="3000" Nullable="false" />
+    <Property Name="size" Type="bigint" Nullable="false" />
+    <Property Name="runtime" Type="int" Nullable="false" />
+    <Property Name="hddNum" Type="nvarchar" MaxLength="10" Nullable="false" />
+    <Property Name="version" Type="int" Nullable="false" />
+    <Property Name="hasCroSub" Type="tinyint" />
+    <Property Name="hasEngSub" Type="tinyint" />
+    <Property Name="cast" Type="nchar" MaxLength="200" />
+    <Property Name="director" Type="nchar" MaxLength="150" />
+    <Property Name="genres" Type="nchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="Serie">
+    <Key>
+      <PropertyRef Name="serieID" />
+    </Key>
+    <Property Name="serieID" Type="int" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="origName" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="rating" Type="numeric" Precision="2" Scale="1" Nullable="false" />
+    <Property Name="internetLink" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="summary" Type="nvarchar" MaxLength="3000" Nullable="false" />
+    <Property Name="trailerLink" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="cast" Type="nchar" MaxLength="1000" />
+    <Property Name="director" Type="nchar" MaxLength="1000" />
+    <Property Name="genres" Type="nchar" MaxLength="100" />
+  </EntityType>
+  <EntityType Name="SerieEpisode">
+    <Key>
+      <PropertyRef Name="episodeID" />
+    </Key>
+    <Property Name="episodeID" Type="int" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="origName" Type="nvarchar" MaxLength="150" Nullable="false" />
+    <Property Name="seasonID" Type="int" Nullable="false" />
+    <Property Name="airDate" Type="datetime" Nullable="false" />
+    <Property Name="size" Type="bigint" Nullable="false" />
+    <Property Name="runtime" Type="int" Nullable="false" />
+    <Property Name="hddID" Type="varchar" MaxLength="10" Nullable="false" />
+    <Property Name="internetLink" Type="nvarchar" MaxLength="300" />
+    <Property Name="version" Type="tinyint" Nullable="false" />
+    <Property Name="hasCroSub" Type="tinyint" />
+    <Property Name="hasEngSub" Type="tinyint" />
+  </EntityType>
+  <EntityType Name="SerieSeason">
+    <Key>
+      <PropertyRef Name="seasonID" />
+    </Key>
+    <Property Name="seasonID" Type="int" Nullable="false" />
+    <Property Name="serieID" Type="int" Nullable="false" />
+    <Property Name="name" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="internetLink" Type="nvarchar" MaxLength="300" Nullable="false" />
+    <Property Name="trailerLink" Type="nvarchar" MaxLength="300" />
+  </EntityType>
+  <Association Name="SerieEpisode_FK_SerieEpisode_SerieSeason">
+    <End Role="SerieSeason" Type="Self.SerieSeason" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="SerieEpisode" Type="Self.SerieEpisode" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="SerieSeason">
+        <PropertyRef Name="seasonID" />
+      </Principal>
+      <Dependent Role="SerieEpisode">
+        <PropertyRef Name="seasonID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="SerieSeason_FK_SerieSeason_Serie">
+    <End Role="Serie" Type="Self.Serie" Multiplicity="1">
+      <OnDelete Action="Cascade" />
+    </End>
+    <End Role="SerieSeason" Type="Self.SerieSeason" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Serie">
+        <PropertyRef Name="serieID" />
+      </Principal>
+      <Dependent Role="SerieSeason">
+        <PropertyRef Name="serieID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <EntityContainer Name="VideoDatabaseModelStoreContainer">
+    <EntitySet Name="Movie" EntityType="Self.Movie" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Serie" EntityType="Self.Serie" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SerieEpisode" EntityType="Self.SerieEpisode" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="SerieSeason" EntityType="Self.SerieSeason" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="SerieEpisode_FK_SerieEpisode_SerieSeason" Association="Self.SerieEpisode_FK_SerieEpisode_SerieSeason">
+      <End Role="SerieSeason" EntitySet="SerieSeason" />
+      <End Role="SerieEpisode" EntitySet="SerieEpisode" />
+    </AssociationSet>
+    <AssociationSet Name="SerieSeason_FK_SerieSeason_Serie" Association="Self.SerieSeason_FK_SerieSeason_Serie">
+      <End Role="Serie" EntitySet="Serie" />
+      <End Role="SerieSeason" EntitySet="SerieSeason" />
+    </AssociationSet>
+  </EntityContainer>
+</Schema>
