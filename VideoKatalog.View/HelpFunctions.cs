@@ -340,19 +340,36 @@ namespace Video_katalog {
         public static string ReplaceIllegalChars (string orginal) {
             return orginal.Replace ("\\", "").Replace ("/", "").Replace (":", " -").Replace ("?", "").Replace ("<", "").Replace (">", "").Replace ("|", "");
         }
-        public static string GetPosterImageUrl(string mainMovieLink) {
+        public static string GetPosterImageUrl(string imdbLink, string title, string type) {
             string ImdbID = "";
-            foreach (char c in mainMovieLink) {
+            foreach (char c in imdbLink) {
                 if (Char.IsDigit(c)) {
                     ImdbID += c.ToString();
                 }
             }
+            ImdbID = ImdbID.Replace("tt", "");
+            ImdbID = "i" + ImdbID;
+            bool replaced = true;
+            while (replaced) {
+                replaced = false;
+                if (title.Contains(' ')) {
+                    replaced = true;
+                    title = title.Replace(' ', '-');
+                }
+            }
 
-            string posterPageSource = ReturnWebPageSource("http://www.movieposterdb.com/movie/" + ImdbID);
-            string imageSourceLink = GetStringBetweenStrins(posterPageSource, " <link rel=\"image_src\" type=\"image/jpeg\" href=\"", "\" />");
-            imageSourceLink = imageSourceLink.Replace("/t_", "/l_");
-            return imageSourceLink;
-
+            try
+            {
+                string posterPageSource = ReturnWebPageSource("https://www.cinematerial.com/" + type + "/" + title + "-" + ImdbID);
+                string imageSourceLink = GetStringBetweenStrins(posterPageSource, "class=\"postercollection title\"", "</div>");
+                imageSourceLink = GetStringBetweenStrins(imageSourceLink, "src=\"", "\"");
+                imageSourceLink = "https://www.cinematerial.com" + imageSourceLink;// +imageSourceLink.Replace("/sm/", "/md/");
+                return imageSourceLink;
+            }
+            catch (Exception ex)
+            {
+                return "http://www.chabotcollege.edu/Library/subjectindex/film.jpg";
+            }
         }
         public static string GetStringBetweenStrins(string sourceStr, string startStr, string endStr) {
             int startIndex = sourceStr.IndexOf(startStr) + startStr.Length;

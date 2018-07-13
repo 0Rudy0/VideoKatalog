@@ -172,11 +172,11 @@ namespace VideoKatalog.WebApp.ExtraClasses {
             FtpWebRequest request;
 
             if (category == "movie") {
-                request = (FtpWebRequest)FtpWebRequest.Create("ftp://hddpunjenje.herobo.com/public_html/posters/movie/" + fileName);
+                request = (FtpWebRequest)FtpWebRequest.Create("ftp://files.000webhost.com/public_html/posters/movie/" + fileName);
 
             }
             else {
-                request = (FtpWebRequest)FtpWebRequest.Create("ftp://hddpunjenje.herobo.com/public_html/posters/serie/" + fileName);
+                request = (FtpWebRequest)FtpWebRequest.Create("ftp://files.000webhost.com/public_html/posters/serie/" + fileName);
             }
             request.Method = WebRequestMethods.Ftp.UploadFile;
             string ftpUsername = "a7194937";

@@ -71,7 +71,7 @@ namespace Video_katalog {
         string googleTrailerSearchPrefix = "http://www.google.com/webhp?hl=hr#sclient=psy&hl=hr&site=webhp&source=hp&q=";
         string googleTrailerSearchSuffix = "+trailer&aq=f&aqi=&aql=&oq=&pbx=1&fp=ebd6b5bbc36e5c9c";
 
-        string impAwardsPosterSearchPrefix = "http://www.impawards.com/googlesearch.html?cx=partner-pub-6811780361519631%3A48v46vdqqnk&cof=FORID%3A9&ie=ISO-8859-1&q=";
+        string impAwardsPosterSearchPrefix = "http://www.impawards.com/search.php?movie=";
         string impAwardsPosterSearchSuffix = "&sa=Search&siteurl=www.impawards.com%252F#860";
         string googlePosterSearchPrefix = "http://www.google.hr/search?q=";
         string googlePosterSearchSuffix = "+poster&hl=hr&client=firefox-a&hs=fVv&rls=org.mozilla:en-US:official&prmd=ivns&tbm=isch&tbo=u&source=univ&sa=X&ei=HqiyTfHHCMiZOrORwYAJ&ved=0CBkQsAQ&biw=1440&bih=925";
@@ -381,8 +381,30 @@ namespace Video_katalog {
         
         //**** POSTER MANAGEMENT ****//        
         private void searchPoster_Click (object sender, RoutedEventArgs e) {
+            string ImdbID = "";
+            foreach (char c in downloadedMovie.InternetLink)
+            {
+                if (Char.IsDigit(c))
+                {
+                    ImdbID += c.ToString();
+                }
+            }
+            ImdbID = ImdbID.Replace("tt", "");
+            ImdbID = "i" + ImdbID;
+            bool replaced = true;
+            string movieName = downloadedMovie.OrigName;
+            while (replaced)
+            {
+                replaced = false;
+                if (movieName.Contains(' '))
+                {
+                    replaced = true;
+                    movieName = movieName.Replace(' ', '-');
+                }
+            }
+
             if (posterImpAwardsRadio.IsChecked == true) {
-                System.Diagnostics.Process.Start (this.impAwardsPosterSearchPrefix + currMovie.OrigName + this.impAwardsPosterSearchSuffix);
+                System.Diagnostics.Process.Start (this.impAwardsPosterSearchPrefix + currMovie.OrigName);
                 this.settings.PosterProvider = "imp";
             }
             else if (posterGoogleRadio.IsChecked == true) {
@@ -390,17 +412,11 @@ namespace Video_katalog {
                 this.settings.PosterProvider = "google";
             }
             else if (posterMoviePosterDBRadio.IsChecked == true) {
-                string ImdbID = null;
                 this.settings.PosterProvider = "posterDB";
-                foreach (char c in currMovie.InternetLink) {
-                    if (Char.IsDigit (c)) {
-                        ImdbID += c;
-                    }
-                }
-                Clipboard.SetText(this.moviePosterDBSearchPrefix + ImdbID);
                 //System.Diagnostics.Process.Start ((new System.Diagnostics.ProcessStartInfo("explorer.exe", 
                   //  this.moviePosterDBSearchPrefix + ImdbID)));
             }
+            Clipboard.SetText("https://www.cinematerial.com/movies/" + movieName + "-" + ImdbID);
             DatabaseManager.UpdateSettings (settings);
         }
         private void pasteImageButton_Click (object sender, RoutedEventArgs e) {
@@ -593,21 +609,30 @@ namespace Video_katalog {
 
         public void ScanVideo (string videoPath) {
             Movie tempMovie = cloner.CloneMovie (currMovie);
-            tempMovie.GetTechInfo (videoPath);
-            currMovie.AudioList = cloner.CloneAudioList (tempMovie.AudioList);
-            currMovie.SubtitleLanguageList = cloner.CloneLangList (tempMovie.SubtitleLanguageList);
-            this.Dispatcher.Invoke (new Action (() => {
-                currMovie.Size = tempMovie.Size;
-                currMovie.Runtime = tempMovie.Runtime;
-                currMovie.Height = tempMovie.Height;
-                currMovie.Width = tempMovie.Width;
-                currMovie.Bitrate = tempMovie.Bitrate;
-                currMovie.AspectRatio = tempMovie.AspectRatio;
-                currMovie.AddTime = tempMovie.AddTime;
-                busyIndicatorScanningVideo.IsBusy = false;
-                movieTechInfoGrid.DataContext = null;
-                movieTechInfoGrid.DataContext = currMovie;
-            })); 
+            try {
+                tempMovie.GetTechInfo(videoPath);
+                currMovie.AudioList = cloner.CloneAudioList(tempMovie.AudioList);
+                currMovie.SubtitleLanguageList = cloner.CloneLangList(tempMovie.SubtitleLanguageList);
+                this.Dispatcher.Invoke(new Action(() => {
+                    currMovie.Size = tempMovie.Size;
+                    currMovie.Runtime = tempMovie.Runtime;
+                    currMovie.Height = tempMovie.Height;
+                    currMovie.Width = tempMovie.Width;
+                    currMovie.Bitrate = tempMovie.Bitrate;
+                    currMovie.AspectRatio = tempMovie.AspectRatio;
+                    currMovie.AddTime = tempMovie.AddTime;
+                    busyIndicatorScanningVideo.IsBusy = false;
+                    movieTechInfoGrid.DataContext = null;
+                    movieTechInfoGrid.DataContext = currMovie;
+                }));
+            }
+            catch (Exception ex)
+            {
+                this.Dispatcher.Invoke(new Action(() =>
+                {
+                    MessageBox.Show(ex.Message);
+                }));
+            }
              
         }
         private void loadFileButton_Click (object sender, RoutedEventArgs e) {
@@ -740,7 +765,6 @@ namespace Video_katalog {
         }
         public void DownloadInfoAndPoster () {
             DownloadAllInfo ();
-            DownloadAndSetPoster ();
         }
 
         //DOWNLOADES     
@@ -751,6 +775,7 @@ namespace Video_katalog {
             if (downloadedMovie == null) {
                 return;
             }
+            DownloadAndSetPoster();
             notFetched = moviePage.notFetched;
             downloadingAll = true;
         }        
@@ -803,7 +828,7 @@ namespace Video_katalog {
             try {                
                 posterImage.Dispatcher.Invoke (DispatcherPriority.Normal, new Action (
                     delegate () {
-                        posterImage.Source = new BitmapImage (new Uri (HelpFunctions.GetPosterImageUrl(currMovie.InternetLink)));
+                        posterImage.Source = new BitmapImage (new Uri (HelpFunctions.GetPosterImageUrl(currMovie.InternetLink, downloadedMovie.OrigName, "movies")));
                         posterEdited = true;
                     }
                 ));

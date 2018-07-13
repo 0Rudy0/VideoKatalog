@@ -319,7 +319,7 @@ function showMovieDetails(movieID) {
     $("#name").html(movie.origName + " (" + movie.year + ")");
     $("#genres").html(movie.genre);
 
-    var posterLink = "http://hddpunjenje.herobo.com/posters/movie/" + movie.name.replace("&#39;", "'").replace("&amp;", "&") + ".jpg";
+    var posterLink = "https://hddpunjenje.000webhostapp.com/posters/movie/" + movie.name.replace("&#39;", "'").replace("&amp;", "&") + ".jpg";
     var imageObject = document.getElementById("moviePoster");
     imageObject.src = posterLink;
 

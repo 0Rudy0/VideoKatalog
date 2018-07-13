@@ -24,11 +24,13 @@ using System.Windows.Media.Animation;
 using System.Drawing;
 using System.Data.SqlServerCe;
 using VideoKatalog.View;
+using System.Configuration;
 
 namespace Video_katalog {
     public partial class CatalogForm : Window {
 
-        Boolean loadData = true;
+        //Boolean loadData = true;
+        Boolean loadData = bool.Parse(ConfigurationManager.AppSettings["loadData"]);
 
         #region GLOBAL DATA
 
@@ -403,7 +405,7 @@ namespace Video_katalog {
             ImageBrush myBrush = new ImageBrush ();
             myBrush.ImageSource = ratingStars;
             myBrush.TileMode = TileMode.Tile;
-            myBrush.Stretch = Stretch.None;
+            myBrush.Stretch = Stretch.Fill;
             int fullWidth = (int) this.ratingMask.Width;
             int width = (int) (ratingFloat * fullWidth / 10);
             myBrush.Viewport = new Rect (0, 0, 10 / ratingFloat * 0.202, 1);

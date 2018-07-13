@@ -4460,7 +4460,7 @@ namespace Video_katalog
 								selectedTxt.WriteLine("<table border=\"0\">");
 								selectedTxt.WriteLine("\t<tr height=\"40\">");
 								selectedTxt.WriteLine("\t\t<td rowspan=\"6\" width=\"210\">");
-								selectedTxt.WriteLine("\t\t\t<img src=\"" + HelpFunctions.GetPosterImageUrl(tempMovie.InternetLink) +
+								selectedTxt.WriteLine("\t\t\t<img src=\"" + HelpFunctions.GetPosterImageUrl(tempMovie.InternetLink, tempMovie.OrigName, "movies") +
 									"\" width=\"200\" height=\"287\" alt=\"Fali slika\">");
 								selectedTxt.WriteLine("\t\t</td>");
 								selectedTxt.WriteLine("\t\t<td><font size=\"5px\"><a href=\"" + tempMovie.InternetLink +
