@@ -370,9 +370,11 @@ namespace Video_katalog {
        
         public string GetName (string source) {
             try {
-                string movieName = GetStringBetweenStrings(source, "<h1 itemprop=\"name\" class=\"\">", "&nbsp;");
+                string movieName = GetStringBetweenStrings(source, "<script type=\"application", "</script>");
+                movieName = GetStringBetweenStrings(movieName, "\"name\":", "\n");
                 movieName = movieName.Trim ();
-                movieName = movieName.Replace ("IMDb - ", "");
+                movieName = movieName.Substring(1, movieName.Length - 3);
+                //movieName = movieName.Replace ("IMDb - ", "");
                 return movieName;
             }
             catch {
@@ -492,12 +494,19 @@ namespace Video_katalog {
                 }
 
                 foreach (string actor in SplitByString(castString, "<tr class=\"")) {
-                    if (actor.Contains ("<span class=\"itemprop\" itemprop=\"name\">")) {
-                        int actorStart = actor.IndexOf("\">") + ("\">").Length;
-                        int actorEnd = actor.IndexOf("</a>");
-                        string actorTrim = GetStringBetweenStrings (actor, "<span class=\"itemprop\" itemprop=\"name\">", "</span>");
+                    if (actor.Contains ("<td class=\"primary_photo\">")) {
+                        var td = SplitByString(actor, "<td").ElementAt(2);
+                        var a = GetStringBetweenStrings(td, "<a href", "</a>");
+                        var b = GetStringFromStringToEnd(a, ">").Trim();
+                        //foreach (var td in SplitByString(actor, "<td").ElementAt(2))
+                        //{
+
+                        //}
+                        //int actorStart = actor.IndexOf("\">") + ("\">").Length;
+                        //int actorEnd = actor.IndexOf("</a>");
+                        //string actorTrim = GetStringBetweenStrings (actor, "<span class=\"itemprop\" itemprop=\"name\">", "</span>");
                         Person tempActor = new Person (new PersonType (2));
-                        tempActor.Name = actorTrim;
+                        tempActor.Name = b;
                         tempActor.DateOfBirth = new DateTime (1800, 1, 1);                        
                         if (castList.Contains (tempActor, new PersonEqualityComparerByName ())) {
                             continue;
@@ -559,8 +568,9 @@ namespace Video_katalog {
         }
         public decimal GetRating (string source) {
             try {
-                string ratingString = source.Substring(source.IndexOf(this.ratingBeginsWith) + this.ratingBeginsWith.Length);
-                ratingString = ratingString.Substring(0, ratingString.IndexOf(this.ratingEndsWith));
+                string ratingString = GetStringBetweenStrings(source, "\"aggregateRating\"", "}");
+                ratingString = GetStringBetweenStrings(source, "\"ratingValue\":", "\n");
+                ratingString = ratingString.Replace("\"", "");
                 //string ratingString = GetStringBetweenStrings (source, this.ratingBeginsWith, this.ratingEndsWith);
                 //MessageBox.Show(ratingString);
                 return Decimal.Parse (ratingString.Replace ('.', ','));
@@ -573,7 +583,7 @@ namespace Video_katalog {
         }
         public string GetSummary (string mainSource, string summarySource) {
             try {
-                string shortSummary = GetStringBetweenStrings(mainSource, "<div class=\"summary_text\" itemprop=\"description\">", "</div>");
+                string shortSummary = GetStringBetweenStrings(mainSource, "<div class=\"summary_text\">", "</div>");
                 //shortSummary = GetStringBetweenStrings (shortSummary, this.shortSummaryBeginsWith2, this.shortSummaryEndsWith);
                 shortSummary = shortSummary.Trim();
                 if (string.IsNullOrWhiteSpace(shortSummary))
