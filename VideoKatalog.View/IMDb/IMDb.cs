@@ -411,23 +411,34 @@ namespace Video_katalog {
         }
         public ObservableCollection<Genre> GetGenres (string source) {
             Genre tempGenre = new Genre ();
+            var genres = DatabaseManager.FetchGenreList();
             ObservableCollection<Genre> movieGenres = new ObservableCollection<Genre> ();
             try {               
-                string genresString = GetStringBetweenStrings (source, "<h4 class=\"inline\">Genres:</h4>", "</div>");
-                genresString = genresString.Substring (genresString.IndexOf ("<"));
-                foreach (string genre in SplitByString (genresString, "<a href=")) {
+                string genresString = GetStringBetweenStrings (source, "<script type=\"application/", "\"actor\":");
+                genresString = GetStringBetweenStrings(genresString, "\"genre\": [", "],");
+                //genresString = genresString.Substring (genresString.IndexOf ("<"));
+                foreach (string genre in SplitByString (genresString, ",")) {
                     if (genre.Trim() == "")
                         continue;
                     string genreTrim = genre;
                     try {
-                        genreTrim = GetStringBetweenStrings (genreTrim, "a href=\"/genre/", "</a>");
-                        genreTrim = GetStringFromStringToEnd(genreTrim, ">");
+                        genreTrim = GetStringBetweenStrings (genreTrim, "\"", "\"");
+                        //genreTrim = GetStringFromStringToEnd(genreTrim, ">");
                         genreTrim = genreTrim.Trim ();
-                        for (int i = 0 ; i < tempGenre.genresEng.Count ; i++) {
-                            if (genreTrim == tempGenre.genresEng[i]) {
-                                Genre newGenre = new Genre ();
+                        //if (genreTrim == tempGenre.genresEng[i])
+                        //{
+                        //    Genre newGenre = new Genre();
+                        //    newGenre.Name = tempGenre.genresCro[i];
+                        //    movieGenres.Add(newGenre);
+                        //}
+                        for (int i = 0; i < tempGenre.genresEng.Count; i++)
+                        {
+                            if (genreTrim == tempGenre.genresEng[i])
+                            {
+                                Genre newGenre = new Genre();
                                 newGenre.Name = tempGenre.genresCro[i];
-                                movieGenres.Add (newGenre);
+                                movieGenres.Add(genres.Where(g => g.Name == tempGenre.genresCro[i]).FirstOrDefault());
+                                break;
                             }
                         }
                     }
@@ -620,7 +631,8 @@ namespace Video_katalog {
         }
         public float GetEarnings () {
             try {
-                string earningsString = GetStringBetweenStrings (earningsSource, this.earningsBeginsWith, this.earningsEndsWith);
+                string earningsString = GetStringBetweenStrings (earningsSource.ToLower(), "worldwide gross</td>", "</td>");
+                earningsString = GetStringBetweenStrings(earningsString, "<span itemprop=\"value\">", "</span>");
                 string earningsClean = null;
                 foreach (char c in earningsString) {
                     if (Char.IsDigit (c)) {

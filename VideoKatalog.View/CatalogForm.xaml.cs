@@ -94,7 +94,7 @@ namespace Video_katalog {
                 this.Dispatcher.Invoke (new Action (() => {
                     statusBarTextBlock.Text = "Filmovi";
                     statusBarProgressBar.Maximum = DatabaseManager.FetchMovieCountList ();
-                    statusBarProgressBar.Value = 0;
+                    statusBarProgressBar.Value = 0;                   
                 }));
                 progressBarCounter = 0;
                 listOfMovies = DatabaseManager.FetchMovieList (genreList, audioList, personList, languageList, hddList, ref progressBarCounter);

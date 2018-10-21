@@ -190,7 +190,7 @@ namespace Video_katalog {
             LoadSettings ();
             hddList = DatabaseManager.FetchHDDList ();
 
-            this.hddComboBox.ItemsSource = hddList;            
+            this.hddComboBox.ItemsSource = hddList;
 
             if (isNewMovie == false) {
                 try {
@@ -624,6 +624,8 @@ namespace Video_katalog {
                     busyIndicatorScanningVideo.IsBusy = false;
                     movieTechInfoGrid.DataContext = null;
                     movieTechInfoGrid.DataContext = currMovie;
+
+                    hddComboBox.SelectedIndex = hddComboBox.Items.Count - 1;
                 }));
             }
             catch (Exception ex)
