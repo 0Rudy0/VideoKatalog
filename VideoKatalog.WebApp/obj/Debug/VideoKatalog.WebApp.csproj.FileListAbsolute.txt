@@ -34,3 +34,6 @@ C:\Projects\VideoKatalog\VideoKatalog.WebApp\bin\System.Web.Http.WebHost.dll
 C:\Projects\VideoKatalog\VideoKatalog.WebApp\bin\System.Web.Http.WebHost.xml
 C:\Projects\VideoKatalog\VideoKatalog.WebApp\bin\System.Net.Http.Formatting.dll
 C:\Projects\VideoKatalog\VideoKatalog.WebApp\bin\System.Net.Http.Formatting.xml
+C:\Projects\VideoKatalog\VideoKatalog.WebApp\obj\Debug\VideoKatalog.WebApp.csprojAssemblyReference.cache
+C:\Projects\VideoKatalog\VideoKatalog.WebApp\obj\Debug\VideoKatalog.WebApp.csproj.CoreCompileInputs.cache
+C:\Projects\VideoKatalog\VideoKatalog.WebApp\obj\Debug\VideoKatalog.WebApp.csproj.CopyComplete

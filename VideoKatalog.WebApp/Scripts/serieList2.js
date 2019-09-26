@@ -26,6 +26,10 @@ var ratingStep = 0.5;
 var ratingMin = 1;
 var ratingMax = 10;
 
+var posterRootUrl = 'http://videokatalog.codius.hr/VideoKatalog/posters/';
+var posterMovieUrl = posterRootUrl + 'movie/';
+var posterSerieUrl = posterRootUrl + 'serie/'
+
 //#endregion
 
 //#region FUNCTIONS
@@ -402,7 +406,7 @@ function changeSerieInfo(serieID, serieName) {
 
 	if (serieName != null) {
 	    
-        var posterLink = "https://hddpunjenje.000webhostapp.com/posters/serie/" + serieName.replace("&#39;", "'").replace("&amp;", "&") + ".jpg";
+        var posterLink = posterSerieUrl + serieName.replace("&#39;", "'").replace("&amp;", "&") + ".jpg";
 		var replaced = true;
 		while (replaced) {
 		    replaced = false;
@@ -413,7 +417,7 @@ function changeSerieInfo(serieID, serieName) {
 		}
 		$('#loadingPosterIndicator').css('display', 'block');
 		$('#seriePoster').css('display', 'none');
-		//$('#seriePoster').css('background-image', "url('https://hddpunjenje.000webhostapp.com/posters/loader1.gif')");
+		//$('#seriePoster').css('background-image', "url(posterRootUrl + 'loader1.gif')");
 		//$('#moviePoster').css('background-image', "url('" + posterLink + "')");
 		$.ajax({
 			url: posterLink,

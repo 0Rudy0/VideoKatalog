@@ -53,6 +53,6 @@ C:\Projects\VideoKatalog\VideoKatalog.View\obj\Debug\VideoKatalog.View.Propertie
 C:\Projects\VideoKatalog\VideoKatalog.View\obj\Debug\VideoKatalog.View.csproj.GenerateResource.Cache
 C:\Projects\VideoKatalog\VideoKatalog.View\obj\Debug\VideoKatalog.View.exe
 C:\Projects\VideoKatalog\VideoKatalog.View\obj\Debug\VideoKatalog.View.pdb
-C:\Projects\VideoKatalog\VideoKatalog.View\obj\Debug\VideoKatalog.View.csprojAssemblyReference.cache
 C:\Projects\VideoKatalog\VideoKatalog.View\obj\Debug\VideoKatalog.View.csproj.CoreCompileInputs.cache
 C:\Projects\VideoKatalog\VideoKatalog.View\obj\Debug\VideoKatalog.View.csproj.CopyComplete
+C:\Projects\VideoKatalog\VideoKatalog.View\obj\Debug\VideoKatalog.View.csprojFakesResolveAssemblyReference.cache

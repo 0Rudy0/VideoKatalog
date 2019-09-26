@@ -16,9 +16,9 @@ namespace Video_katalog {
         public static string homeVideoPosterFolder = HardcodedStrings.posterFolder + @"Home Video/";
 
         //FREE
-        public static string ftpAdress = "ftp://files.000webhost.com/public_html/posters/";
-        public static string ftpAppUpdatesPath = "ftp://ftp.hdfilmovi.org/public_html/updates/Video Katalog.exe"; 
-        public static string ftpUsername = "hddpunjenje";
+        public static string ftpAdress = "ftp://ftp.myasp.net/VideoKatalog/posters/";
+        public static string ftpAppUpdatesPath = "ftp://ftp.hdfilmovi.org/public_html/updates/Video Katalog.exe";
+        public static string ftpUsername = "rudy007-vk";
         public static string ftpPassword = "rudx1234";
 
         //HOSTING24

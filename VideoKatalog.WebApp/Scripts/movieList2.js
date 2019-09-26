@@ -28,6 +28,10 @@ var yearStep = 1;
 var yearMin = 1950;
 var yearMax = (new Date()).getFullYear();
 
+var posterRootUrl = 'http://videokatalog.codius.hr/VideoKatalog/posters/';
+var posterMovieUrl = posterRootUrl + 'movie/';
+var posterSerieUrl = posterRootUrl + 'serie/'
+
 // if orientation is supported (eg. mobile device) 
 // instead of resize, do the orientation event
 var supportsOrientationChange = 'onorientationchange' in window,
@@ -298,7 +302,7 @@ function changeMovieInfo(selectedMovieID, listIndex) {
 	//if (selectedMovieGlobal != null && selectedMovieGlobal.id == selectedMovie.id && selectedMovieGlobal.full == true)
 	//	return;
     selectedMovieGlobal = getMovieWithId(selectedMovieID);
-    var posterLink = "https://hddpunjenje.000webhostapp.com/posters/movie/" + selectedMovieGlobal.name.replace("&#39;", "'").replace("&amp;", "&") + ".jpg";
+    var posterLink = posterMovieUrl + selectedMovieGlobal.name.replace("&#39;", "'").replace("&amp;", "&") + ".jpg";
 	var replaced = true;
 	while (replaced) {
 	    replaced = false;
@@ -379,10 +383,12 @@ function isMovieSelected(movieID) {
 function downloadMoviePosters(index) {
 	imgArray = new Array();
 
-	var img = new Image();
-    var posterLink = "https://hddpunjenje.000webhostapp.com/posters/movie/" + movieArray[index].name.replace("&#39;", "'").replace("&amp;", "&") + ".jpg";
-	img.src = posterLink;
-	imgArray.push(img);
+    if (index) {
+        var img = new Image();
+        var posterLink = posterMovieUrl + movieArray[index].name.replace("&#39;", "'").replace("&amp;", "&") + ".jpg";
+        img.src = posterLink;
+        imgArray.push(img);
+    }
 
 	setTimeout(function () {
 		if (index < 50) {

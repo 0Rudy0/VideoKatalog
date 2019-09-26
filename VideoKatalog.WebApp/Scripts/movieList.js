@@ -10,6 +10,10 @@ var selectedFocus = 0;
 var lastDate;
 var imdbLink;
 
+var posterRootUrl = 'http://videokatalog.codius.hr/VideoKatalog/posters/';
+var posterMovieUrl = posterRootUrl + 'movie/';
+var posterSerieUrl = posterRootUrl + 'serie/'
+
 function Movie (id, name, origName, size, rating, cast, director, year, plot, runtime, hasCroSub, hasEngSub, videoRes, dateAdded, imdbLink, trailerLink, genre, langs) {
     this.id = id;
     this.name = name;
@@ -319,7 +323,7 @@ function showMovieDetails(movieID) {
     $("#name").html(movie.origName + " (" + movie.year + ")");
     $("#genres").html(movie.genre);
 
-    var posterLink = "https://hddpunjenje.000webhostapp.com/posters/movie/" + movie.name.replace("&#39;", "'").replace("&amp;", "&") + ".jpg";
+    var posterLink = posterMovieUrl + movie.name.replace("&#39;", "'").replace("&amp;", "&") + ".jpg";
     var imageObject = document.getElementById("moviePoster");
     imageObject.src = posterLink;
 
